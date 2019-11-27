@@ -1,0 +1,62 @@
+messages:
+  0:
+    msg: 'No error'
+    level: 0
+
+products:
+  ALEXI:
+    account: 'FTP_WA'
+    meta:
+      owner: 'IHE Delft'
+      description:
+        'Product description'
+      websites: ['https://www.wateraccounting.org']
+      protocols: ['FTP']
+      methods: ['ftp']
+      ftypes: ['gz']
+      versions: ['v1']
+      datasets: ['Evaporation']
+      datatypes: ['daily', 'weekly']
+      projection: ['WGS84']
+    v1:
+      Evaporation:
+        daily:
+          url: 'ftp://ftp.wateraccounting.unesco-ihe.org'
+          method: 'get'
+          freq: 'D'
+          variables:
+            ETa:
+              name: 'Daily Evaporation'
+              description:
+                ''
+              dir: '/WaterAccounting/Data_Satellite/Evaporation/ALEXI/World_05182018/'
+              fname:
+                r: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat.gz'
+                t: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat'
+                l: 'ETa-ALEXI_v1_mmpd_daily-{Y:>04s}_{m:>02s}_{d:>02s}.tif'
+              ftype:
+                r: 'gz'
+                t: 'dat'
+                l: 'GTiff'
+              dtype:
+                r: 'binary'
+                t: 'float32'
+                l: 'float32'
+              unit:
+                f: 'MJ/m2d'
+                t: 'mm/d'
+                m: 2.45
+              lat:
+                s: -60.0
+                n: 70.0
+                r: 0.05
+              lon:
+                w: -180.0
+                e: 180.0
+                r: 0.05
+              time:
+                s: 2005-01-01
+                e: 2016-12-31
+              dem:
+                w: -9999
+                h: -9999
