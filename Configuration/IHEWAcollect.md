@@ -20,7 +20,7 @@ Define the **Configuration.IHEWAcollect.yml standard** of WaterAccounting Tools.
 
 ### Temporal Resolution
 
-| Short   | Lone       | Description |
+| Short   | Long       | Description |
 | ------: |----------- | ----------- |
 |         | six_hourly |             |
 | D       | daily      |             |
@@ -35,7 +35,7 @@ Define the **Configuration.IHEWAcollect.yml standard** of WaterAccounting Tools.
   * [strftime codes](http://strftime.org/)
   * [pandas date_range alias](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#timeseries-offset-aliases)
 
-| Identifier | sec/min        | degree   	       | meters/km                    |
+| Name       | sec/min        | degree   	       | meters/km                    |
 | ---------: |--------------- | ------------------ | ---------------------------- |
 | 3s         | 3 arc-second   | 0.0008333333333333 | approx. 90 m at the equator  |
 | 15s        | 15 arc-second  | 0.0041666666666667 | approx. 500 m at the equator |
@@ -67,18 +67,18 @@ Define the **Configuration.IHEWAcollect.yml standard** of WaterAccounting Tools.
 
 ### Driver
 
-| Ext              | File type        | GDAL Drivers     |
-| ---------------: | ---------------- | ---------------- |
-| grb2             |                  | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib) |
-| grib2            |                  | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib) |
-| tif              |                  | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff) |
+| Ext              | File type        | GDAL Drivers                                                        |
+| ---------------: | ---------------- | ------------------------------------------------------------------- |
+| grb2             |                  | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       |
+| grib2            |                  | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       |
+| tif              |                  | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff)    |
 | nc               |                  | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
-| gz -> dat(`<f4`) |                  |                  |
-| adf              |                  | [AIG](https://gdal.org/drivers/raster/aig.html#raster-aig) |
-| bil              | Raster data file | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr) |
-| hdr              | Header file      |                  |
-| blw              | World file       |                  |
-| stx              | Statistics file  |                  |
+| gz -> dat(`<f4`) |                  |                                                                     |
+| adf              |                  | [AIG](https://gdal.org/drivers/raster/aig.html#raster-aig)          |
+| bil              | Raster data file | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
+| hdr              | Header file      |                                                                     |
+| blw              | World file       |                                                                     |
+| stx              | Statistics file  |                                                                     |
 
 
 ## Numeric types
@@ -107,6 +107,8 @@ Define the **Configuration.IHEWAcollect.yml standard** of WaterAccounting Tools.
 | d          | day, `stirng[2]`                          |
 | j          | day of year, `stirng[3]`                  |
 | latlon     | DEM tile's name, `string[7]`, _n00e005_   |
+
+example
 
 ```Python
 import datetime
