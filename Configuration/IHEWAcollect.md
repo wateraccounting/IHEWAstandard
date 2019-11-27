@@ -15,21 +15,25 @@ Define the **Configuration.IHEWAcollect.yml standard** of WaterAccounting Tools.
     * unit
     * time
 
-### Data types
 
-#### Temporal Resolution
+## Data types
 
-| Short   | Lone       | Other  |
-| ------: |----------- | ------ |
-|         | six_hourly |        |
-| D       | daily      |        |
-| 7D      | weekly     |        |
-| 10D     | dekadal    |        |
-| MD      | monthly    |        |
-|         | pentadal   |        |
-| Y       | yearly     |        |
+### Temporal Resolution
 
-#### Spatial Resolution
+| Short   | Lone       | Description |
+| ------: |----------- | ----------- |
+|         | six_hourly |             |
+| D       | daily      |             |
+| 7D      | weekly     |             |
+| 10D     | dekadal    |             |
+| MD      | monthly    |             |
+|         | pentadal   |             |
+| Y       | yearly     |             |
+
+### Spatial Resolution
+  
+  * [strftime codes](http://strftime.org/)
+  * [pandas date_range alias](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#timeseries-offset-aliases)
 
 | Identifier | sec/min        | degree   	       | meters/km                    |
 | ---------: |--------------- | ------------------ | ---------------------------- |
@@ -38,7 +42,8 @@ Define the **Configuration.IHEWAcollect.yml standard** of WaterAccounting Tools.
 | 30s        | 30 arc-second  | 0.0083333333333333 | approx. 1 km at the equator  |
 | 5m         | 5 minute       | 0.0833333333333333 | approx. 10 km at the equator |
 
-### Protocal
+
+## Protocal types
 
 | Protocal   | Python Dependency           |
 | ---------: |---------------------------- |
@@ -49,7 +54,18 @@ Define the **Configuration.IHEWAcollect.yml standard** of WaterAccounting Tools.
 | TDS        | pytds (python-tds)          |
 | ECMWF      | ecmwfapi (ecmwf-api-client) |
 
-### File types, `Driver.FileExtension`
+
+## File types, `Driver.FileExtension`
+
+### File
+
+| Name       | Description                                           |
+| ---------: |------------------------------------------------------ |
+| rmtfile    | downloaded to `./download/`                           |
+| tmpfile    | generated to `./temporary/`, to be deleted at the end |
+| locfile    | saved to `./`                                         |
+
+### Driver
 
 | Ext              | File type        | GDAL Drivers     |
 | ---------------: | ---------------- | ---------------- |
@@ -65,4 +81,38 @@ Define the **Configuration.IHEWAcollect.yml standard** of WaterAccounting Tools.
 | stx              | Statistics file  |                  |
 
 
-## [examples](examples/README.md)
+## Numeric types
+
+  * [Python](https://docs.python.org/3/library/stdtypes.html)
+    * Text Type      : `str`
+    * Numeric Types  : `int`, `float`, `complex`
+    * Sequence Types : `list`, `tuple`, `range`
+    * Mapping Type   : `dict`
+    * Set Types      : `set`, `frozenset`
+    * Boolean Type   : `bool`
+    * Binary Types   : `bytes`
+  * [Numpy](https://docs.scipy.org/doc/numpy/user/basics.types.html)
+  * [NetCDF](https://www.unidata.ucar.edu/software/netcdf/docs/data_type.html)
+
+
+## Name
+
+| Name       | Description                               |
+| ---------: |------------------------------------------ |
+| var        | variable name, lower case                 |
+| Var        | variable name, upper case                 |
+| i          | ith part of file, `for i in range(0, 4):` |
+| Y          | year, `stirng[4]`                         |
+| m          | month, `stirng[2]`                        |
+| d          | day, `stirng[2]`                          |
+| j          | day of year, `stirng[3]`                  |
+| latlon     | DEM tile's name, `string[7]`, _n00e005_   |
+
+```Python
+import datetime
+print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
+
+"2001-02-03 04:05"
+```
+
+# [examples](examples/README.md)
