@@ -98,18 +98,18 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 
 #### Driver
 
-| Ext              | File type        | GDAL Drivers                                                        |
-| ---------------: | ---------------- | ------------------------------------------------------------------- |
-| grb2             |                  | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       |
-| grib2            |                  | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       |
-| tif              |                  | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff)    |
-| nc               |                  | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
-| gz -> dat(`<f4`) |                  |                                                                     |
-| adf              |                  | [AIG](https://gdal.org/drivers/raster/aig.html#raster-aig)          |
-| bil              | Raster data file | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| hdr              | Header file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| blw              | World file       | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
+| Ext               | File type        | GDAL Drivers                                                        |
+| ----------------: | ---------------- | ------------------------------------------------------------------- |
+| .grb2             | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       |
+| .grib2            | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       |
+| .tif              | Raster file      | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff)    |
+| .nc               | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
+| .gz -> dat(`<f4`) | Binary file      |                                                                     |
+| .adf              | Raster file      | [AIG](https://gdal.org/drivers/raster/aig.html#raster-aig)          |
+| .bil              | Raster file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
+| .hdr              | Header file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
+| .blw              | World file       | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
+| .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
 
 
 ### Numeric types

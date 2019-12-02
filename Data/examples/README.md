@@ -4,13 +4,13 @@ Define the **Data examples** of WaterAccounting Tools.
 
 ## GTiff
 
-  * [GTiff.Classic](GTiff.Classic.tif)
-  * [GTiff.Big](GTiff.Big.tif)
+  * [GTiff.Classic.tif](GTiff.Classic.tif)
+  * [GTiff.Big.tif](GTiff.Big.tif)
   
 ## NetCDF
 
-  * [NetCDF.WaterPix.Input](NetCDF.WaterPix.Input.nc)
-  * [NetCDF.WaterPix.Output](NetCDF.WaterPix.Output.nc)
-  
-  * [NetCDF.Hyperloop.Input](NetCDF.Hyperloop.Input.nc)
-  * [NetCDF.Hyperloop.Output](NetCDF.Hyperloop.Output.nc)
+  * [NetCDF.WaterPix.Input.nc](NetCDF.WaterPix.Input.nc)
+  * [NetCDF.WaterPix.Output.nc](NetCDF.WaterPix.Output.nc)
+
+  * [NetCDF.Hyperloop.Input.nc](NetCDF.Hyperloop.Input.nc)
+  * [NetCDF.Hyperloop.Output.nc](NetCDF.Hyperloop.Output.nc)

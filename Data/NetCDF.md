@@ -2,7 +2,14 @@
 
 Define the **Data.NetCDF standard** of WaterAccounting Tools.
 
+[OGC Standard, NetCDF](https://www.opengeospatial.org/standards/netcdf)
+[NetCDF Code](https://github.com/Unidata/netcdf4-python)
+
+[NetCDF Best Practices](https://www.unidata.ucar.edu/software/netcdf/docs/BestPractices.html)
+
+
 ## WaterPix
+
 
 ### Input
 
@@ -28,6 +35,7 @@ Define the **Data.NetCDF standard** of WaterAccounting Tools.
   - `rainydays_fv` = ncv['**RainyDays_M**']._FillValue
   - `thetasat_fv` = ncv['**SaturatedWaterContent**']._FillValue
   - `rootdepth_fv` = ncv['**RootDepth**']._FillValue
+
 
 ### Output
 
@@ -128,6 +136,7 @@ Yearly: **('time_yyyy', 'latitude', 'longitude')**
 
 ## Hyperloop
 
+
 ### Input
 
 
@@ -196,6 +205,7 @@ data = {
   'etg': 'Green Evapotranspiration'
 }
 ```
+s
 
 ### Output
 

@@ -2,7 +2,10 @@
 
 Define the **Data standard** of WaterAccounting Tools.
 
-Data type
+[OGC Standard](https://www.opengeospatial.org/standards)
+
+
+## Data Types Convertion, (C, Python, Numpy, NetCDF)
 
 | C              | Python  | Numpy         | NetCDF    | Decsription      | Bits | Min                  | Max                  |
 | -------------- | ------  | ------------- | --------- | ---------------- | ---- | -------------------- | -------------------- |
@@ -22,6 +25,7 @@ Data type
 | float complex  |         | complex64     |           |                  |      |                      |                      |
 | double complex | complex | complex128    |           |                  |      |                      |                      |
 |                | complex | complex\_     |           |                  |      |                      |                      |
+
 
 ## [NetCDF](NetCDF.md)
 
