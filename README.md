@@ -5,21 +5,21 @@ Define the **standard** of WaterAccounting Tools.
 
 ## [Configuration](Configuration/README.md)
 
-### [IHEWAcollect](Configuration/README.md#IHEWAcollect)
+### [IHEWAcollect](Configuration/IHEWAcollect.md)
 
 
 ## [Data](Data/README.md)
 
-### [GTiff](Data/README.md#GTiff)
+### [GTiff](Data/GTiff.md)
 
-### [NetCDF](Data/README.md#NetCDF)
+### [NetCDF](Data/NetCDF.md)
 
-### [SVG](Data/README.md#SVG)
+### [SVG](Data/SVG.md)
 
 
 ## [Engine](Engine/README.md)
 
-### [API](Engine/README.md#API)
+### [API](Engine/API.md)
 
-### [Data](Engine/README.md#Data)
+### [Data](Engine/Data.md)
 
