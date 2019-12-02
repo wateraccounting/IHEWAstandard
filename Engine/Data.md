@@ -210,7 +210,155 @@ data = {
 
 ### Output, csv
 
-#### Sheet 4
+#### Sheet 1
+
+`create_sheet1()`
+
+  - _Fractions_, `complete_data['fractions']`
+  - _WPL_, `global_data["wpl_tif"]`
+  - _EWR_, `global_data["environ_water_req"]`
+  - _P_, `complete_data['p']`
+  - _ETblue_, `complete_data['etb']`
+  - _ETgreen_, `complete_data['etg']`
+
+`create_csv()`
+
+```Python
+first_row = ['CLASS', 'SUBCLASS', 'VARIABLE', 'VALUE']
+
+writer.writerow(['INFLOW', 'PRECIPITATION', 'Rainfall', '{0}'.format(results['p_advection'])])
+writer.writerow(['INFLOW', 'PRECIPITATION', 'Snowfall', 0.])
+writer.writerow(['INFLOW', 'PRECIPITATION', 'Precipitation recycling', '{0}'.format(results['p_recycled'])])
+writer.writerow(['INFLOW', 'SURFACE WATER', 'Main riverstem', '{0}'.format(results['q_in_sw'])])
+writer.writerow(['INFLOW', 'SURFACE WATER', 'Tributaries', 0.])
+writer.writerow(['INFLOW', 'SURFACE WATER', 'Utilized surface water', 0.])
+writer.writerow(['INFLOW', 'SURFACE WATER', 'Flood', 0.])
+writer.writerow(['INFLOW', 'GROUNDWATER', 'Natural', '{0}'.format(results['q_in_gw'])])
+writer.writerow(['INFLOW', 'GROUNDWATER', 'Utilized', 0.])
+writer.writerow(['INFLOW', 'OTHER', 'Desalinized', '{0}'.format(results['q_in_desal'])])
+writer.writerow(['STORAGE', 'CHANGE', 'Surface storage', '{0}'.format(results['dS'])])
+writer.writerow(['STORAGE', 'CHANGE', 'Storage in sinks', 0.])
+writer.writerow(['OUTFLOW', 'ET LANDSCAPE', 'Protected', '{0}'.format(results['landscape_et_plu'])])
+writer.writerow(['OUTFLOW', 'ET LANDSCAPE', 'Utilized', '{0}'.format(results['landscape_et_ulu'])])
+writer.writerow(['OUTFLOW', 'ET LANDSCAPE', 'Modified', '{0}'.format(results['landscape_et_mlu'])])
+writer.writerow(['OUTFLOW', 'ET LANDSCAPE', 'Managed', '{0}'.format(results['landscape_et_mwu'])])
+writer.writerow(['OUTFLOW', 'ET UTILIZED FLOW', 'Protected', '{0}'.format(results['uf_plu'])])
+writer.writerow(['OUTFLOW', 'ET UTILIZED FLOW', 'Utilized', '{0}'.format(results['uf_ulu'])])
+writer.writerow(['OUTFLOW', 'ET UTILIZED FLOW', 'Modified', '{0}'.format(results['uf_mlu'])])
+writer.writerow(['OUTFLOW', 'ET UTILIZED FLOW', 'Managed', '{0}'.format(results['uf_mwu'])])        
+writer.writerow(['OUTFLOW', 'ET INCREMENTAL', 'Manmade', '{0}'.format(results['manmade'])])  
+writer.writerow(['OUTFLOW', 'ET INCREMENTAL', 'Natural', '{0}'.format(results['natural'])])
+writer.writerow(['OUTFLOW', 'SURFACE WATER', 'Main riverstem', '{0}'.format(results['q_outflow'])])
+writer.writerow(['OUTFLOW', 'SURFACE WATER', 'Tributaries',  0.])  
+writer.writerow(['OUTFLOW', 'SURFACE WATER', 'Utilized surface water', 0.])  
+writer.writerow(['OUTFLOW', 'SURFACE WATER', 'Flood', 0.])
+writer.writerow(['OUTFLOW', 'SURFACE WATER', 'Interbasin transfer', '{0}'.format(results['q_out_sw'])])
+writer.writerow(['OUTFLOW', 'GROUNDWATER', 'Natural', '{0}'.format(results['q_out_gw'])]) 
+writer.writerow(['OUTFLOW', 'GROUNDWATER', 'Utilized', 0.])
+writer.writerow(['OUTFLOW', 'OTHER', 'Non-utilizable', '{0}'.format(results['non_utilizable_outflow'])])
+writer.writerow(['OUTFLOW', 'OTHER', 'Other', '{0}'.format(results['other'])])
+writer.writerow(['OUTFLOW', 'RESERVED', 'Commited', '{0}'.format(results['reserved_outflow_actual'])]) 
+writer.writerow(['OUTFLOW', 'RESERVED', 'Navigational', 0.]) 
+writer.writerow(['OUTFLOW', 'RESERVED', 'Environmental', 0.]) 
+```
+
+#### Sheet 2
+
+`create_sheet2_csv()`
+
+  - _LAND_USE_,
+  - _CLASS_,
+  - _TRANSPIRATION_,
+  - _WATER_,
+  - _SOIL_,
+  - _INTERCEPTION_,
+  - _AGRICULTURE_,
+  - _ENVIRONMENT_,
+  - _ECONOMY_,
+  - _ENERGY_,
+  - _LEISURE_,
+  - _NON_BENEFICIAL_,
+
+```Python
+first_row = ['LAND_USE', 'CLASS', 'TRANSPIRATION', 'WATER', 'SOIL', 'INTERCEPTION', 'AGRICULTURE', 'ENVIRONMENT', 'ECONOMY', 'ENERGY', 'LEISURE', 'NON_BENEFICIAL']
+
+# Calculate evaporation.
+E = ET - T - I
+
+# Write data to csv-file.
+for LAND_USE in classes_dict.keys():
+    for CLASS in classes_dict[LAND_USE].keys():
+        write_sheet2_row(LAND_USE, CLASS, lulc_dict, classes_dict, LULC, T, I, E, writer)
+```
+
+#### Sheet 3
+
+**Sheet 3a**
+
+`create_sheet3_csv()`
+
+  - _USE_
+  - _CLASS_
+  - _SUBCLASS_
+  - _TYPE_
+  - _SUBTYPE_
+  - _WATER_CONSUMPTION_
+
+```Python
+first_row_a = ["USE","CLASS","SUBCLASS","TYPE","SUBTYPE","WATER_CONSUMPTION"]
+
+for TYPE in wp_y_rainfed_dictionary.keys():
+    for SUBTYPE in wp_y_rainfed_dictionary[TYPE].keys():
+        writer_a.writerow(["CROP","RAINFED","ET",TYPE,SUBTYPE,"nan"])
+for TYPE in wp_y_irrigated_dictionary.keys():
+    for SUBTYPE in wp_y_irrigated_dictionary[TYPE].keys():
+        writer_a.writerow(["CROP","IRRIGATED","ET rainfall",TYPE,SUBTYPE,"nan"])
+        writer_a.writerow(["CROP","IRRIGATED","Incremental ET",TYPE,SUBTYPE,"nan"])
+
+for TYPE in wp_y_non_crop_dictionary.keys():
+    for SUBTYPE in wp_y_non_crop_dictionary[TYPE].keys():
+        writer_a.writerow(["NON-CROP","RAINFED","ET",TYPE,SUBTYPE,"nan"])
+        writer_a.writerow(["NON-CROP","IRRIGATED","ET rainfall",TYPE,SUBTYPE,"nan"])
+        writer_a.writerow(["NON-CROP","IRRIGATED","Incremental ET",TYPE,SUBTYPE,"nan"])
+```
+
+**Sheet 3b**
+
+`create_sheet3_csv()`
+
+  - _USE_
+  - _CLASS_
+  - _SUBCLASS_
+  - _TYPE_
+  - _SUBTYPE_
+  - _LAND_PRODUCTIVITY_
+  - _WATER_PRODUCTIVITY_
+
+```Python
+first_row_b = ["USE","CLASS","SUBCLASS","TYPE","SUBTYPE","LAND_PRODUCTIVITY","WATER_PRODUCTIVITY"]
+
+for TYPE in wp_y_rainfed_dictionary.keys():
+    for SUBTYPE in wp_y_rainfed_dictionary[TYPE].keys():
+        writer_b.writerow(["CROP","RAINFED","Yield",TYPE,SUBTYPE,"nan","nan"])
+for TYPE in wp_y_irrigated_dictionary.keys():
+    for SUBTYPE in wp_y_irrigated_dictionary[TYPE].keys():
+        writer_b.writerow(["CROP","IRRIGATED","Yield rainfall",TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["CROP","IRRIGATED","Incremental yield",TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["CROP","IRRIGATED","Total yield",TYPE,SUBTYPE,"nan","nan"])
+
+for TYPE in wp_y_non_crop_dictionary.keys():
+    for SUBTYPE in wp_y_non_crop_dictionary[TYPE].keys():
+        writer_b.writerow(["NON-CROP","RAINFED","Yield",TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["NON-CROP","IRRIGATED","Yield rainfall",TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["NON-CROP","IRRIGATED","Incremental yield",TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["NON-CROP","IRRIGATED","Total yield",TYPE,SUBTYPE,"nan","nan"])
+```
+
+#### Sheet 4 & Sheet 6
+
+**Sheet 4**
+
+`create_sheet4_6()`
 
   - _SUPPLY_SURFACEWATER_, `supply_sw_tif`
   - _SUPPLY_GROUNDWATER_, `supply_gw_tif`
@@ -223,5 +371,124 @@ data = {
   - _NON_RECOVERABLE_GROUNDWATER_, `non_recov_gw_tif`
   - _DEMAND_, `demand_tif`
 
+`create_sheet4_csv()`
+
+```Python
+required_landuse_types = ['Wetlands','Greenhouses','Rainfed Crops','Residential','Industry','Natural Grasslands',
+                          'Forests','Shrubland','Managed water bodies','Other (Non-Manmade)','Aquaculture',
+                          'Power and Energy',
+                          'Forest Plantations', 'Irrigated crops','Other','Natural Water Bodies']
+
+first_row = ['LANDUSE_TYPE'] + results.keys()
+
+for flow in results.keys():
+    row.append(results[flow][lu_type] * convert_unit)
+writer.writerow(row)
+
+```
+
+**Sheet 6**
+
+`create_sheet4_6()`
+
+  - _VERTICAL_RECHARGE_, `recharge_tif`
+  - _VERTICAL_GROUNDWATER_WITHDRAWALS_, `supply_gw_tif`
+  - _RETURN_FLOW_GROUNDWATER_, `return_flow_gw_gw_tif`
+  - _RETURN_FLOW_SURFACEWATER_, `return_flow_sw_gw_tif`
+
+  - _CapillaryRise_, `capillaryrise`
+  - _DeltaS_, `'nan'`
+  - _ManagedAquiferRecharge_, `'nan'`
+  - _Baseflow_, `baseflow`
+  - _GWInflow_, `'nan'`
+  - _GWOutflow_, `'nan'`
+
+`create_sheet6_csv()`
+
+```Python
+required_landuse_types = ['Wetlands','Greenhouses','Rainfed Crops','Residential','Industry','Natural Grasslands',
+                          'Forests','Shrubland','Managed water bodies','Other (Non-Manmade)','Aquaculture',
+                          'Forest Plantations', 'Irrigated crops','Other','Natural Water Bodies',
+                          'Glaciers']
+
+first_row = ['LANDUSE_TYPE'] + results.keys()
+
+for flow in results.keys():
+    row.append(results[flow][lu_type] * convert_unit)
+writer.writerow(row)
+```
+
+#### Sheet 5
+
+`create_csv()`
+
+  - _SUBBASIN_
+  - _VARIABLE_
+  - _VALUE_
+  - _UNITS_
+
+```Python
+first_row = ['SUBBASIN', 'VARIABLE', 'VALUE', 'UNITS']
+
+for sb in results['surf_runoff'].keys():
+    writer.writerow([sb, 'Inflow', '{0}'.format(results['inflows'][sb]), 'km3'])
+    for lu_class in ['PROTECTED', 'UTILIZED', 'MODIFIED', 'MANAGED']:
+        writer.writerow([sb, 'Fast Runoff: '+lu_class, '{0}'.format(results['surf_runoff'][sb][lu_class]), 'km3'])
+        writer.writerow([sb, 'Slow Runoff: ' +lu_class, '{0}'.format(results['base_runoff'][sb][lu_class]), 'km3'])
+    writer.writerow([sb, 'Total Runoff', '{0}'.format(results['total_runoff'][sb]), 'km3'])
+    writer.writerow([sb, 'SW withdr. manmade', '{0}'.format(results['withdrawls'][sb]['man']), 'km3'])
+    writer.writerow([sb, 'SW withdr. natural', '{0}'.format(results['withdrawls'][sb]['natural']), 'km3'])
+    writer.writerow([sb, 'SW withdr. total', '{0}'.format(results['withdrawls'][sb]['man']+results['withdrawls'][sb]['natural']), 'km3'])
+    writer.writerow([sb, 'Return Flow SW', '{0}'.format(results['return_sw_sw'][sb]), 'km3'])
+    writer.writerow([sb, 'Return Flow GW', '{0}'.format(results['return_gw_sw'][sb]), 'km3'])
+    writer.writerow([sb, 'Total Return Flow', '{0}'.format(results['return_sw_sw'][sb]+results['return_gw_sw'][sb]), 'km3'])
+    writer.writerow([sb, 'Outflow: Total', '{0}'.format(results['total_outflow'][sb]), 'km3'])
+    writer.writerow([sb, 'Outflow: Committed', '{0}'.format(results['committed_outflow'][sb]), 'km3'])
+    writer.writerow([sb, 'Outflow: Non Recoverable', '{0}'.format(results['non_recoverable_outflow'][sb]), 'km3'])
+    writer.writerow([sb, 'Outflow: Non Utilizable', '{0}'.format(results['non_utilizable_outflow'][sb]), 'km3'])
+    writer.writerow([sb, 'Outflow: Utilizable', '{0}'.format(results['utilizable_outflow'][sb]), 'km3'])
+    writer.writerow([sb,'Interbasin Transfer','{0}'.format(results['interbasin_transfers'][sb]),'km3'])
+    writer.writerow([sb, 'SW storage change', '{0}'.format(results['deltaS'][sb]), 'km3'])
+```
+
+#### Sheet 7
+
+`create_csv()`
+
+  - _LAND_USE_
+  - _VARIABLE_
+  - _SERVICE_
+  - _VALUE_
+  - _UNITS_
+
+```Python
+first_row = ['LAND_USE', 'VARIABLE', 'SERVICE', 'VALUE', 'UNITS']
+
+for lu_class in ['PROTECTED', 'UTILIZED', 'MODIFIED', 'MANAGED']:
+    writer.writerow([lu_class, 'Total Runoff', 'Non-consumptive',
+                     '{0:.3f}'.format(results['tot_runoff'][lu_class]), 'km3'])
+    writer.writerow([lu_class, 'Groundwater Recharge', 'Non-consumptive',
+                     '{0:.3f}'.format(results['gw_rech'][lu_class]), 'km3'])
+#    writer.writerow(['PROTECTED','Natural water storage in lakes', 'Non-consumptive',  '{0:.2f}'.format(results['nat_stor']),'km3'])
+#    writer.writerow(['PROTECTED','Inland Capture Fishery', 'Non-consumptive', '{0:.2f}'.format(results['fish']),'t'])
+    writer.writerow([lu_class, 'Natural Feed Production', 'Incremental ET natural',
+                     '{0:.3f}'.format(results['feed_incremental'][lu_class]), 't'])
+    writer.writerow([lu_class, 'Natural Feed Production', 'Landscape ET',
+                     '{0:.3f}'.format(results['feed_landscape'][lu_class]), 't'])
+    writer.writerow([lu_class, 'Natural Fuel Wood Production', 'Incremental ET natural',
+                     '{0:.3f}'.format(results['fuel_incremental'][lu_class]), 't'])
+    writer.writerow([lu_class, 'Natural Fuel Wood Production', 'Landscape ET',
+                     '{0:.3f}'.format(results['fuel_landscape'][lu_class]), 't'])
+    writer.writerow([lu_class, 'Dry Season Baseflow', 'Non-consumptive',
+                     '{0:.3f}'.format(results['baseflow'][lu_class]), 'km3'])
+#    writer.writerow(['PROTECTED','Groundwater Recharge', 'SURFACE WATER', 'Flood', 0.])
+    writer.writerow([lu_class, 'Root Zone Water Storage', 'Non-consumptive',
+                     '{0:.3f}'.format(results['root_storage'][lu_class]), 'km3'])
+    writer.writerow([lu_class, 'Atmospheric Water Recycling', 'Incremental ET natural',
+                     '{0:.3f}'.format(results['atm_recycl_incremental'][lu_class]),'km3'])
+    writer.writerow([lu_class, 'Atmospheric Water Recycling', 'Landscape ET',
+                     '{0:.3f}'.format(results['atm_recycl_landscape'][lu_class]),'km3'])
+
+```
 
 # [Examples](examples/README.md#Data)
