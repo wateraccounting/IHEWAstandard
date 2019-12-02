@@ -1,35 +1,6 @@
 accounts:
-  NASA:
-    username: ''
-    password: ''
-    apitoken: ''
+  FTP_WA_GUESS:                                                                     # 'account'
+    username: 'wateraccountingguest'                                                #   username
+    password: 'W@t3r@ccounting'                                                     #   password
+    apitoken: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'                        #   API token
 
-  GLEAM:
-    username: ''
-    password: ''
-    apitoken: ''
-
-  FTP_WA:
-    username: ''
-    password: ''
-    apitoken: ''
-
-  FTP_WA_GUESS:
-    username: 'wateraccountingguest'
-    password: 'W@t3r@ccounting'
-    apitoken: ''
-
-  MSWEP:
-    username: ''
-    password: ''
-    apitoken: ''
-
-  Copernicus:
-    username: ''
-    password: ''
-    apitoken: ''
-
-  VITO:
-    username: ''
-    password: ''
-    apitoken: ''

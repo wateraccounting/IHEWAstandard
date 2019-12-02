@@ -4,59 +4,59 @@ messages:
     level: 0
 
 products:
-  ALEXI:
-    account: 'FTP_WA'
-    meta:
-      owner: 'IHE Delft'
-      description:
-        'Product description'
-      websites: ['https://www.wateraccounting.org']
-      protocols: ['FTP']
-      methods: ['ftp']
-      ftypes: ['gz']
-      versions: ['v1']
-      datasets: ['Evaporation']
-      datatypes: ['daily', 'weekly']
-      projection: ['WGS84']
-    v1:
-      Evaporation:
-        daily:
-          url: 'ftp://ftp.wateraccounting.unesco-ihe.org'
-          method: 'get'
-          freq: 'D'
-          variables:
-            ETa:
-              name: 'Daily Evaporation'
-              description:
-                ''
-              dir: '/WaterAccounting/Data_Satellite/Evaporation/ALEXI/World_05182018/'
-              fname:
-                r: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat.gz'
-                t: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat'
-                l: 'ETa-ALEXI_v1_mmpd_daily-{Y:>04s}_{m:>02s}_{d:>02s}.tif'
-              ftype:
-                r: 'gz'
-                t: 'dat'
-                l: 'GTiff'
-              dtype:
-                r: 'binary'
-                t: 'float32'
-                l: 'float32'
-              unit:
-                f: 'MJ/m2d'
-                t: 'mm/d'
-                m: 2.45
-              lat:
-                s: -60.0
-                n: 70.0
-                r: 0.05
-              lon:
-                w: -180.0
-                e: 180.0
-                r: 0.05
-              time:
-                s: 2005-01-01
-                e: 2016-12-31
-              dem:
-                w: -9999
-                h: -9999
+  ALEXI:                                                                            # `product`
+    account: 'FTP_WA'                                                               # accounts.yml
+    meta:                                                                           # product metadata
+      owner: 'IHE Delft'                                                            #   product owner/developer/maintainer...
+      description:                                                                  #   description
+        'Product description'                                                       #   
+      websites: ['https://www.wateraccounting.org']                                 #   official websites
+      protocols: ['FTP']                                                            #   web protocols, ex. HTTP/HTTPS...
+      methods: ['ftp']                                                              #   dependency (python) used to download 
+      ftypes: ['gz', 'GTiff']                                                       #   hosted file types
+      versions: ['v1']                                                              #   version list
+      datasets: ['Evaporation']                                                     #   datasets
+      datatypes: ['daily', 'weekly']                                                #   temporal/spacial resolution
+      projection: ['EPSG:4326 - WGS 84 - Geographic']                               #   EPSG Geodetic Parameter Dataset of Coordinate Reference Systems (crs)
+    v1:                                                                             # `product.version`
+      Evaporation:                                                                  # `product.version.parameter`
+        daily:                                                                      # `product.version.parameter.resolution`
+          url: 'ftp://ftp.wateraccounting.unesco-ihe.org'                           #   data potal/repository url
+          method: 'get'                                                             #   request methods [get, post, ...]
+          freq: 'D'                                                                 #   `resolution` short name, follow pandas.datetime
+          variables:                                                                #
+            ETa:                                                                    # `product.version.parameter.resolution.variable`
+              name: 'Daily Evaporation'                                             #   long name 
+              description:                                                          #   description
+                ''                                                                  # 
+              dir: '/WaterAccounting/Data_Satellite/Evaporation/ALEXI/'             #   data location on the data potal/repository
+              fname:                                                                #   file name
+                r: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat.gz'                             #     remote file,            string, template
+                t: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat'                                #     temporary file,         string, template
+                l: 'ETa-ALEXI_v1_mmpd_daily-{Y:>04s}_{m:>02s}_{d:>02s}.tif'         #     local/downloaded file,  string, template
+              ftype:                                                                #   file type/extension
+                r: 'gz'                                                             #     remote file,            string
+                t: 'dat'                                                            #     temporary file,         string
+                l: 'GTiff'                                                          #     local/downloaded file,  string
+              dtype:                                                                #   data type
+                r: 'binary'                                                         #     remote file,            string, numpy style
+                t: 'float32'                                                        #     temporary file,         string, numpy style
+                l: 'float32'                                                        #     local/downloaded file,  string, numpy style
+              unit:                                                                 #   data unit
+                r: 'MJ/m2d'                                                         #     remote file,            string
+                l: 'mm/d'                                                           #     local/downloaded file,  string
+                m: 2.45                                                             #     multiplyer,             float
+              lat:                                                                  #   latitude
+                s: -60.0                                                            #     south,                  float
+                n: 70.0                                                             #     north,                  float
+                r: 0.05                                                             #     resolution,             float
+              lon:                                                                  #   longitude
+                w: -180.0                                                           #     west,                   float
+                e: 180.0                                                            #     east,                   float
+                r: 0.05                                                             #     resolution,             float
+              time:                                                                 #   time
+                s: 2005-01-01                                                       #     start,                  string, 'yyyy-mm-dd'
+                e: 2016-12-31                                                       #     end,                    string, 'yyyy-mm-dd'
+              dem:                                                                  #   demension
+                w: -9999                                                            #     width,                  integer
+                h: -9999                                                            #     height,                 integer

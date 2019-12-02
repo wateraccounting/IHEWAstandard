@@ -5,7 +5,15 @@ Define the **Configuration.IHEWAcollect standard** of WaterAccounting Tools.
 
 ## IHEWAcollect.accounts.yaml
 
-Accounts configuration Yaml file, contains 
+Accounts configuration Yaml file, contains
+
+```Yaml
+accounts:
+  FTP_WA_GUESS:
+    username: 'wateraccountingguest'
+    password: 'W@t3r@ccounting'
+    apitoken: ''
+```
 
 
 ## IHEWAcollect.base.yaml
@@ -47,7 +55,7 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 ```
 
 
-### Data types
+### Resolution types
 
 #### Temporal Resolution
 
@@ -91,9 +99,11 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | ECMWF      | ecmwfapi (ecmwf-api-client) |
 
 
-### File types, `Driver.FileExtension`
+### File types
 
-#### File
+`Driver.FileExtension`
+
+#### File name
 
 | Name       | Description                                           |
 | ---------: |------------------------------------------------------ |
@@ -101,7 +111,7 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | tmpfile    | generated to `./temporary/`, to be deleted at the end |
 | locfile    | saved to `./download/`                                |
 
-#### Driver
+#### File driver
 
 | Ext               | File type        | GDAL Drivers                                                        |
 | ----------------: | ---------------- | ------------------------------------------------------------------- |
@@ -117,18 +127,4 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
 
 
-### Numeric types
-
-  * [Python](https://docs.python.org/3/library/stdtypes.html)
-    * Text Type      : `str`
-    * Numeric Types  : `int`, `float`, `complex`
-    * Sequence Types : `list`, `tuple`, `range`
-    * Mapping Type   : `dict`
-    * Set Types      : `set`, `frozenset`
-    * Boolean Type   : `bool`
-    * Binary Types   : `bytes`
-  * [Numpy](https://docs.scipy.org/doc/numpy/user/basics.types.html)
-  * [NetCDF](https://www.unidata.ucar.edu/software/netcdf/docs/data_type.html)
-
-
-# [examples](examples/README.md)
+# [Examples](examples/README.md#IHEWAcollect)
