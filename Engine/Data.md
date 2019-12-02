@@ -309,17 +309,17 @@ first_row_a = ["USE","CLASS","SUBCLASS","TYPE","SUBTYPE","WATER_CONSUMPTION"]
 
 for TYPE in wp_y_rainfed_dictionary.keys():
     for SUBTYPE in wp_y_rainfed_dictionary[TYPE].keys():
-        writer_a.writerow(["CROP","RAINFED",    "ET",            TYPE,SUBTYPE,"nan"])
+        writer_a.writerow(["CROP",      "RAINFED",    "ET",            TYPE,SUBTYPE,"nan"])
 for TYPE in wp_y_irrigated_dictionary.keys():
     for SUBTYPE in wp_y_irrigated_dictionary[TYPE].keys():
-        writer_a.writerow(["CROP","IRRIGATED",  "ET rainfall",   TYPE,SUBTYPE,"nan"])
-        writer_a.writerow(["CROP","IRRIGATED",  "Incremental ET",TYPE,SUBTYPE,"nan"])
+        writer_a.writerow(["CROP",      "IRRIGATED",  "ET rainfall",   TYPE,SUBTYPE,"nan"])
+        writer_a.writerow(["CROP",      "IRRIGATED",  "Incremental ET",TYPE,SUBTYPE,"nan"])
 
 for TYPE in wp_y_non_crop_dictionary.keys():
     for SUBTYPE in wp_y_non_crop_dictionary[TYPE].keys():
-        writer_a.writerow(["NON-CROP","RAINFED",    "ET",            TYPE,SUBTYPE,"nan"])
-        writer_a.writerow(["NON-CROP","IRRIGATED",  "ET rainfall",   TYPE,SUBTYPE,"nan"])
-        writer_a.writerow(["NON-CROP","IRRIGATED",  "Incremental ET",TYPE,SUBTYPE,"nan"])
+        writer_a.writerow(["NON-CROP",  "RAINFED",    "ET",            TYPE,SUBTYPE,"nan"])
+        writer_a.writerow(["NON-CROP",  "IRRIGATED",  "ET rainfall",   TYPE,SUBTYPE,"nan"])
+        writer_a.writerow(["NON-CROP",  "IRRIGATED",  "Incremental ET",TYPE,SUBTYPE,"nan"])
 ```
 
 **Sheet 3b**
@@ -339,19 +339,19 @@ first_row_b = ["USE","CLASS","SUBCLASS","TYPE","SUBTYPE","LAND_PRODUCTIVITY","WA
 
 for TYPE in wp_y_rainfed_dictionary.keys():
     for SUBTYPE in wp_y_rainfed_dictionary[TYPE].keys():
-        writer_b.writerow(["CROP","RAINFED",    "Yield",            TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["CROP",      "RAINFED",    "Yield",            TYPE,SUBTYPE,"nan","nan"])
 for TYPE in wp_y_irrigated_dictionary.keys():
     for SUBTYPE in wp_y_irrigated_dictionary[TYPE].keys():
-        writer_b.writerow(["CROP","IRRIGATED",  "Yield rainfall",   TYPE,SUBTYPE,"nan","nan"])
-        writer_b.writerow(["CROP","IRRIGATED",  "Incremental yield",TYPE,SUBTYPE,"nan","nan"])
-        writer_b.writerow(["CROP","IRRIGATED    ","Total yield",    TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["CROP",      "IRRIGATED",  "Yield rainfall",   TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["CROP",      "IRRIGATED",  "Incremental yield",TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["CROP",      "IRRIGATED    ","Total yield",    TYPE,SUBTYPE,"nan","nan"])
 
 for TYPE in wp_y_non_crop_dictionary.keys():
     for SUBTYPE in wp_y_non_crop_dictionary[TYPE].keys():
-        writer_b.writerow(["NON-CROP","RAINFED",    "Yield",            TYPE,SUBTYPE,"nan","nan"])
-        writer_b.writerow(["NON-CROP","IRRIGATED",  "Yield rainfall",   TYPE,SUBTYPE,"nan","nan"])
-        writer_b.writerow(["NON-CROP","IRRIGATED",  "Incremental yield",TYPE,SUBTYPE,"nan","nan"])
-        writer_b.writerow(["NON-CROP","IRRIGATED",  "Total yield",      TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["NON-CROP",  "RAINFED",    "Yield",            TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["NON-CROP",  "IRRIGATED",  "Yield rainfall",   TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["NON-CROP",  "IRRIGATED",  "Incremental yield",TYPE,SUBTYPE,"nan","nan"])
+        writer_b.writerow(["NON-CROP",  "IRRIGATED",  "Total yield",      TYPE,SUBTYPE,"nan","nan"])
 ```
 
 #### Sheet 4 & Sheet 6
