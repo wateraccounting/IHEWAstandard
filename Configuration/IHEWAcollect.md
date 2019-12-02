@@ -51,15 +51,20 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 
 #### Temporal Resolution
 
-| Short   | Long       | Description |
-| ------: |----------- | ----------- |
-|         | six_hourly |             |
-| D       | daily      |             |
-| 7D      | weekly     |             |
-| 10D     | dekadal    |             |
-| MD      | monthly    |             |
-|         | pentadal   |             |
-| Y       | yearly     |             |
+[datetime format codes](https://docs.python.org/3.7/library/datetime.html#strftime-and-strptime-behavior)
+
+[pandas DateOffset](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects)
+
+| Name        | datetime | pandas   |
+| ----------: | -------- | -------- |
+| hourly      | %H       | H        |
+| six_hourly  |          | 6H       |
+| daily       | %d       | D        |
+| weekly      | %W / %U  | 7D       |
+| dekadal     |          | 10D      |
+| monthly     | %m       | MD       |
+| pentadal    |          |          |
+| yearly      | %Y       | Y        |
 
 #### Spatial Resolution
   
@@ -92,9 +97,9 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 
 | Name       | Description                                           |
 | ---------: |------------------------------------------------------ |
-| rmtfile    | downloaded to `./download/`                           |
+| rmtfile    | downloaded to `./remote/`                             |
 | tmpfile    | generated to `./temporary/`, to be deleted at the end |
-| locfile    | saved to `./`                                         |
+| locfile    | saved to `./download/`                                |
 
 #### Driver
 
