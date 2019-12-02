@@ -2,5 +2,5 @@ accounts:
   FTP_WA_GUESS:                                                                     # 'account'
     username: 'wateraccountingguest'                                                #   username
     password: 'W@t3r@ccounting'                                                     #   password
-    apitoken: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'                        #   API token
+    apitoken: ''                                                                    #   API token
 
