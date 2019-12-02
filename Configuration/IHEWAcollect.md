@@ -12,7 +12,7 @@ accounts:
   FTP_WA_GUESS:
     username: 'wateraccountingguest'
     password: 'W@t3r@ccounting'
-    apitoken: ''
+    apitoken: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 ```
 
 
@@ -22,14 +22,14 @@ Base configuration Yaml file, contains `messages` and `products`.
 
 ### None value
 
-`null`: 
+YAML string '`null`' applyed to: 
 
-  * account
+  * `account`
   * data
-    * ftype
-    * freq
-    * unit
-    * time
+    * `ftype`
+    * `freq`
+    * `unit`
+    * `time`
 
 
 ### Name
