@@ -36,18 +36,17 @@ Example from WaterPix.
 
 #### Dimensions
 
-Monthly: **('time_yyyymm', 'latitude', 'longitude')**
+  - Monthly, **('time_yyyymm', 'latitude', 'longitude')**
+  - Yearly, **('time_yyyy', 'latitude', 'longitude')**
 
-Yearly: **('time_yyyy', 'latitude', 'longitude')**
-
+```Python
+lat_dim  = out_nc.createDimension(inp_lat.standard_name, lat_n)
+lon_dim  = out_nc.createDimension(inp_lon.standard_name, lon_n)
+time_dim = out_nc.createDimension('time_yyyymm',         time_n)
+year_dim = out_nc.createDimension('time_yyyy',           years_n)
+```
 
 #### Coordinates
-
-  - `lat_dim` = out_nc.createDimension(**`inp_lat.standard_name`**, `lat_n`)
-  - `lon_dim` = out_nc.createDimension(**`inp_lon.standard_name`**, `lon_n`)
-  - `time_dim` = out_nc.createDimension('**time_yyyymm**', `time_n`)
-  - `year_dim` = out_nc.createDimension('**time_yyyy**', `years_n`)
-
 
   - _Reference system_, `crs_var`, **inp_crs.standard_name**, '`i`'
     - crs_var.standard_name
