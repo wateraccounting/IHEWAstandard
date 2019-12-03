@@ -10,9 +10,9 @@ Example from WaterPix.
 
 #### Dimensions
 
-#### Variables of Dimension
+#### Coordinates
 
-#### Variables of Data
+#### Data variables
 
   - `inp_crs` = ncv['**crs**']
   - `inp_lat` = ncv['**latitude**']
@@ -36,12 +36,18 @@ Example from WaterPix.
 
 #### Dimensions
 
-  - `lat_dim` = out_nc.createDimension(**inp_lat.standard_name**, `lat_n`)
-  - `lon_dim` = out_nc.createDimension(**inp_lon.standard_name**, `lon_n`)
+Monthly: **('time_yyyymm', 'latitude', 'longitude')**
+
+Yearly: **('time_yyyy', 'latitude', 'longitude')**
+
+
+#### Coordinates
+
+  - `lat_dim` = out_nc.createDimension(**`inp_lat.standard_name`**, `lat_n`)
+  - `lon_dim` = out_nc.createDimension(**`inp_lon.standard_name`**, `lon_n`)
   - `time_dim` = out_nc.createDimension('**time_yyyymm**', `time_n`)
   - `year_dim` = out_nc.createDimension('**time_yyyy**', `years_n`)
 
-#### Variables of Dimension
 
   - _Reference system_, `crs_var`, **inp_crs.standard_name**, '`i`'
     - crs_var.standard_name
@@ -60,11 +66,7 @@ Example from WaterPix.
     - year_var.standard_name = 'time_yyyy'
     - year_var.format = 'yyyy'
 
-#### Variables of Data 
-
-Monthly: **('time_yyyymm', 'latitude', 'longitude')**
-
-Yearly: **('time_yyyy', 'latitude', 'longitude')**
+#### Data variables 
 
   - _Surface runoff_
     - monthly, **SurfaceRunoff_M**, `ss_var`, _`mm/month`_
