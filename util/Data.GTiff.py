@@ -9,7 +9,8 @@ except ImportError:
     import gdal
     import osr
     import gdalconst
-
+print(os.environ["GDAL_DATA"])
+print(os.environ["GDAL_DRIVER_PATH"])
 
 # print(os.getcwd())
 # print(os.path.dirname(os.path.abspath(__file__)))
@@ -49,12 +50,16 @@ outRaster.SetGeoTransform((originX, pixelWidth, 0, originY, 0, pixelHeight))
 outband = outRaster.GetRasterBand(band)
 outband.WriteArray(array)
 
-# outRasterSRS = osr.SpatialReference()
-# outRasterSRS.ImportFromEPSG(4326)
-# outRaster.SetProjection(outRasterSRS.ExportToWkt())
+outRasterSRS = osr.SpatialReference()
+# GDAL 2.3.3, released 2018/12/14
+print(outRasterSRS.ImportFromEPSG(4326))            # return 7, ERROR 6: EPSG PCS/GCS code 4326 not found in EPSG support files.
+print(outRasterSRS.SetWellKnownGeogCS("WGS84"))     # return 0
+print(outRasterSRS.SetWellKnownGeogCS("EPSG:4326")) # return 7, ERROR 6: EPSG PCS/GCS code 4326 not found in EPSG support files.
+outRaster.SetProjection(outRasterSRS.ExportToWkt())
 
 outband.FlushCache()
-outRaster = None
+outband         = None
+outRaster       = None
 
 fp = gdal.Open(file)
 ds = fp.GetRasterBand(band).ReadAsArray()
