@@ -115,7 +115,9 @@ Template:
 
 ### Data variables
 
-#### Coordinate Reference System, **DO NOT CHANGE 'crs'!**
+#### Coordinate Reference System
+
+> **DO NOT CHANGE 'crs'!**
 
 Template:
 
@@ -159,8 +161,10 @@ Template:
 Some templates and standards can be found in 
 [IHEWAstandard/resources/Products.xlsx](https://github.com/wateraccounting/IHEWAstandard/tree/master/resources).
 
-[Archived Engine.Data.Engine1](./Archived-Data.md#engine-1)
-[Archived Engine.Data.Engine2](./Archived-Data.md#engine-2)
+Archived Data
+
+  - [Archived Engine.Data.Engine1](./Archived-Data.md#engine-1)
+  - [Archived Engine.Data.Engine2](./Archived-Data.md#engine-2)
 
 | Variable Name/Code | Standard Name | units | Description |
 | -----------------: | ------------- | ----- | ----------- |
