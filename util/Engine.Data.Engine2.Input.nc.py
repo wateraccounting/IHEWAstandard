@@ -197,6 +197,370 @@ ds = xr.Dataset.from_dict(
                         ],
                         dtype=ds_data_vars_dtype
                 )
+        },
+        'ret': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Reference EvapoTranspiration',
+                        'long_name':     'Reference EvapoTranspiration',
+                        'temp_res':      'day',
+                        'units':         'mm',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'bet': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Blue EvapoTranspiration',
+                        'long_name':     'Blue EvapoTranspiration',
+                        'temp_res':      'day',
+                        'units':         'mm',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'get': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Green EvapoTranspiration',
+                        'long_name':     'Green EvapoTranspiration',
+                        'temp_res':      'day',
+                        'units':         'mm',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'et': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'EvapoTranspiration',
+                        'long_name':     'EvapoTranspiration',
+                        'temp_res':      'day',
+                        'units':         'mm',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'n': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Rainy Days',
+                        'long_name':     'Rainy Days',
+                        'temp_res':      'day',
+                        'units':         '',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'ndm': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'National Drought Model',
+                        'long_name':     'National Drought Model',
+                        'temp_res':      'day',
+                        'units':         '',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'lai': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Leaf Area Index',
+                        'long_name':     'Leaf Area Index',
+                        'temp_res':      'day',
+                        'units':         '',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'bf': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Baseflow',
+                        'long_name':     'Baseflow',
+                        'temp_res':      'day',
+                        'units':         '',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'sr': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Surface Runoff',
+                        'long_name':     'Surface Runoff',
+                        'temp_res':      'day',
+                        'units':         '',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'dro': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Incremental Runoff',
+                        'long_name':     'Incremental Runoff',
+                        'temp_res':      'day',
+                        'units':         '',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'tr': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Total Runoff',
+                        'long_name':     'Total Runoff',
+                        'temp_res':      'day',
+                        'units':         '',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'perc': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Percolation',
+                        'long_name':     'Percolation',
+                        'temp_res':      'day',
+                        'units':         '',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'dperc': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Incremental Percolation',
+                        'long_name':     'Incremental Percolation',
+                        'temp_res':      'day',
+                        'units':         '',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'supply': {
+                'dims': ('time', 'y', 'x'),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Supply',
+                        'long_name':     'Supply',
+                        'temp_res':      'day',
+                        'units':         '',
+                        'from':          'WaterPix'
+                },
+                'data': np.array(
+                        [
+                            [
+                                [1, 2],
+                                [3, 4],
+                                [5, 6]
+                            ],
+                            [
+                                [10, 20],
+                                [30, 40],
+                                [50, 60]
+                            ]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
         }
     }
 })
