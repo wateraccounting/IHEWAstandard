@@ -3,10 +3,10 @@
 Define the **standard** of WaterAccounting Tools.
 
 
-## [Architecture](./Architecture/README.md)
+## [Architecture](./Architecture)
 
 
-## [Configuration](./Configuration/README.md)
+## [Configuration](./Configuration)
 
 ### [IHEWAcollect](./Configuration/IHEWAcollect.md)
 
@@ -15,7 +15,7 @@ Define the **standard** of WaterAccounting Tools.
 [accounts.yaml](./Configuration/IHEWAcollect.md#ihewacollectaccountsyaml)
 
 
-## [Data](./Data/README.md)
+## [Data](./Data)
 
 [Data Types Convertion, (C, Python, Numpy, NetCDF)](./Data/README.md#data-types-convertion-c-python-numpy-netcdf)
 
@@ -28,7 +28,7 @@ Define the **standard** of WaterAccounting Tools.
 ### [SVG](./Data/SVG.md)
 
 
-## [Engine](./Engine/README.md)
+## [Engine](./Engine)
 
 ### [API](./Engine/API.md)
 
@@ -39,7 +39,7 @@ Define the **standard** of WaterAccounting Tools.
 [Engine 2](./Engine/Data.md#engine-2)
 
 
-## [resources](https://github.com/wateraccounting/IHEWAstandard/tree/master/resources)
+## [resources](./resources)
 
 
-## [util](https://github.com/wateraccounting/IHEWAstandard/tree/master/util)
+## [util](./util)
