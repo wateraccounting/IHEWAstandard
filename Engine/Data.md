@@ -23,7 +23,7 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 | -----------------------: | ------------------------------------------------------------------ | ------- |
 | Engine2.Input.Day.nc     | `EngineNumber`.`Input/Output`.`TemporalResolution`.`FileExtension` |         |
 
-The following template use 'day' as temporal resolution.
+> The following template use '**day**' as temporal resolution.
 
 ### Attributes/Metadata
 
