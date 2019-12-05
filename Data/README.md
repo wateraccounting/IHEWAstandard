@@ -2,7 +2,7 @@
 
 Define the **Data standard** of WaterAccounting Tools.
 
-  - [OGC Standard](https://www.opengeospatial.org/standards)
+[OGC Standard](https://www.opengeospatial.org/standards)
 
 
 ## [GTiff](./GTiff.md)
@@ -15,7 +15,6 @@ Define the **Data standard** of WaterAccounting Tools.
 
 
 ## Note
-
 
 ### Data Types Convertion, (C, Python, Numpy, NetCDF)
 
@@ -37,7 +36,6 @@ Define the **Data standard** of WaterAccounting Tools.
 | float complex  |         | complex64     |           |             |                  |      |                      |                      |
 | double complex | complex | complex128    |           |             |                  |      |                      |                      |
 |                | complex | complex\_     |           |                  |      |                      |                      |
-
 
 ### Numeric Types
 
