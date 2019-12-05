@@ -45,8 +45,8 @@ The following template use 'day' as temporal resolution.
 | CRS            | String | 'EPSG:4326 - WGS 84 - Geographic' | CRS name linked with variable 'crs'        |
 | originX        | Double | 0.0               | West                                                       |
 | originY        | Double | 20.0              | North                                                      |
-| rasterW        | Double | 10.0              | Raster Width                                                |
-| rasterH        | Double | -10.0             | Raster Height                                               |
+| rasterW        | Double | 10.0              | Raster Width,  image pixel size 10.0                       |
+| rasterH        | Double | -10.0             | Raster Height, image pixel size 10.0                       |
 
 ### Dimensions
 
@@ -63,7 +63,7 @@ Template:
 Template:
 
 ```Python
-'lon': {                                            # longitude,    np.ndarray
+'lon': {                                        # longitude,    np.ndarray
         'dims': ('y', 'x'),
         'attrs': {
                 'standard_name': 'Longitude',
@@ -80,7 +80,7 @@ Template:
                 dtype=np.float32
         )
 },
-'lat': {                                            # latitude,    np.ndarray
+'lat': {                                        # latitude,    np.ndarray
         'dims': ('y', 'x'),
         'attrs': {
                 'standard_name': 'Latitude',
@@ -97,7 +97,7 @@ Template:
                 dtype=np.float32
         )
 },
-'time': {                                           # time,        np.ndarray
+'time': {                                       # time,        np.ndarray
         'dims': ('time'),
         'attrs': {
                 'standard_name': 'time',
@@ -119,35 +119,35 @@ Template:
 Template:
 
 ```Python
-'crs': {                                            # variable short name, 'crs': 'EPSG:4326 - WGS 84 - Geographic'
+'crs': {                                        # variable short name, 'crs': 'EPSG:4326 - WGS 84 - Geographic'
         'dims': (),
         'attrs': {
-                'standard_name':                    'CRS',
-                'long_name':                        'Coordinate Reference System',
-                'grid_mapping_name':                'latitude_longitude',
+                'standard_name':                'CRS',
+                'long_name':                    'Coordinate Reference System',
+                'grid_mapping_name':            'latitude_longitude',
                 
-                'spatial_ref':                      'GEOGCS['
-                                                        'GCS_WGS_1984,'
-                                                        'DATUM['
-                                                            'WGS_1984,'
-                                                            'SPHEROID['
-                                                                'WGS_84,'
-                                                                '6378137.0,'
-                                                                '298.257223563'
-                                                            ']'
-                                                        '],'
-                                                        'PRIMEM['
-                                                            'Greenwich,'
-                                                            '0.0'
-                                                        '],'
-                                                        'UNIT['
-                                                            'Degree,'
-                                                            '0.017453292519943295'
+                'spatial_ref':                  'GEOGCS['
+                                                    'GCS_WGS_1984,'
+                                                    'DATUM['
+                                                        'WGS_1984,'
+                                                        'SPHEROID['
+                                                            'WGS_84,'
+                                                            '6378137.0,'
+                                                            '298.257223563'
                                                         ']'
-                                                    ']',
-                'longitude_of_prime_meridian':      0.0,
-                'semi_major_axis':                  6378137.0,
-                'inverse_flattening':               298.257223563
+                                                    '],'
+                                                    'PRIMEM['
+                                                        'Greenwich,'
+                                                        '0.0'
+                                                    '],'
+                                                    'UNIT['
+                                                        'Degree,'
+                                                        '0.017453292519943295'
+                                                    ']'
+                                                ']',
+                'longitude_of_prime_meridian':  0.0,
+                'semi_major_axis':              6378137.0,
+                'inverse_flattening':           298.257223563
         },
         'data': np.NaN
 }
@@ -163,21 +163,21 @@ Template:
 Template:
 
 ```Python
-'pcp': {                                            # variable short name
-        'dims': (                                   # variable dimensions
+'pcp': {                                        # variable short name
+        'dims': (                               # variable dimensions
                 'time',
                 'y',
                 'x'
         ),
-        'attrs': {                                  # variable attributes
-                'grid_mapping':  'crs',             # # 'grid_mapping' linked with variable 'crs'
+        'attrs': {                              # variable attributes
+                'grid_mapping':  'crs',         # # 'grid_mapping' linked with variable 'crs'
                 'standard_name': 'Precipitation',
                 'long_name':     'Precipitation',
                 'temp_res':      'day',
                 'units':         'mm',
                 'from':          'WaterPix'
         },
-        'data': np.array(                           # variable data, np.array(, dtype=)
+        'data': np.array(                       # variable data, np.array(, dtype=)
                 [
                     [
                         [1, 2],
