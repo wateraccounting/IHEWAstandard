@@ -2,7 +2,18 @@
 
 Define the **Data.GTiff standard** of WaterAccounting Tools.
 
+  - [Standard](#standard)
+  - [Resources](#resources)
+  - [Examples](#examples)
+
+
+## Standard
+
   - [OGC Standard, GTiff](https://www.opengeospatial.org/standards/geotiff)
+
+
+## Resources
+
   - [Tiff Code, C](https://gitlab.com/libtiff/libtiff)
 
 ```Python

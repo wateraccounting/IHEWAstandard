@@ -2,7 +2,18 @@
 
 Define the **Data.NetCDF standard** of WaterAccounting Tools.
 
+  - [Standard](#standard)
+  - [Resources](#resources)
+  - [Examples](#examples)
+
+
+## Standard
+
   - [OGC Standard, NetCDF](https://www.opengeospatial.org/standards/netcdf)
+
+
+## Resources
+
   - [NetCDF Code, C](https://github.com/Unidata/netcdf-c)
   - [NetCDF Code, Python](https://github.com/Unidata/netcdf4-python)
 

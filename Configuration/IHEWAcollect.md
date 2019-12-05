@@ -2,8 +2,17 @@
 
 Define the **Configuration.IHEWAcollect standard** of WaterAccounting Tools.
 
-  - [base.yaml](./IHEWAcollect.md#ihewacollectbaseyaml)
-  - [accounts.yaml](./IHEWAcollect.md#ihewacollectaccountsyaml)
+  - [Standard](#standard)
+  - [Resources](#resources)
+  - [IHEWAcollect.accounts.yaml](#ihewacollectaccountsyaml)
+  - [IHEWAcollect.base.yaml](#ihewacollectbaseyaml)
+  - [Examples](#examples)
+
+
+## Standard
+
+
+## Resources
 
 
 ## IHEWAcollect.accounts.yaml
