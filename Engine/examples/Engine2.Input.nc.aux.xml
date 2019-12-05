@@ -1,0 +1,82 @@
+<PAMDataset>
+  <Subdataset name="pcp">
+    <PAMDataset>
+      <PAMRasterBand band="1">
+        <Histograms>
+          <HistItem>
+            <HistMin>0.5833333333333333</HistMin>
+            <HistMax>6.416666666666667</HistMax>
+            <BucketCount>6</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>1|1|1|1|1|1</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MAXIMUM">6</MDI>
+          <MDI key="STATISTICS_MEAN">3.5</MDI>
+          <MDI key="STATISTICS_MINIMUM">1</MDI>
+          <MDI key="STATISTICS_STDDEV">1.7078251276599</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="2">
+        <Histograms>
+          <HistItem>
+            <HistMin>5.833333333333333</HistMin>
+            <HistMax>64.16666666666667</HistMax>
+            <BucketCount>6</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>1|1|1|1|1|1</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MAXIMUM">60</MDI>
+          <MDI key="STATISTICS_MEAN">35</MDI>
+          <MDI key="STATISTICS_MINIMUM">10</MDI>
+          <MDI key="STATISTICS_STDDEV">17.078251276599</MDI>
+        </Metadata>
+      </PAMRasterBand>
+    </PAMDataset>
+  </Subdataset>
+  <Subdataset name="pet">
+    <PAMDataset>
+      <PAMRasterBand band="1">
+        <Histograms>
+          <HistItem>
+            <HistMin>0.5833333333333333</HistMin>
+            <HistMax>6.416666666666667</HistMax>
+            <BucketCount>6</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>1|1|1|1|1|1</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MAXIMUM">6</MDI>
+          <MDI key="STATISTICS_MEAN">3.5</MDI>
+          <MDI key="STATISTICS_MINIMUM">1</MDI>
+          <MDI key="STATISTICS_STDDEV">1.7078251276599</MDI>
+        </Metadata>
+      </PAMRasterBand>
+      <PAMRasterBand band="2">
+        <Histograms>
+          <HistItem>
+            <HistMin>5.833333333333333</HistMin>
+            <HistMax>64.16666666666667</HistMax>
+            <BucketCount>6</BucketCount>
+            <IncludeOutOfRange>0</IncludeOutOfRange>
+            <Approximate>0</Approximate>
+            <HistCounts>1|1|1|1|1|1</HistCounts>
+          </HistItem>
+        </Histograms>
+        <Metadata>
+          <MDI key="STATISTICS_MAXIMUM">60</MDI>
+          <MDI key="STATISTICS_MEAN">35</MDI>
+          <MDI key="STATISTICS_MINIMUM">10</MDI>
+          <MDI key="STATISTICS_STDDEV">17.078251276599</MDI>
+        </Metadata>
+      </PAMRasterBand>
+    </PAMDataset>
+  </Subdataset>
+</PAMDataset>

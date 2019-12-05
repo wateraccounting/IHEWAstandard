@@ -34,7 +34,7 @@ ds = xr.Dataset.from_dict(
                                                             # GTiff Extent, [West, South] to [East, North] 
                                                             #               pixelWidth   = 10
                                                             #               pixelHeight  = -10
-        'crs':          'EPSG:4326 - WGS 84 - Geographic',  # CRS name linked with variable 'crs'
+        'CRS':          'EPSG:4326 - WGS 84 - Geographic',  # CRS name linked with variable 'crs'
         'originX':      0,                                  # West
         'originY':      20,                                 # North
         'rasterW':      10,                                 # pixel Width
@@ -99,14 +99,14 @@ ds = xr.Dataset.from_dict(
         'crs': {                                            # variable short name, 'crs': 'EPSG:4326 - WGS 84 - Geographic'
                 'dims': (),
                 'attrs': {
-                        'standard_name':                        'CRS',
-                        'long_name':                            'Coordinate Reference System',
+                        'standard_name':                    'CRS',
+                        'long_name':                        'Coordinate Reference System',
+                        'grid_mapping_name':                'latitude_longitude',
                         
-                        'spatial_ref':                          'GEOGCS[\"GCS_WGS_1984\",DATUM[\"WGS_1984\",SPHEROID[\"WGS_84\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.017453292519943295]]',
-                        'grid_mapping_name':                    'latitude_longitude',
-                        'longitude_of_prime_meridian':          0.0,
-                        'semi_major_axis':                      6378137.0,
-                        'inverse_flattening':                   298.257223563
+                        'spatial_ref':                      'GEOGCS[\"GCS_WGS_1984\",DATUM[\"WGS_1984\",SPHEROID[\"WGS_84\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.017453292519943295]]',
+                        'longitude_of_prime_meridian':      0.0,
+                        'semi_major_axis':                  6378137.0,
+                        'inverse_flattening':               298.257223563
                 },
                 'data': ds_FillValue
         },
