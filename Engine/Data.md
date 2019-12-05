@@ -23,7 +23,7 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 | -----------------------: | ------------------------------------------------------------------ | ------- |
 | Engine2.Input.Monthly.nc | `EngineNumber`.`Input/Output`.`TemporalResolution`.`FileExtension` |         |
 
-### Metadata/Attributes
+### Attributes/Metadata
 
 | Name           | Type   | Example           | Description                                                |
 | -------------: | ------ | ----------------- | ---------------------------------------------------------- |
@@ -50,7 +50,7 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 
 time, y, x => time, lat, lon
 
-Example python:
+Template:
 
 ```Python
 'dims': ('time', 'y', 'x')
@@ -58,7 +58,7 @@ Example python:
 
 ### Coordinates variables
 
-Example python:
+Template:
 
 ```Python
 'lon': {                                            # longitude,    np.ndarray
@@ -114,7 +114,7 @@ Example python:
 
 #### Coordinate Reference System, **DO NOT CHANGE 'crs'!**
 
-Example python:
+Template:
 
 ```Python
 'crs': {                                            # variable short name, 'crs': 'EPSG:4326 - WGS 84 - Geographic'
@@ -158,7 +158,7 @@ Example python:
 | `pcp`              | Precipitation | mm/day | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
 | `pet`              | Potential EvapoTranspiration | mm/day | The value of each pixel represents the total of daily Potential EvapoTranspiration in the year expressed in mm |
 
-Example python:
+Template:
 
 ```Python
 'pcp': {                                            # variable short name
