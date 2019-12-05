@@ -4,7 +4,8 @@ Define the **Architecture standard** of WaterAccounting Tools.
 
 ## Architecture
 
-Version 1, [Image](./img/v1/Arch.IHEWA.png)
+**Version 1**
+![alt text](https://github.com/wateraccounting/IHEWAstandard/raw/master/Architecture/img/v1/Arch.IHEWA.png "IHEWA, Architecture")
 
 ### Components
 
