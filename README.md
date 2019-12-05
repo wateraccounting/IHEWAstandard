@@ -8,6 +8,10 @@ Define the **standard** of WaterAccounting Tools.
 
 ### [IHEWAcollect](./Configuration/IHEWAcollect.md)
 
+[base.yaml](./Configuration/IHEWAcollect.md#ihewacollectbaseyaml)
+
+[accounts.yaml](./Configuration/IHEWAcollect.md#ihewacollectaccountsyaml)
+
 
 ## [Data](./Data/README.md)
 
