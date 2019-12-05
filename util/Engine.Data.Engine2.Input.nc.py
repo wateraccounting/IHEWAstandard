@@ -49,9 +49,10 @@ ds = xr.Dataset.from_dict(
         'lon': {                                            # longitude,    np.ndarray
                 'dims': ('y', 'x'),
                 'attrs': {
-                        'standard_name': 'longitude',
+                        'standard_name': 'Longitude',
+                        'long_name':     'Longitude',
                         'units':         'degree',
-                        'axis':          'Y'
+                        'axis':          'x'
                 },
                 'data': np.array(
                         [
@@ -65,9 +66,10 @@ ds = xr.Dataset.from_dict(
         'lat': {                                            # latitude,    np.ndarray
                 'dims': ('y', 'x'),
                 'attrs': {
-                        'standard_name': 'latitude',
+                        'standard_name': 'Latitude',
+                        'long_name':     'Latitude',
                         'units':         'degree',
-                        'axis':          'Y'
+                        'axis':          'y'
                 },
                 'data': np.array(
                         [
@@ -97,6 +99,7 @@ ds = xr.Dataset.from_dict(
     },
     'data_vars': {
         'crs': {                                            # variable short name, 'crs': 'EPSG:4326 - WGS 84 - Geographic'
+                                                            # DO NOT CHANGE 'crs'!
                 'dims': (),
                 'attrs': {
                         'standard_name':                    'CRS',
@@ -119,8 +122,8 @@ ds = xr.Dataset.from_dict(
                 'attrs': {                                  # variable attributes
                                                             # 'grid_mapping' linked with variable 'crs'
                         'grid_mapping':  'crs',
-                        'standard_name': 'precipitation',
-                        'long_name':     'precipitation',
+                        'standard_name': 'Precipitation',
+                        'long_name':     'Precipitation',
                         'units':         'mm/day'
                 },
                 'data': np.array(                           # variable data, np.array(, dtype=)
@@ -142,8 +145,8 @@ ds = xr.Dataset.from_dict(
         'pet': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
-                        'standard_name': 'potential evapotranspiration',
-                        'long_name':     'potential evapotranspiration',
+                        'standard_name': 'Potential Evapotranspiration',
+                        'long_name':     'Potential Evapotranspiration',
                         'units':         'mm/day',
                         'grid_mapping':  'crs'
                 },
