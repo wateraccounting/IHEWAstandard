@@ -171,14 +171,16 @@ ds.to_netcdf(
     format='NETCDF4',
     engine='netcdf4',
     encoding={
+        # coord
         'lon': {
             'dtype':        ds_coords_dtype
         },
         'lat': {
             'dtype':        ds_coords_dtype
         },
+        # data_vars
         'crs': {
-            'dtype':        'int64'
+            'dtype':        ds_data_vars_dtype
         },
         'pcp': {
             'dtype':        ds_data_vars_dtype,
