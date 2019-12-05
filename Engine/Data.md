@@ -158,9 +158,11 @@ Template:
 Some templates and standards can be found in 
 [IHEWAstandard/resources/Products.xlsx](https://github.com/wateraccounting/IHEWAstandard/tree/master/resources).
 
-| Variable Name/Code | Standard Name | units | Description                                                |
-| -----------------: | ------------- | ----- | ---------------------------------------------------------- |
-| `pcp`              | Precipitation | mm    | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
+| Variable Name/Code | Dimensions | Standard Name | units | Description |
+| -----------------: | ---------- | ------------- | ----- | ----------- |
+| `dem`              | 2D         | Digital Elevation Model |  |  |
+| `dir`              | 2D         | Direction     |  |  |
+| `pcp`              | 3D         | Precipitation | mm    | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
 | `pet`              | Potential EvapoTranspiration | mm    | The value of each pixel represents the total of daily Potential EvapoTranspiration in the year expressed in mm |
 
 Template 2D variable:
@@ -174,7 +176,7 @@ Template 2D variable:
         'attrs': {                              # variable attributes
                                                 # 'grid_mapping' linked with variable 'crs'
                 'grid_mapping':  'crs',
-                'standard_name': 'Digical Elevation Model',
+                'standard_name': 'Digital Elevation Model',
                 'long_name':     'DEM',
                 'units':         '',
                 'from':          'HydroSHED'
