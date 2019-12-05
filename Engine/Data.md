@@ -167,10 +167,12 @@ Some templates and standards can be found in
 
 | Variable Name/Code | Dimensions | Standard Name | units | Description |
 | -----------------: | ---------- | ------------- | ----- | ----------- |
+| 2D  |  |  |  |  |
 | `dem`              | 2D         | Digital Elevation Model |  |  |
 | `dir`              | 2D         | Direction     |  |  |
+| 3D  |  |  |  |  |
 | `pcp`              | 3D         | Precipitation | mm    | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
-| `pet`              | Potential EvapoTranspiration | mm    | The value of each pixel represents the total of daily Potential EvapoTranspiration in the year expressed in mm |
+| `pet`              | 3D         | Potential EvapoTranspiration | mm    | The value of each pixel represents the total of daily Potential EvapoTranspiration in the year expressed in mm |
 
 Template 2D variable:
 
