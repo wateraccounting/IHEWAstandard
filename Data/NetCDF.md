@@ -9,4 +9,4 @@ Define the **Data.NetCDF standard** of WaterAccounting Tools.
   - [NetCDF Best Practices](https://www.unidata.ucar.edu/software/netcdf/docs/BestPractices.html)
 
 
-# [Examples](examples/README.md#NetCDF)
+# [Examples](examples/README.md#netcdf)

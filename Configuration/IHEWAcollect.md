@@ -127,4 +127,4 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
 
 
-# [Examples](examples/README.md#IHEWAcollect)
+# [Examples](examples/README.md#ihewacollect)

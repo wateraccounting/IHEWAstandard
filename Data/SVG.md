@@ -6,4 +6,4 @@ Define the **Data.SVG standard** of WaterAccounting Tools.
   - [SVG Code, xml](https://github.com/w3c/svgwg/)
 
 
-# [Examples](examples/README.md#SVG)
+# [Examples](examples/README.md#svg)

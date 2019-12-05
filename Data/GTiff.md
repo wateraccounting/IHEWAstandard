@@ -13,4 +13,4 @@ Define the **Data.GTiff standard** of WaterAccounting Tools.
 #               pixelHeight  = -10
 ```
 
-# [Examples](examples/README.md#GTiff)
+# [Examples](examples/README.md#gtiff)
