@@ -163,7 +163,33 @@ Some templates and standards can be found in
 | `pcp`              | Precipitation | mm    | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
 | `pet`              | Potential EvapoTranspiration | mm    | The value of each pixel represents the total of daily Potential EvapoTranspiration in the year expressed in mm |
 
-Template:
+Template 2D variable:
+
+```Python
+'dem': {
+        'dims': (                               # variable dimensions, 2D
+                'y',
+                'x'
+        ),
+        'attrs': {                              # variable attributes
+                                                # 'grid_mapping' linked with variable 'crs'
+                'grid_mapping':  'crs',
+                'standard_name': 'Digical Elevation Model',
+                'long_name':     'DEM',
+                'units':         '',
+                'from':          'HydroSHED'
+        },
+        'data': np.array(                       # variable data, np.array(, dtype=)
+                [
+                    [1, 2],
+                    [3, 4],
+                    [5, 6]
+                ],
+                dtype=ds_data_vars_dtype
+        )
+```
+
+Template 3D variable:
 
 ```Python
 'pcp': {                                        # variable short name

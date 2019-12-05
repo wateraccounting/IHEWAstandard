@@ -118,7 +118,29 @@ ds = xr.Dataset.from_dict(
                 },
                 'data': ds_FillValue
         },
-        'pcp': {                                            # variable short name
+        'dem': {
+                'dims': (                                   # variable dimensions, 2D
+                        'y',
+                        'x'
+                ),
+                'attrs': {                                  # variable attributes
+                                                            # 'grid_mapping' linked with variable 'crs'
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Digical Elevation Model',
+                        'long_name':     'DEM',
+                        'units':         '',
+                        'from':          'HydroSHED'
+                },
+                'data': np.array(                           # variable data, np.array(, dtype=)
+                        [
+                            [1, 2],
+                            [3, 4],
+                            [5, 6]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+        'pcp': {                                            # variable short name, 3D
                 'dims': (                                   # variable dimensions
                         'time',
                         'y',
