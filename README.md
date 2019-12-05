@@ -2,10 +2,10 @@
 
 Define the **standard** of WaterAccounting Tools.
 
+![alt text](https://github.com/wateraccounting/IHEWAstandard/raw/master/Architecture/img/20190911-WA_DEV.JPG "IHEWA, Architecture")
+
 
 ## Architecture, [link](./Architecture)
-
-![alt text](https://github.com/wateraccounting/IHEWAstandard/raw/master/Architecture/img/v1/Arch.IHEWA.png "IHEWA Architecture")
 
 
 ## Configuration, [link](./Configuration)
