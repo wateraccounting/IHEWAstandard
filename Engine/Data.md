@@ -21,7 +21,7 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 
 | Template                 | Example                                                            | Remarks |
 | -----------------------: | ------------------------------------------------------------------ | ------- |
-| Engine2.Input.Monthly.nc | `EngineNumber`.`Input/Output`.`TemporalResolution`.`FileExtension` |         |
+| Engine2.Input.Daily.nc   | `EngineNumber`.`Input/Output`.`TemporalResolution`.`FileExtension` |         |
 
 ### Attributes/Metadata
 
@@ -171,6 +171,7 @@ Template:
                 'grid_mapping':  'crs',             # # 'grid_mapping' linked with variable 'crs'
                 'standard_name': 'Precipitation',
                 'long_name':     'Precipitation',
+                'temp_res':      'daily',
                 'units':         'mm/day',
                 'from':          'WaterPix'
         },
