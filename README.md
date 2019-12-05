@@ -3,35 +3,43 @@
 Define the **standard** of WaterAccounting Tools.
 
 
-## [Architecture](./Architecture)
+## Architecture
+
+[link](./Architecture)
 
 ![alt text](https://github.com/wateraccounting/IHEWAstandard/raw/master/Architecture/img/v1/Arch.IHEWA.png "IHEWA Architecture")
 
 
-## [Configuration](./Configuration)
+## Configuration
 
-### [IHEWAcollect](./Configuration/IHEWAcollect.md)
+[link](./Configuration)
 
-
-## [Data](./Data)
-
-### [GTiff](./Data/GTiff.md)
-
-### [NetCDF](./Data/NetCDF.md)
-
-### [SVG](./Data/SVG.md)
-
-### [Note](./Data/README.md#note)
+  - [IHEWAcollect](./Configuration/IHEWAcollect.md)
 
 
-## [Engine](./Engine)
+## Data
 
-### [API](./Engine/API.md)
+[link](./Data)
 
-### [Data](./Engine/Data.md)
+  - [GTiff](./Data/GTiff.md)
+  - [NetCDF](./Data/NetCDF.md)
+  - [SVG](./Data/SVG.md)
+  - [Note](./Data/README.md#note)
 
 
-## [resources](./resources)
+## Engine
+
+[link](./Engine)
+
+  - [API](./Engine/API.md)
+  - [Data](./Engine/Data.md)
 
 
-## [util](./util)
+## resources
+
+[link](./resources)
+
+
+## util
+
+[link](./util)
