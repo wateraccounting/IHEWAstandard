@@ -152,8 +152,8 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Potential Evapotranspiration',
-                        'long_name':     'Potential Evapotranspiration',
+                        'standard_name': 'Potential EvapoTranspiration',
+                        'long_name':     'Potential EvapoTranspiration',
                         'units':         'mm/day',
                         'from':          'WaterPix'
                 },

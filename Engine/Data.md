@@ -43,15 +43,13 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 | CRS            | String | 'EPSG:4326 - WGS 84 - Geographic' | CRS name linked with variable 'crs'        |
 | originX        | Double | 0.0               | West                                                       |
 | originY        | Double | 20.0              | North                                                      |
-| rasterW        | Double | 10.0              | pixel Width                                                |
-| rasterH        | Double | -10.0             | pixel Height                                               |
+| rasterW        | Double | 10.0              | Raster Width                                                |
+| rasterH        | Double | -10.0             | Raster Height                                               |
 
 ### Dimensions
 
 ```Python
-'time'
-'y'
-'x'
+('time', 'y', 'x')
 ```
 
 ### Coordinates variables
@@ -108,7 +106,9 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 
 ### Data variables
 
-Coordinate Reference System, DO NOT CHANGE 'crs'!
+#### Coordinate Reference System, **DO NOT CHANGE 'crs'!**
+
+Example python:
 
 ```Python
 'crs': {                                            # variable short name, 'crs': 'EPSG:4326 - WGS 84 - Geographic'
@@ -145,6 +145,15 @@ Coordinate Reference System, DO NOT CHANGE 'crs'!
 }
 ```
 
+#### Hydrological Variables
+
+| Variable Name/Code | Standard Name | units  | Description                                                |
+| -----------------: | ------------- | ------ | ---------------------------------------------------------- |
+| `pcp`              | Precipitation | mm/day | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
+| `pet`              | Potential EvapoTranspiration | mm/day | The value of each pixel represents the total of daily Potential EvapoTranspiration in the year expressed in mm |
+
+Example python:
+
 ```Python
 'pcp': {                                            # variable short name
         'dims': (                                   # variable dimensions
@@ -156,7 +165,8 @@ Coordinate Reference System, DO NOT CHANGE 'crs'!
                 'grid_mapping':  'crs',             # # 'grid_mapping' linked with variable 'crs'
                 'standard_name': 'Precipitation',
                 'long_name':     'Precipitation',
-                'units':         'mm/day'
+                'units':         'mm/day',
+                'from':          'WaterPix'
         },
         'data': np.array(                           # variable data, np.array(, dtype=)
                 [
