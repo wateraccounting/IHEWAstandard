@@ -2,10 +2,16 @@
 
 Define the **Engine.Data standard** of WaterAccounting Tools.
 
+**TOC**
+
   - [Standard](#standard)
   - [Resources](#resources)
   - [Engine 1](#engine-1)
-  - [Engine 2](#engine-1)
+    - [Input, NetCDF](#engine-1-input-netcdf)
+    - [Output, NetCDF](#engine-1-output-netcdf)
+  - [Engine 2](#engine-2)
+    - [Input, NetCDF](#engine-2-input-netcdf)
+    - [Output, NetCDF](#engine-2-output-netcdf)
   - [Examples](#examples)
 
 

@@ -2,6 +2,8 @@
 
 Define the **Data.GTiff standard** of WaterAccounting Tools.
 
+**TOC**
+
   - [Standard](#standard)
   - [Resources](#resources)
   - [Examples](#examples)

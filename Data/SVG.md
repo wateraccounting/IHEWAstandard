@@ -2,6 +2,8 @@
 
 Define the **Data.SVG standard** of WaterAccounting Tools.
 
+**TOC**
+
   - [Standard](#standard)
   - [Resources](#resources)
   - [Examples](#examples)

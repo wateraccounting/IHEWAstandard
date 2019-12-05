@@ -2,6 +2,8 @@
 
 Define the **Configuration.IHEWAcollect standard** of WaterAccounting Tools.
 
+**TOC**
+
   - [Standard](#standard)
   - [Resources](#resources)
   - [IHEWAcollect.accounts.yaml](#ihewacollectaccountsyaml)
