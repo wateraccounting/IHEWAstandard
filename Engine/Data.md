@@ -155,6 +155,9 @@ Template:
 
 #### Hydrological Variables
 
+Some templates and standards can be found in 
+[IHEWAstandard/resources/Products.xlsx](https://github.com/wateraccounting/IHEWAstandard/tree/master/resources).
+
 | Variable Name/Code | Standard Name | units | Description                                                |
 | -----------------: | ------------- | ----- | ---------------------------------------------------------- |
 | `pcp`              | Precipitation | mm    | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
@@ -170,7 +173,7 @@ Template:
                 'x'
         ),
         'attrs': {                              # variable attributes
-                'grid_mapping':  'crs',         # # 'grid_mapping' linked with variable 'crs'
+                'grid_mapping':  'crs',         # 'grid_mapping' linked with variable 'crs'
                 'standard_name': 'Precipitation',
                 'long_name':     'Precipitation',
                 'temp_res':      'day',
