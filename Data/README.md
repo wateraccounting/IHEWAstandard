@@ -5,13 +5,13 @@ Define the **Data standard** of WaterAccounting Tools.
   - [OGC Standard](https://www.opengeospatial.org/standards)
 
 
-## [GTiff](GTiff.md)
+## [GTiff](./GTiff.md)
 
 
-## [NetCDF](NetCDF.md)
+## [NetCDF](./NetCDF.md)
 
 
-## [SVG](SVG.md)
+## [SVG](./SVG.md)
 
 
 ## Note
