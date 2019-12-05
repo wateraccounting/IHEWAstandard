@@ -21,7 +21,9 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 
 | Template                 | Example                                                            | Remarks |
 | -----------------------: | ------------------------------------------------------------------ | ------- |
-| Engine2.Input.Daily.nc   | `EngineNumber`.`Input/Output`.`TemporalResolution`.`FileExtension` |         |
+| Engine2.Input.Day.nc     | `EngineNumber`.`Input/Output`.`TemporalResolution`.`FileExtension` |         |
+
+The following template use 'day' as temporal resolution.
 
 ### Attributes/Metadata
 
@@ -153,10 +155,10 @@ Template:
 
 #### Hydrological Variables
 
-| Variable Name/Code | Standard Name | units  | Description                                                |
-| -----------------: | ------------- | ------ | ---------------------------------------------------------- |
-| `pcp`              | Precipitation | mm/day | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
-| `pet`              | Potential EvapoTranspiration | mm/day | The value of each pixel represents the total of daily Potential EvapoTranspiration in the year expressed in mm |
+| Variable Name/Code | Standard Name | units | Description                                                |
+| -----------------: | ------------- | ----- | ---------------------------------------------------------- |
+| `pcp`              | Precipitation | mm    | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
+| `pet`              | Potential EvapoTranspiration | mm    | The value of each pixel represents the total of daily Potential EvapoTranspiration in the year expressed in mm |
 
 Template:
 
@@ -171,8 +173,8 @@ Template:
                 'grid_mapping':  'crs',             # # 'grid_mapping' linked with variable 'crs'
                 'standard_name': 'Precipitation',
                 'long_name':     'Precipitation',
-                'temp_res':      'daily',
-                'units':         'mm/day',
+                'temp_res':      'day',
+                'units':         'mm',
                 'from':          'WaterPix'
         },
         'data': np.array(                           # variable data, np.array(, dtype=)
