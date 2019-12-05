@@ -20,30 +20,35 @@ ds = xr.Dataset.from_dict(
 {
     'attrs': {
         # meta
-        'version':      'v0',                               # The version of this template NetCDF is 'v0', major release number of Github & Pypi
-        'standard':     'WaterAccounting',                  # This version applies standard of 'WaterAccounting'
+        'version':          'v0',                           # The version of this template NetCDF is 'v0', major release number of Github & Pypi
+        'standard':         'WaterAccounting',              # This version applies standard of 'WaterAccounting'
         # to
-        'engine':       '2',                                # The data is created for engine '2'
-        'name':         'Hyperloop',                        # This engine name is 'Hyperloop'
-        'type':         'input',                            # This data is used as 'input' for engine2
+        'engine_num':       '2',                            # The data is created for engine '2'
+        'engine_use':       'Input',                        # The data is used as 'input' for engine2
+        'model_name':       'Hyperloop',                    # The engine model,   linked with release name
+        'model_version':    'v0.0.1',                       # The engine version, linked with release version
         # from
-        'created':      'WaterPix',                         # This data is created by 'WaterPix'
-        'time':         '2019-12-03',                       # This data is created at 'yyyy-mm-dd'
+        'created_by':       'IHE',                          # This data is created by owner 'IHE'
+        'created_time':     '2019-12-03',                   # This data is created at time  'yyyy-mm-dd'
+        'created_model':    'WaterPix',                     # This data is created by model 'WaterPix'
         # GTiff format
                                                             # GTiff Origin, [West, North]
-                                                            # GTiff Extent, [West, South] to [East, North] 
-                                                            #               pixelWidth   = 10
-                                                            #               pixelHeight  = -10
-        'CRS':          'EPSG:4326 - WGS 84 - Geographic',  # CRS name linked with variable 'crs'
-        'originX':      0,                                  # West
-        'originY':      20,                                 # North
-        'rasterW':      10,                                 # pixel Width
-        'rasterH':      -10                                 # pixel Height
+                                                            # GTiff Extent, [West, South] to [East, North]
+                                                            # GTiff         rasterWidth  = 10
+                                                            # GTiff         rasterHeight = -10
+                                                            # Image         pixelWidth   = 10
+                                                            # Image         pixelHeight  = 10
+                                                            # CRS name,     linked with variable 'crs'
+        'CRS':              'EPSG:4326 - WGS 84 - Geographic', 
+        'originX':          0.0,                            # West
+        'originY':          20.0,                           # North
+        'rasterW':          10.0,                           # pixel Width
+        'rasterH':          -10.0                           # pixel Height
     },
     'dims': {
-        'time':         2,
-        'y':            3,
-        'x':            2
+        'time':             2,
+        'y':                3,
+        'x':                2
     },
     'coords': {                                             # GTiff array,  [North, West] to [South, East]
         'lon': {                                            # longitude,    np.ndarray
@@ -80,7 +85,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_coords_dtype
                 )
         },
-        'time': {
+        'time': {                                           # time,        np.ndarray
                 'dims': ('time'),
                 'attrs': {
                         'standard_name': 'time',
@@ -124,7 +129,8 @@ ds = xr.Dataset.from_dict(
                         'grid_mapping':  'crs',
                         'standard_name': 'Precipitation',
                         'long_name':     'Precipitation',
-                        'units':         'mm/day'
+                        'units':         'mm/day',
+                        'from':          'WaterPix'
                 },
                 'data': np.array(                           # variable data, np.array(, dtype=)
                         [
@@ -145,10 +151,11 @@ ds = xr.Dataset.from_dict(
         'pet': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
+                        'grid_mapping':  'crs',
                         'standard_name': 'Potential Evapotranspiration',
                         'long_name':     'Potential Evapotranspiration',
                         'units':         'mm/day',
-                        'grid_mapping':  'crs'
+                        'from':          'WaterPix'
                 },
                 'data': np.array(
                         [
