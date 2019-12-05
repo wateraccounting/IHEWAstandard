@@ -48,11 +48,17 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 
 ### Dimensions
 
+time, y, x => time, lat, lon
+
+Example python:
+
 ```Python
-('time', 'y', 'x')
+'dims': ('time', 'y', 'x')
 ```
 
 ### Coordinates variables
+
+Example python:
 
 ```Python
 'lon': {                                            # longitude,    np.ndarray
