@@ -10,7 +10,7 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
     - [Dimensions](#dimensions)
     - [Coordinates variables](#coordinates-variables)
     - [Data variables](#data-variables)
-      - [CRS](#coordinate-reference-system-do-not-change-crs)
+      - [CRS](#coordinate-reference-system)
       - [Hydrological](#hydrological-variables)
   - [Resources](#resources)
   - [Examples](#examples)
