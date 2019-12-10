@@ -73,9 +73,10 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 
 #### Temporal Resolution
 
-[datetime format codes](https://docs.python.org/3.7/library/datetime.html#strftime-and-strptime-behavior)
-
-[pandas DateOffset](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects)
+  * [strftime codes](http://strftime.org/)
+  * [datetime format codes](https://docs.python.org/3.7/library/datetime.html#strftime-and-strptime-behavior)
+  * [pandas DateOffset](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects)
+  * [pandas date_range alias](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#timeseries-offset-aliases)
 
 | Name        | datetime | pandas   |
 | ----------: | -------- | -------- |
@@ -90,14 +91,16 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 
 #### Spatial Resolution
   
-  * [strftime codes](http://strftime.org/)
-  * [pandas date_range alias](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#timeseries-offset-aliases)
+  * [LatLon](https://calgary.rasc.ca/latlong.htm)
 
-| Name       | sec/min        | degree   	       | meters/km                    |
+| Name       | sec/min        | degree   	         | meters/km                    |
 | ---------: |--------------- | ------------------ | ---------------------------- |
+| 0.1s       | 0.1 arc-second | 0.0000277777777777 | approx. 3 m at the equator   |
+| 1s         | 1 arc-second   | 0.0002777777777777 | approx. 30 m at the equator  |
 | 3s         | 3 arc-second   | 0.0008333333333333 | approx. 90 m at the equator  |
 | 15s        | 15 arc-second  | 0.0041666666666667 | approx. 500 m at the equator |
 | 30s        | 30 arc-second  | 0.0083333333333333 | approx. 1 km at the equator  |
+| 1m         | 1 minute       | 0.0277777777777777 | approx. 2 km at the equator  |
 | 5m         | 5 minute       | 0.0833333333333333 | approx. 10 km at the equator |
 
 
