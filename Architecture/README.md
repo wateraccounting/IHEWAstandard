@@ -22,7 +22,7 @@ Define the **Architecture standard** of WaterAccounting Tools.
       - SWAT+
       - ...
     - Engine 2, ** model
-      - Hyperloop
+      - Hyperloop, [Image](./img/v1/Arch.IHEWAengine.2.Hyperloop.png)
       - ...
   - IHEWAgis, [Image](./img/v1/Arch.IHEWAgis.png)
     - GDAL
