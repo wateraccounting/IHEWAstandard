@@ -10,6 +10,11 @@ Define the **Engine.Lulc standard** of WaterAccounting Tools.
 
 ## Standard
 
+  - [FAO](http://www.fao.org/3/x0596e/X0596e00.htm#P-1_0)
+  - [Land Cover Classification with eo-learn: Part 1](https://medium.com/sentinel-hub/land-cover-classification-with-eo-learn-part-1-2471e8098195)
+  - [Land Cover Classification with eo-learn: Part 2](https://medium.com/sentinel-hub/land-cover-classification-with-eo-learn-part-2-bd9aa86f8500)
+  - [Land Cover Classification with eo-learn: Part 3](https://medium.com/sentinel-hub/land-cover-classification-with-eo-learn-part-3-c62ed9ecd405)
+
 ### Landuse & Landcover
 
 | ID | Code | Landuse | Description | Beneficial T [%] | Beneficial E [%] | Beneficial I [%] | Agriculture [%] | Environment [%] | Economic [%] | Energy [%] | Leisure [%] |
