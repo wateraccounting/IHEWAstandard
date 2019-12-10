@@ -86,7 +86,6 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | weekly      | %W / %U  | 7D       |
 | dekadal     |          | 10D      |
 | monthly     | %m       | MD       |
-| pentadal    |          |          |
 | yearly      | %Y       | Y        |
 
 #### Spatial Resolution
