@@ -5,19 +5,16 @@ Define the **Configuration.IHEWAcollect standard** of WaterAccounting Tools.
 **TOC**
 
   - [Standard](#standard)
+    - [IHEWAcollect.accounts.yaml](#ihewacollectaccountsyaml)
+    - [IHEWAcollect.base.yaml](#ihewacollectbaseyaml)
   - [Resources](#resources)
-  - [IHEWAcollect.accounts.yaml](#ihewacollectaccountsyaml)
-  - [IHEWAcollect.base.yaml](#ihewacollectbaseyaml)
   - [Examples](#examples)
 
 
 ## Standard
 
 
-## Resources
-
-
-## IHEWAcollect.accounts.yaml
+### IHEWAcollect.accounts.yaml
 
 Accounts configuration Yaml file, contains
 
@@ -34,7 +31,7 @@ accounts:
 
 Base configuration Yaml file, contains `messages` and `products`.
 
-### None value
+#### None value
 
 YAML string '`null`' applyed to: 
 
@@ -46,7 +43,7 @@ YAML string '`null`' applyed to:
     * `time`
 
 
-### Name
+#### Name
 
 | Name       | Description                               |
 | ---------: |------------------------------------------ |
@@ -69,9 +66,9 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 ```
 
 
-### Resolution types
+#### Resolution types
 
-#### Temporal Resolution
+##### Temporal Resolution
 
   * [strftime codes](http://strftime.org/)
   * [datetime format codes](https://docs.python.org/3.7/library/datetime.html#strftime-and-strptime-behavior)
@@ -88,7 +85,7 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | monthly     | %m       | MD       |
 | yearly      | %Y       | Y        |
 
-#### Spatial Resolution
+##### Spatial Resolution
   
   * [LatLon](https://calgary.rasc.ca/latlong.htm)
 
@@ -103,7 +100,7 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | 5m         | 5 minute       | 0.0833333333333333 | approx. 10 km at the equator |
 
 
-### Protocal types
+#### Protocal types
 
 | Protocal   | Python Dependency           |
 | ---------: |---------------------------- |
@@ -115,11 +112,11 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | ECMWF      | ecmwfapi (ecmwf-api-client) |
 
 
-### File types
+#### File types
 
 `Driver.FileExtension`
 
-#### File name
+##### File name
 
 | Name       | Description                                           |
 | ---------: |------------------------------------------------------ |
@@ -127,7 +124,7 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | tmpfile    | generated to `./temporary/`, to be deleted at the end |
 | locfile    | saved to `./download/`                                |
 
-#### File driver
+##### File driver
 
 | Ext               | File type        | GDAL Drivers                                                        |
 | ----------------: | ---------------- | ------------------------------------------------------------------- |
@@ -141,6 +138,15 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | .hdr              | Header file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
 | .blw              | World file       | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
 | .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
+
+
+## Resources
+
+### Products
+
+| Product       | Version  | Parameter         | resolution        | resolution       | variable  |
+| ------------: | -------- | ----------------- | ----------------- |----------------- | --------- |
+| ALEXI         | v1       | Evaporation       | resolution        | daily            | ETa       |
 
 
 # [Examples](examples/README.md#ihewacollect)
