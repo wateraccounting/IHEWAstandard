@@ -26,6 +26,8 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 
 ### Attributes/Metadata
 
+> inculded in NetCDF file
+
 | Name           | Type    | Example           | Description                                                |
 | -------------: | ------- | ----------------- | ---------------------------------------------------------- |
 |  **Basic Info**                                                                                           |
@@ -49,6 +51,8 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 
 ### Dimensions
 
+> inculded in NetCDF file
+
 time, y, x => time, lat, lon
 
 _Template_
@@ -58,6 +62,8 @@ _Template_
 ```
 
 ### Coordinates variables
+
+> inculded in NetCDF file
 
 _Template_
 
@@ -115,6 +121,8 @@ _Template_
 
 **Coordinate Reference System**
 
+> inculded in NetCDF file
+> 
 > **DO NOT CHANGE 'crs'!**
 
 _Template_
@@ -156,7 +164,9 @@ _Template_
 
 **Variables**
 
-Parameter, csv data, not inculded in NetCDF file
+Parameter, csv data
+
+> not inculded in NetCDF file
 
 | Variable Name/Code      | Standard Name                | units | Description                    |
 | ----------------------: | ---------------------------- | ----- | ------------------------------ |
@@ -178,7 +188,9 @@ Parameter, csv data, not inculded in NetCDF file
 | `timber`                | Non-Crops                    |       | STATS_GSOV                     |
 | `aquaculture`           | Non-Crops                    |       | STATS_GSOV                     |
 
-GIS data, inculded in NetCDF file
+GIS data
+
+> inculded in NetCDF file
 
 | Variable Name/Code      | Standard Name                | units | Description                    |
 | ----------------------: | ---------------------------- | ----- | ------------------------------ |
