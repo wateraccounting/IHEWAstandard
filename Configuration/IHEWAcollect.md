@@ -73,15 +73,19 @@ Temporal Resolution
   * [pandas DateOffset](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects)
   * [pandas date_range alias](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#timeseries-offset-aliases)
 
-| Name        | datetime | pandas   |
-| ----------: | -------- | -------- |
-| hourly      | %H       | H        |
-| six_hourly  |          | 6H       |
-| daily       | %d       | D        |
-| weekly      | %W / %U  | 7D       |
-| dekadal     |          | 10D      |
-| monthly     | %m       | MD       |
-| yearly      | %Y       | Y        |
+| Name           | datetime | pandas   |
+| -------------: | -------- | -------- |
+| hourly         | %H       | H        |
+| six_hourly     |          | 6H       |
+| daily          | %d       | D        |
+| weekly         | %W / %U  | 7D       |
+| eight_daily    |          | 8D       |
+| dekadal        |          | 10D      |
+| sixteen_daily  |          | 16D      |
+| monthly, start | %m       | MS       |
+| monthly, end   | %m       | M        |
+| yearly, start  | %Y       | AS       |
+| yearly, end    | %Y       | Y        |
 
 Spatial Resolution
   

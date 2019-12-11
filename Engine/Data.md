@@ -16,6 +16,8 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 
 ## Standard
 
+[watools.General.data_convertions.Save_as_NC()](https://github.com/wateraccounting/watools/blob/master/General/data_conversions.py#L279)
+
 ### File name
 
 | Template                 | Example                                                            | Remarks |
@@ -203,17 +205,17 @@ GIS data
 | Variable Name/Code         | Standard Name                | units | Description                    |
 | -------------------------: | ---------------------------- | ----- | ------------------------------ |
 | **2D, Static Map**                                                                                 |
-| Basins level                                                                                       |
+| Integer                                                                                            |
 | `lu`                       | VGTB                         |       |                                |
 | `full_basin_mask`          | VGTB                         |       |                                |
 | `masks`                    | VGTB                         |       |                                |
-| Global level                                                                                       |
+| `population_tif`           | VNM-POP                      |       | VNM_pph_v2b_2009               |
+| Float                                                                                              |
 | `dem`                      | Elevation                    |       |                                |
 | `dir`                      | Direction                    |       |                                |
 | `equiped_sw_irrigation`    | GMIA FAO                     |       | gmia_v5_aeisw_pct_aei_asc      |
 | `wpl_tif`                  | Grey Water Footprint         |       | WPL                            |
 | `environ_water_req`        | EF                           |       | EWR                            |
-| `population_tif`           | VNM-POP                      |       | VNM_pph_v2b_2009               |
 | **3D, Timeserise Map**                                                                             |
 | `pcp`                      | Precipitation                | mm    | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
 | `pet`                      | Potential EvapoTranspiration | mm    | The value of each pixel represents the total of daily Potential EvapoTranspiration in the year expressed in mm |

@@ -13,9 +13,11 @@ fpath = os.path.dirname(os.path.abspath(__file__))
 file = os.path.join(fpath, '../', 'Engine', 'examples', 'Engine2.Input.nc')
 
 # xarray Dataset, define
-ds_FillValue        = np.NaN
-ds_coords_dtype     = np.float32
-ds_data_vars_dtype  = np.float32
+ds_FillValue_i4  = -9999
+ds_FillValue_f4  = np.NaN
+ds_coords_dtype  = np.float32
+ds_data_vars_i4  = np.int32
+ds_data_vars_f4  = np.float32
 ds = xr.Dataset.from_dict(
 {
     'attrs': {
@@ -56,7 +58,7 @@ ds = xr.Dataset.from_dict(
                 'attrs': {
                         'standard_name': 'Longitude',
                         'long_name':     'Longitude',
-                        'units':         'degree',
+                        'units':         'degrees_east',
                         'axis':          'x'
                 },
                 'data': np.array(
@@ -73,7 +75,7 @@ ds = xr.Dataset.from_dict(
                 'attrs': {
                         'standard_name': 'Latitude',
                         'long_name':     'Latitude',
-                        'units':         'degree',
+                        'units':         'degrees_north',
                         'axis':          'y'
                 },
                 'data': np.array(
@@ -112,12 +114,30 @@ ds = xr.Dataset.from_dict(
                         'long_name':                        'Coordinate Reference System',
                         'grid_mapping_name':                'latitude_longitude',
                         
-                        'spatial_ref':                      'GEOGCS[\"GCS_WGS_1984\",DATUM[\"WGS_1984\",SPHEROID[\"WGS_84\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.017453292519943295]]',
+                        'spatial_ref':                      'GEOGCS['
+                                                                'GCS_WGS_1984,'
+                                                                'DATUM['
+                                                                    'WGS_1984,'
+                                                                    'SPHEROID['
+                                                                        'WGS_84,'
+                                                                        '6378137.0,'
+                                                                        '298.257223563'
+                                                                    ']'
+                                                                '],'
+                                                                'PRIMEM['
+                                                                    'Greenwich,'
+                                                                    '0.0'
+                                                                '],'
+                                                                'UNIT['
+                                                                    'Degree,'
+                                                                    '0.017453292519943295'
+                                                                ']'
+                                                            ']',
                         'longitude_of_prime_meridian':      0.0,
                         'semi_major_axis':                  6378137.0,
                         'inverse_flattening':               298.257223563
                 },
-                'data': ds_FillValue
+                'data': ds_FillValue_f4
         },
 
         # # 0D
@@ -137,7 +157,7 @@ ds = xr.Dataset.from_dict(
         #         },
         #         'data': np.array(
         #             0.02,
-        #             dtype=ds_data_vars_dtype
+        #             dtype=ds_data_vars_f4
         #         )
         # },
         # # 1D
@@ -153,11 +173,35 @@ ds = xr.Dataset.from_dict(
         #                 [
         #                     1, 2
         #                 ],
-        #                 dtype=ds_data_vars_dtype
+        #                 dtype=ds_data_vars_f4
         #         )
         # },
 
-        # 2D
+        # 2D, Integer
+        'lu': {                                             # variable short name
+                'dims': (                                   # variable dimensions
+                        'y',
+                        'x'
+                ),
+                'attrs': {                                  # variable attributes
+                                                            # 'grid_mapping' linked with variable 'crs'
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Landuse',
+                        'long_name':     'Landuse',
+                        'temp_res':      '',
+                        'units':         '',
+                        'from':          'FAO'
+                },
+                'data': np.array(                           # variable data, np.array(, dtype=)
+                        [
+                            [1, 2],
+                            [3, 4],
+                            [5, 6]
+                        ],
+                        dtype=ds_data_vars_i4
+                )
+        },
+        # 2D, Float
         'dem': {                                            # variable short name
                 'dims': (                                   # variable dimensions
                         'y',
@@ -178,7 +222,7 @@ ds = xr.Dataset.from_dict(
                             [3, 4],
                             [5, 6]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'dir': {
@@ -200,7 +244,7 @@ ds = xr.Dataset.from_dict(
                             [3, 4],
                             [5, 6]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
 
@@ -233,7 +277,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'pet': {
@@ -259,7 +303,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'ret': {
@@ -285,7 +329,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'bet': {
@@ -311,7 +355,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'get': {
@@ -337,7 +381,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'et': {
@@ -363,7 +407,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'n': {
@@ -389,7 +433,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'ndm': {
@@ -415,7 +459,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'lai': {
@@ -441,7 +485,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'bf': {
@@ -467,7 +511,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'sr': {
@@ -493,7 +537,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'dro': {
@@ -519,7 +563,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'tr': {
@@ -545,7 +589,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'perc': {
@@ -571,7 +615,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'dperc': {
@@ -597,7 +641,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         },
         'supply': {
@@ -623,7 +667,7 @@ ds = xr.Dataset.from_dict(
                                 [50, 60]
                             ]
                         ],
-                        dtype=ds_data_vars_dtype
+                        dtype=ds_data_vars_f4
                 )
         }
     }
@@ -633,7 +677,7 @@ ds = xr.Dataset.from_dict(
 ds.to_netcdf(
     file,
     mode='w',
-    format='NETCDF4',
+    format='NETCDF4',                                       # watools uses 'NETCDF4_CLASSIC'
     engine='netcdf4',
     encoding={
         # coord
@@ -643,21 +687,29 @@ ds.to_netcdf(
         'lat': {
             'dtype':        ds_coords_dtype
         },
-        # data_vars
+        # CRS
         'crs': {
-            'dtype':        ds_data_vars_dtype
+            'dtype':        ds_data_vars_i4
         },
+        # 2D, Integer
+        'lu': {
+            'dtype':        ds_data_vars_i4,
+            '_FillValue':   ds_FillValue_i4,
+            'scale_factor': ds_data_vars_f4(1.0),
+            'add_offset':   ds_data_vars_f4(0.0)
+        },
+        # 2D, Float
         'pcp': {
-            'dtype':        ds_data_vars_dtype,
-            '_FillValue':   ds_FillValue,
-            'scale_factor': ds_data_vars_dtype(1.0),
-            'add_offset':   ds_data_vars_dtype(0.0)
+            'dtype':        ds_data_vars_f4,
+            '_FillValue':   ds_FillValue_f4,
+            'scale_factor': ds_data_vars_f4(1.0),
+            'add_offset':   ds_data_vars_f4(0.0)
         },
         'pet': {
-            'dtype':        ds_data_vars_dtype,
-            '_FillValue':   ds_FillValue,
-            'scale_factor': ds_data_vars_dtype(1.0),
-            'add_offset':   ds_data_vars_dtype(0.0)
+            'dtype':        ds_data_vars_f4,
+            '_FillValue':   ds_FillValue_f4,
+            'scale_factor': ds_data_vars_f4(1.0),
+            'add_offset':   ds_data_vars_f4(0.0)
         }
     }
 )
