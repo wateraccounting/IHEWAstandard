@@ -8,6 +8,3 @@ Define the **Engine standard** of WaterAccounting Tools.
 
 ## [Data](./Data.md)
 
-
-## [Landuse classes](./Lulc.md)
-

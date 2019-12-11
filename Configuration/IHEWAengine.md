@@ -1,10 +1,11 @@
-# IHEWAstandard.Engine.Lulc
+# IHEWAstandard.Configuration.IHEWAengine
 
 Define the **Engine.Lulc standard** of WaterAccounting Tools.
 
 **TOC**
 
   - [Standard](#standard)
+    - [Landuse & Landcover](#landuse--landcover)
   - [Resources](#resources)
   - [Examples](#examples)
 
@@ -111,4 +112,4 @@ Define the **Engine.Lulc standard** of WaterAccounting Tools.
   - [Land Cover Classification with eo-learn: Part 3](https://medium.com/sentinel-hub/land-cover-classification-with-eo-learn-part-3-c62ed9ecd405)
 
 
-# [Examples](examples/README.md#lulc)
+# [Examples](examples/README.md#ihewaengine)

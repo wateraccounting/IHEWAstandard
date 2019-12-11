@@ -5,8 +5,8 @@ Define the **Configuration.IHEWAcollect standard** of WaterAccounting Tools.
 **TOC**
 
   - [Standard](#standard)
-    - [IHEWAcollect.accounts.yaml](#ihewacollectaccountsyaml)
-    - [IHEWAcollect.base.yaml](#ihewacollectbaseyaml)
+    - [accounts.yaml](#accountsyaml)
+    - [base.yaml](#baseyaml)
   - [Resources](#resources)
   - [Examples](#examples)
 
@@ -14,7 +14,7 @@ Define the **Configuration.IHEWAcollect standard** of WaterAccounting Tools.
 ## Standard
 
 
-### IHEWAcollect.accounts.yaml
+### accounts.yaml
 
 Accounts configuration Yaml file, contains
 
@@ -27,7 +27,7 @@ accounts:
 ```
 
 
-## IHEWAcollect.base.yaml
+## base.yaml
 
 Base configuration Yaml file, contains `messages` and `products`.
 
