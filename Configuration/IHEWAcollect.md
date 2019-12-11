@@ -66,7 +66,7 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 
 **Resolution types**
 
-Temporal Resolution
+Temporal Resolution, [watools.Functions.Start.Download_Data.Set_Start_End_Dates()](https://github.com/wateraccounting/watools/blob/master/Functions/Start/Download_Data.py#L771)
 
   * [strftime codes](http://strftime.org/)
   * [datetime format codes](https://docs.python.org/3.7/library/datetime.html#strftime-and-strptime-behavior)
