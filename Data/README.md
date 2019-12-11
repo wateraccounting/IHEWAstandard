@@ -35,7 +35,7 @@ Define the **Data standard** of WaterAccounting Tools.
 | double         | float   | float\_       |           |             |                  |      |                      |                      |
 | float complex  |         | complex64     |           |             |                  |      |                      |                      |
 | double complex | complex | complex128    |           |             |                  |      |                      |                      |
-|                | complex | complex\_     |           |                  |      |                      |                      |
+|                | complex | complex\_     |           |             |                  |      |                      |                      |
 
 ### Numeric Types
 

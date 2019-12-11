@@ -256,7 +256,7 @@ _Template 2D variable_
                     [3, 4],
                     [5, 6]
                 ],
-                dtype=ds_data_vars_dtype
+                dtype=np.float32
         )
 ```
 

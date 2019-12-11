@@ -93,7 +93,7 @@ ds = xr.Dataset.from_dict(
                         'standard_name': 'time',
                         'long_name':     'time'
                 },
-                'data': np.array(
+                'data': np.array(                           # Temporal resolution, linked to file name
                         [
                             datetime.datetime(2000, 1, 1, 0, 0, 0),
                             datetime.datetime(2000, 1, 2, 0, 0, 0)
