@@ -110,8 +110,8 @@ ds = xr.Dataset.from_dict(
                                                             # DO NOT CHANGE 'crs'!
                 'dims': (),
                 'attrs': {
-                        'standard_name':                    'CRS',
-                        'long_name':                        'Coordinate Reference System',
+                        'standard_name':                    'Coordinate Reference System',
+                        'long_name':                        'Lon/Lat Coords in WGS84',
                         'grid_mapping_name':                'latitude_longitude',
                         
                         'spatial_ref':                      'GEOGCS['
