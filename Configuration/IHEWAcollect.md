@@ -153,6 +153,7 @@ File driver
 | .hdr              | Header file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
 | .blw              | World file       | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
 | .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
+| In memory         | Raster file      | [MEM](https://gdal.org/drivers/raster/mem.html#raster-mem)          |
 
 
 ## Resources
