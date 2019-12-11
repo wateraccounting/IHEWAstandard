@@ -168,61 +168,69 @@ Parameter, csv data
 
 > not inculded in NetCDF file
 
-| Variable Name/Code      | Standard Name                | units | Description                    |
-| ----------------------: | ---------------------------- | ----- | ------------------------------ |
-| **0D, Parameter**                                                                               |
-| `name`                  | Basin name                   |       | VGTB                           |
-| `recycling_ratio`       | Ratio                        |       |                                |
-| **1D, Parameter**                                                                               |
-| `fraction_xs`           | Fraction                     |       |                                |
-| **1D, Calendar**                                                                                |
-| Crops                                                                                           |
-| `Rice-Rainfed`          | Crops                        |       | Cereals                        |
-| `Rice-Irrigated`        | Crops                        |       | Cereals                        |
-| `Tea`                   | Crops                        |       | Beverage crops                 |
-| `Fodder`                | Crops                        |       | Other crops                    |
-| `Sugar cane`            | Crops                        |       | Non-cereals                    |
-| Non-Crops                                                                                       |
-| `meat`                  | Non-Crops                    |       | STATS_GSOV                     |
-| `milk`                  | Non-Crops                    |       | STATS_GSOV                     |
-| `timber`                | Non-Crops                    |       | STATS_GSOV                     |
-| `aquaculture`           | Non-Crops                    |       | STATS_GSOV                     |
+| Variable Name/Code         | Standard Name                | units | Description                    |
+| -------------------------: | ---------------------------- | ----- | ------------------------------ |
+| **0D, Parameter**                                                                                  |
+| `name`                     | Basin name                   |       | VGTB                           |
+| `recycling_ratio`          | Ratio                        |       |                                |
+| `water_year_start_month`   | Start month of water year    |       |                                |
+| **0D, Extra**                                                                                      |
+| `grace`                    | GRACE                        |       |                                |
+| `grace_supply_split`       | GRACE                        |       |                                |
+| `grace_split_alpha_bounds` | GRACE                        |       |                                |
+| `ndm_max_original`         | National Drought Model       |       |                                |
+| **1D, Parameter**                                                                                  |
+| `dico_in`                  | subbasin in or outflow point |       |                                |
+| `dico_out`                 | subbasin in or outflow point |       |                                |
+| `fraction_xs`              | Fraction                     |       |                                |
+| **1D, Calendar**                                                                                   |
+| Crops                                                                                              |
+| `rice-rainfed`             | Crops                        |       | Cereals                        |
+| `rice-irrigated`           | Crops                        |       | Cereals                        |
+| `tea`                      | Crops                        |       | Beverage crops                 |
+| `fodder`                   | Crops                        |       | Other crops                    |
+| `sugar cane`               | Crops                        |       | Non-cereals                    |
+| Non-Crops                                                                                          |
+| `meat`                     | Non-Crops                    |       | STATS_GSOV                     |
+| `milk`                     | Non-Crops                    |       | STATS_GSOV                     |
+| `timber`                   | Non-Crops                    |       | STATS_GSOV                     |
+| `aquaculture`              | Non-Crops                    |       | STATS_GSOV                     |
 
 GIS data
 
 > inculded in NetCDF file
 
-| Variable Name/Code      | Standard Name                | units | Description                    |
-| ----------------------: | ---------------------------- | ----- | ------------------------------ |
-| **2D, Static Map**                                                                              |
-| Basins                                                                                          |
-| `lu`                    | VGTB                         |       |                                |
-| `full_basin_mask`       | VGTB                         |       |                                |
-| `masks`                 | VGTB                         |       |                                |
-| Global                                                                                          |
-| `dem`                   | Elevation                    |       |                                |
-| `dir`                   | Direction                    |       |                                |
-| `equiped_sw_irrigation` | GMIA FAO                     |       | gmia_v5_aeisw_pct_aei_asc      |
-| `wpl_tif`               | Grey Water Footprint         |       | WPL                            |
-| `environ_water_req`     | EF                           |       | EWR                            |
-| `population_tif`        | VNM-POP                      |       | VNM_pph_v2b_2009               |
-| **3D, Timeserise Map**                                                                          |
-| `pcp`                   | Precipitation                | mm    | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
-| `pet`                   | Potential EvapoTranspiration | mm    | The value of each pixel represents the total of daily Potential EvapoTranspiration in the year expressed in mm |
-| `ret`                   | Reference EvapoTranspiration |       |                                |
-| `bet`                   | Blue EvapoTranspiration      |       |                                |
-| `get`                   | Green EvapoTranspiration     |       |                                |
-| `et`                    | Evapotranspiration           |       |                                |
-| `n`                     | Rainy Days                   |       |                                |
-| `ndm`                   | National Drought Model       |       |                                |
-| `lai`                   | Leaf Area Index              |       |                                |
-| `bf`                    | Baseflow                     |       |                                |
-| `sr`                    | Surface Runoff               |       |                                |
-| `dro`                   | Incremental Runoff           |       |                                |
-| `tr`                    | Total  Runoff                |       |                                |
-| `perc`                  | Percolation                  |       |                                |
-| `dperc`                 | Incremental Percolation      |       |                                |
-| `supply`                | Supply                       |       |                                |
+| Variable Name/Code         | Standard Name                | units | Description                    |
+| -------------------------: | ---------------------------- | ----- | ------------------------------ |
+| **2D, Static Map**                                                                                 |
+| Basins level                                                                                       |
+| `lu`                       | VGTB                         |       |                                |
+| `full_basin_mask`          | VGTB                         |       |                                |
+| `masks`                    | VGTB                         |       |                                |
+| Global level                                                                                       |
+| `dem`                      | Elevation                    |       |                                |
+| `dir`                      | Direction                    |       |                                |
+| `equiped_sw_irrigation`    | GMIA FAO                     |       | gmia_v5_aeisw_pct_aei_asc      |
+| `wpl_tif`                  | Grey Water Footprint         |       | WPL                            |
+| `environ_water_req`        | EF                           |       | EWR                            |
+| `population_tif`           | VNM-POP                      |       | VNM_pph_v2b_2009               |
+| **3D, Timeserise Map**                                                                             |
+| `pcp`                      | Precipitation                | mm    | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
+| `pet`                      | Potential EvapoTranspiration | mm    | The value of each pixel represents the total of daily Potential EvapoTranspiration in the year expressed in mm |
+| `ret`                      | Reference EvapoTranspiration |       |                                |
+| `bet`                      | Blue EvapoTranspiration      |       |                                |
+| `get`                      | Green EvapoTranspiration     |       |                                |
+| `et`                       | Evapotranspiration           |       |                                |
+| `n`                        | Rainy Days                   |       |                                |
+| `ndm`                      | National Drought Model       |       |                                |
+| `lai`                      | Leaf Area Index              |       |                                |
+| `bf`                       | Baseflow                     |       |                                |
+| `sr`                       | Surface Runoff               |       |                                |
+| `dro`                      | Incremental Runoff           |       |                                |
+| `tr`                       | Total  Runoff                |       |                                |
+| `perc`                     | Percolation                  |       |                                |
+| `dperc`                    | Incremental Percolation      |       |                                |
+| `supply`                   | Supply                       |       |                                |
 
 _Template 2D variable_
 
