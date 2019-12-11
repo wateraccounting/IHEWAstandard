@@ -13,10 +13,11 @@ Define the **Configuration.IHEWAcollect standard** of WaterAccounting Tools.
 
 ## Standard
 
-
 ### accounts.yaml
 
 Accounts configuration Yaml file, contains
+
+_Template_
 
 ```Yaml
 accounts:
@@ -26,12 +27,11 @@ accounts:
     apitoken: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 ```
 
-
-## base.yaml
+### base.yaml
 
 Base configuration Yaml file, contains `messages` and `products`.
 
-#### None value
+**None value**
 
 YAML string '`null`' applyed to: 
 
@@ -42,8 +42,7 @@ YAML string '`null`' applyed to:
     * `unit`
     * `time`
 
-
-#### Name
+**Name**
 
 | Name       | Description                               |
 | ---------: |------------------------------------------ |
@@ -65,10 +64,9 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 "2001-02-03 04:05"
 ```
 
+**Resolution types**
 
-#### Resolution types
-
-##### Temporal Resolution
+Temporal Resolution
 
   * [strftime codes](http://strftime.org/)
   * [datetime format codes](https://docs.python.org/3.7/library/datetime.html#strftime-and-strptime-behavior)
@@ -85,7 +83,7 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | monthly     | %m       | MD       |
 | yearly      | %Y       | Y        |
 
-##### Spatial Resolution
+Spatial Resolution
   
   * [LatLon](https://calgary.rasc.ca/latlong.htm)
 
@@ -99,8 +97,7 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | 1m         | 1 minute       | 0.0277777777777777 | approx. 2 km at the equator  |
 | 5m         | 5 minute       | 0.0833333333333333 | approx. 10 km at the equator |
 
-
-#### Protocal types
+**Protocal types**
 
 | Protocal   | Python Dependency           |
 | ---------: |---------------------------- |
@@ -111,12 +108,11 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | TDS        | pytds (python-tds)          |
 | ECMWF      | ecmwfapi (ecmwf-api-client) |
 
-
-#### File types
+**File types**
 
 `Driver.FileExtension`
 
-##### File name
+File name
 
 | Name       | Description                                           |
 | ---------: |------------------------------------------------------ |
@@ -124,7 +120,7 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 | tmpfile    | generated to `./temporary/`, to be deleted at the end |
 | locfile    | saved to `./download/`                                |
 
-##### File driver
+File driver
 
 | Ext               | File type        | GDAL Drivers                                                        |
 | ----------------: | ---------------- | ------------------------------------------------------------------- |
@@ -142,7 +138,7 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 
 ## Resources
 
-### Products
+Products
 
 | Product       | Version  | Parameter         | resolution        | resolution       | variable  |
 | ------------: | -------- | ----------------- | ----------------- |----------------- | --------- |

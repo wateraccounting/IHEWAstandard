@@ -53,7 +53,7 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 
 time, y, x => time, lat, lon
 
-**Template**
+_Template_
 
 ```Python
 'dims': ('time', 'y', 'x')
@@ -61,7 +61,7 @@ time, y, x => time, lat, lon
 
 ### Coordinates variables
 
-**Template**
+_Template_
 
 ```Python
 'lon': {                                        # longitude,    np.ndarray
@@ -115,11 +115,11 @@ time, y, x => time, lat, lon
 
 ### Data variables
 
-#### Coordinate Reference System
+**Coordinate Reference System**
 
 > **DO NOT CHANGE 'crs'!**
 
-**Template CRS**
+_Template_
 
 ```Python
 'crs': {                                        # variable short name, 'crs': 'EPSG:4326 - WGS 84 - Geographic'
@@ -156,7 +156,7 @@ time, y, x => time, lat, lon
 }
 ```
 
-#### Variables
+**Variables**
 
 Parameter, csv data, not inculded in NetCDF file
 
@@ -212,7 +212,7 @@ GIS data, inculded in NetCDF file
 | `dperc`                 | Incremental Percolation      |       |                                |
 | `supply`                | Supply                       |       |                                |
 
-**Template 2D variable**
+_Template 2D variable_
 
 ```Python
 'dem': {
@@ -238,7 +238,7 @@ GIS data, inculded in NetCDF file
         )
 ```
 
-**Template 3D variable**
+_Template 3D variable_
 
 ```Python
 'pcp': {                                        # variable short name
