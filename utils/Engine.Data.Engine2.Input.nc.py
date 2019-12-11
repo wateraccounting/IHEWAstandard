@@ -103,6 +103,7 @@ ds = xr.Dataset.from_dict(
         #                               freq='D')
     },
     'data_vars': {
+        # CRS
         'crs': {                                            # variable short name, 'crs': 'EPSG:4326 - WGS 84 - Geographic'
                                                             # DO NOT CHANGE 'crs'!
                 'dims': (),
@@ -118,6 +119,44 @@ ds = xr.Dataset.from_dict(
                 },
                 'data': ds_FillValue
         },
+
+        # # 0D
+        # 'name': {
+        #         'dims': (),                             # variable dimensions, 0D
+        #         'attrs': {
+        #                 'standard_name':    'Basin Name',
+        #                 'long_name':        'Basin Name'
+        #         },
+        #         'data': 'VGTB'
+        # },
+        # 'recycling_ratio': {
+        #         'dims': (),
+        #         'attrs': {
+        #                 'standard_name':    'Recycling Ratio',
+        #                 'long_name':        'Recycling Ratio'
+        #         },
+        #         'data': np.array(
+        #             0.02,
+        #             dtype=ds_data_vars_dtype
+        #         )
+        # },
+        # # 1D
+        # 'rice-rainfed': {
+        #         'dims': (                               # variable dimensions, 1D
+        #                 'time'
+        #         ),
+        #         'attrs': {
+        #                 'standard_name':    'Crop Calendar',
+        #                 'long_name':        'Crop Calendar'
+        #         },
+        #         'data': np.array(                           # variable data, np.array(, dtype=)
+        #                 [
+        #                     1, 2
+        #                 ],
+        #                 dtype=ds_data_vars_dtype
+        #         )
+        # },
+
         # 2D
         'dem': {                                            # variable short name
                 'dims': (                                   # variable dimensions
@@ -129,6 +168,7 @@ ds = xr.Dataset.from_dict(
                         'grid_mapping':  'crs',
                         'standard_name': 'Digital Elevation Model',
                         'long_name':     'DEM',
+                        'temp_res':      '',
                         'units':         '',
                         'from':          'HydroSHED'
                 },
@@ -141,6 +181,29 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_dtype
                 )
         },
+        'dir': {
+                'dims': (
+                        'y',
+                        'x'
+                ),
+                'attrs': {
+                        'grid_mapping':  'crs',
+                        'standard_name': 'Digital Direction Model',
+                        'long_name':     'DIR',
+                        'temp_res':      '',
+                        'units':         '',
+                        'from':          'HydroSHED'
+                },
+                'data': np.array(
+                        [
+                            [1, 2],
+                            [3, 4],
+                            [5, 6]
+                        ],
+                        dtype=ds_data_vars_dtype
+                )
+        },
+
         # 3D
         'pcp': {                                            # variable short name
                 'dims': (                                   # variable dimensions
@@ -153,7 +216,8 @@ ds = xr.Dataset.from_dict(
                         'grid_mapping':  'crs',
                         'standard_name': 'Precipitation',
                         'long_name':     'Precipitation',
-                        'units':         'mm/day',
+                        'temp_res':      'day',
+                        'units':         'mm',
                         'from':          'WaterPix'
                 },
                 'data': np.array(                           # variable data, np.array(, dtype=)
