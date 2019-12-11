@@ -163,6 +163,8 @@ Parameter, csv data, not inculded in NetCDF file
 | **0D, Parameter**                                                                               |
 | `name`                  | Basin name                   |       | VGTB                           |
 | `recycling_ratio`       | Ratio                        |       |                                |
+| **1D, Parameter**                                                                               |
+| `fraction_xs`           | Fraction                     |       |                                |
 | **1D, Calendar**                                                                                |
 | Crops                                                                                           |
 | `Rice-Rainfed`          | Crops                        |       | Cereals                        |
