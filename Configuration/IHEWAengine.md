@@ -11,6 +11,8 @@ Define the **Engine.Lulc standard** of WaterAccounting Tools.
 
 ## Standard
 
+Landuse & Landcover
+
   - [FAO](http://www.fao.org/3/x0596e/X0596e00.htm#P-1_0)
   - [FAO, AQUASTAT](http://www.fao.org/aquastat/en/geospatial-information/global-maps-irrigated-areas)
   - [USGS, GLCC-2.0](https://www.usgs.gov/media/images/global-land-cover-characteristics-data-base-version-20)
@@ -102,6 +104,8 @@ Define the **Engine.Lulc standard** of WaterAccounting Tools.
 | 80 | MWU29 | Managed   | Thermal power plants                                         | 0.0   | 100.0 | 0.0   | 0.0   | 0.0   | 0.0   | 100.0 | 0.0   |
 
 ## Resources
+
+Landuse & Landcover
 
   - [Copernicus](https://land.copernicus.eu/global/)
   - [Esa PROBA-V Mission Exploitation Platform](https://proba-v-mep.esa.int/)
