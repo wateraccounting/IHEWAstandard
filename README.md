@@ -2,7 +2,7 @@
 
 Define the **standard** of WaterAccounting Tools.
 
-![alt text](https://github.com/wateraccounting/IHEWAstandard/raw/master/20190911-WA_DEV.JPG "IHEWA, Architecture")
+![alt text](./20190911-WA_DEV.JPG "IHEWA, Architecture")
 
 
 ## Architecture, [link](./Architecture)

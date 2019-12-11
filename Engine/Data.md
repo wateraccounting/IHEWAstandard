@@ -10,8 +10,6 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
     - [Dimensions](#dimensions)
     - [Coordinates variables](#coordinates-variables)
     - [Data variables](#data-variables)
-      - [CRS](#coordinate-reference-system)
-      - [Hydrological](#hydrological-variables)
   - [Resources](#resources)
   - [Examples](#examples)
 
@@ -36,17 +34,17 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
 |  **Engine Info**                                                                                          |
 | engine_num     | String  | '2'               | The data is created for engine number '2'                  |
 | engine_use     | String  | 'Input'           | This engine use the data as 'input'                        |
-| model_name     | String  | 'Hyperloop'       | This engine name is 'Hyperloop'                            |
-| model_version  | String  | 'v0.0.1'          | This engine version is 'v0.0.1'                            |
+| model_name     | String  | 'Hyperloop'       | This engine model name is 'Hyperloop'                      |
+| model_version  | String  | 'v0.0.1'          | This engine model version is 'v0.0.1'                      |
 |  **Creater Info**                                                                                         |
 | created_by     | String  | 'IHE'             | This data is created by owner 'IHE'                        |
 | created_time   | String  | '2019-12-03'      | This data is created at 'yyyy-mm-dd'                       |
 | created_model  | String  | 'WaterPix'        | This data is created by model 'WaterPix'                   |
 |  **GTiff Format**                                                                                         |
 | CRS            | String  | 'EPSG:4326 - WGS 84 - Geographic' | CRS name linked with variable 'crs'        |
-| originX        | Double  | 0.0               | West                                                       |
-| originY        | Double  | 20.0              | North                                                      |
-| rasterW        | Double  | 10.0              | Raster Width,  image pixel size 10.0                       |
+| originX        | Double  |   0.0             | West                                                       |
+| originY        | Double  |  20.0             | North                                                      |
+| rasterW        | Double  |  10.0             | Raster Width,  image pixel size 10.0                       |
 | rasterH        | Double  | -10.0             | Raster Height, image pixel size 10.0                       |
 
 ### Dimensions
@@ -162,10 +160,10 @@ Parameter, csv data, not inculded in NetCDF file
 
 | Variable Name/Code      | Standard Name                | units | Description                    |
 | ----------------------: | ---------------------------- | ----- | ------------------------------ |
-| 0D, Parameter                                                                                   |
+| **0D, Parameter**                                                                               |
 | `name`                  | Basin name                   |       | VGTB                           |
 | `recycling_ratio`       | Ratio                        |       |                                |
-| 1D, Calendar                                                                                    |
+| **1D, Calendar**                                                                                |
 | Crops                                                                                           |
 | `Rice-Rainfed`          | Crops                        |       | Cereals                        |
 | `Rice-Irrigated`        | Crops                        |       | Cereals                        |
@@ -182,7 +180,7 @@ GIS data, inculded in NetCDF file
 
 | Variable Name/Code      | Standard Name                | units | Description                    |
 | ----------------------: | ---------------------------- | ----- | ------------------------------ |
-| 2D, Static Map                                                                                  |
+| **2D, Static Map**                                                                              |
 | Basins                                                                                          |
 | `lu`                    | VGTB                         |       |                                |
 | `full_basin_mask`       | VGTB                         |       |                                |
@@ -194,7 +192,7 @@ GIS data, inculded in NetCDF file
 | `wpl_tif`               | Grey Water Footprint         |       | WPL                            |
 | `environ_water_req`     | EF                           |       | EWR                            |
 | `population_tif`        | VNM-POP                      |       | VNM_pph_v2b_2009               |
-| 3D, Timeserise Map                                                                              |
+| **3D, Timeserise Map**                                                                          |
 | `pcp`                   | Precipitation                | mm    | The value of each pixel represents the total of daily precipitation in the year expressed in mm |
 | `pet`                   | Potential EvapoTranspiration | mm    | The value of each pixel represents the total of daily Potential EvapoTranspiration in the year expressed in mm |
 | `ret`                   | Reference EvapoTranspiration |       |                                |
