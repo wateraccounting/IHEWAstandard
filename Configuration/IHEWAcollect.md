@@ -87,6 +87,21 @@ Temporal Resolution, [watools.Functions.Start.Download_Data.Set_Start_End_Dates(
 | yearly, start  | %Y       | AS       |
 | yearly, end    | %Y       | Y        |
 
+_Template_
+
+```Python
+if freq == 'MS':
+    files = glob.glob('*monthly_%d.%02d.01.tif' % (year, month))
+if freq == 'AS':
+    files = glob.glob('*yearly_%d.%02d.01.tif' % (year, month))
+if freq == 'D':
+    files = glob.glob('*daily_%d.%02d.%02d.tif' % (year, month, day))
+if freq == '8D':
+    files = glob.glob('*8-daily_%d.%02d.%02d.tif' % (year, month, day))
+if freq == '16D':
+    files = glob.glob('*16-daily_%d.%02d.%02d.tif' % (year, month, day))
+```
+
 Spatial Resolution
   
   * [LatLon](https://calgary.rasc.ca/latlong.htm)
