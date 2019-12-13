@@ -173,9 +173,9 @@ Parameter, csv data
 | Variable Name/Code                 | Standard Name                | units  | Sheet                          | Other |
 | ---------------------------------: | ---------------------------- | ------ | ------------------------------ | ----- |
 | **0D, Parameter**                                                                                                   |
-| `name`                             | Basin name VGTB              |        | sh1  sh2  sh3                  | metadata |
-| `recycling_ratio`                  | Ratio                        |        | sh1                            |       |
-| `water_year_start_month`           | Start month of water year    |        | sh1                 sh5        |       |
+| `name`                             | Basin name VGTB              |        | sh1  sh2  sh3  sh4  sh5  sh7   | metadata |
+| `recycling_ratio`                  | Ratio                        |        | sh1                      sh7   | metadata|
+| `water_year_start_month`           | Start month of water year    |        | sh1                 sh5  sh7   | metadata |
 | **0D, Extra**                                                                                                       |
 | `grace`                            | GRACE                        |        |                                |       |
 | `grace_supply_split`               | GRACE                        |        |                sh4             |       |
@@ -184,7 +184,7 @@ Parameter, csv data
 | **1D, Parameter**                                                                                                   |
 | `dico_in`                          | subbasin in or outflow point |        |                     sh5        | metadata |
 | `dico_out`                         | subbasin in or outflow point |        |                     sh5        | metadata |
-| `fraction_xs`                      | Fraction                     |        |                     sh5        |       |
+| `fraction_xs`                      | Fraction                     |        |                     sh5        | metadata |
 | **1D, Calendar**                                                                                                    |
 | Crops, Sheet 3, metadata                                                                                            |
 | `rice-rainfed`                     | Crops Cereals                |        |                                |       |
@@ -206,10 +206,10 @@ GIS data
 | ---------------------------------: | ---------------------------------- | ---------------------------------- | ---------------------------------- | -------------------------------- | ------ | ----------------------------------- | ----- |
 | **2D, Static Map**                                                                                                                                                                                                                          |
 | Integer                                                                                                                                                                                                                                     |
-| `lu`                               | `lu`                               | `Landuse`                          | `LCC`                              | VGTB                             |        | sh1  sh2  sh3  sh4  sh5             | metadata |
+| `lu`                               | `lu`                               | `Landuse`                          | `LCC`                              | VGTB                             |        | sh1  sh2  sh3  sh4  sh5       sh7   | metadata |
 | `full_basin_mask`                  | `full_basin_mask`                  |                                    |                                    | VGTB                             |        |                                     |       |
 | `masks`                            | `masks`                            |                                    |                                    | VGTB                             |        |                     sh5             | metadata |
-| `population_tif`                   | `population_tif`                   |                                    |                                    | VNM-POP VNM_pph_v2b_2009         |        |                sh4                  | global_data |
+| `population_tif`                   | `population_tif`                   |                                    |                                    | VNM-POP VNM_pph_v2b_2009         |        |                sh4            sh7   | global_data |
 | Float                                                                                                                                                                                                                                       |
 |                                    |                                    | `Water_Occurrence`                 |                                    | Water Occurrence                 |        |                     WPx             |       |
 | `dem`                              | `dem`                              |                                    |                                    | Elevation                        |        |                     sh5             | global_data |
@@ -221,24 +221,24 @@ GIS data
 |                                    |                                    | `Fraction_Surface_Water_Supply`    |                                    | Fraction Surface Water Supply    |        |                     sh5             |       |
 | `fractions`                        | Fractions: `fractions`             |                                    |                                    | Fractions                        |        | sh1                 sh5             | complete_data |
 | **3D, Timeserise Map**                                                                                                                                                                                                                      |
-| `pcp`                              | P: `p`                             | `Precipitation`                    | `PCP`                              | Precipitation                    | mm     | sh1  sh2  sh3  sh4  sh5             | complete_data |
+| `pcp`                              | P: `p`                             | `Precipitation`                    | `PCP`                              | Precipitation                    | mm     | sh1  sh2  sh3  sh4  sh5       sh7   | complete_data |
 |                                    |                                    | `Evaporation`                      |                                    | Evaporation                      |        |      sh2                            |       |
 |                                    | `t`                                | `Transpiration`                    |                                    | Transpiration                    |        |      sh2                            | complete_data |
 |                                    | `i`                                | `Interception`                     |                                    | Interception                     |        |      sh2                            | complete_data |
 | `pet`                              | `pet`                              |                                    |                                    | Potential EvapoTranspiration     | mm     |                                     |       |
 | `ret`                              | `etref`                            | `Reference_Evapotranspiration`     | `RET`                              | Reference EvapoTranspiration     |        |          _sh3_ sh4  sh5             | complete_data |
 | `aet`                              |                                    | `Actual_Evapotranspiration`        |                                    | Actual EvapoTranspiration        |        |      sh2 _sh3_ sh4 _sh5_            |       |
-| `bet`                              | ETblue: `etb`                      | `Blue_Evapotranspiration`          |                                    | Blue EvapoTranspiration          |        | sh1       sh3  sh4                  | complete_data |
-| `get`                              | ETgreen: `etg`                     | `Green_Evapotranspiration`         |                                    | Green EvapoTranspiration         |        | sh1       sh3 _sh4_                 | complete_data |
+| `bet`                              | ETblue: `etb`                      | `Blue_Evapotranspiration`          |                                    | Blue EvapoTranspiration          |        | sh1       sh3  sh4            sh7   | complete_data |
+| `get`                              | ETgreen: `etg`                     | `Green_Evapotranspiration`         |                                    | Green EvapoTranspiration         |        | sh1       sh3 _sh4_           sh7   | complete_data |
 | `et`                               | `et`                               |                                    |                                    | Evapotranspiration               |        |      sh2                            | complete_data |
 | `n`                                | `n`                                | `Rainy_Days`                       |                                    | Rainy Days                       |        |      sh2                            | complete_data |
 |                                    |                                    | `NDVI`                             |                                    | NDVI                             |        |          _sh3_                      |       |
-| `ndm`                              | `ndm`                              | `Normalized_Dry_Matter`            |                                    | National Drought Model           | kg_ha  |      sh2  sh3                       | complete_data |
+| `ndm`                              | `ndm`                              | `Normalized_Dry_Matter`            |                                    | National Drought Model           | kg_ha  |      sh2  sh3                 sh7   | complete_data |
 | `lai`                              | `lai`                              | `LAI`                              |                                    | Leaf Area Index                  | m2-m-2 |      sh2       sh4                  | complete_data |
-| `bf`                               | base_runoff: `bf`                  |                                    |                                    | Baseflow                         |        |                sh4  sh5             | complete_data |
+| `bf`                               | base_runoff: `bf`                  |                                    |                                    | Baseflow                         |        |                sh4  sh5       sh7   | complete_data |
 | `sr`                               | surf_runoff: `sr`                  | `Surface_Runoff`                   |                                    | Surface Runoff                   |        |                     sh5             | complete_data |
 | `dro`                              | `dro`                              |                                    |                                    | Incremental Runoff               |        |                sh4                  | complete_data |
-| `tr`                               | total_runoff: `tr`                 |                                    |                                    | Total Runoff                     |        | sh1                 sh5             | complete_data |
+| `tr`                               | total_runoff: `tr`                 |                                    |                                    | Total Runoff                     |        | sh1                 sh5       sh7   | complete_data |
 | `perc`                             | `perc`                             |                                    |                                    | Percolation                      |        |                sh4                  | complete_data |
 | `dperc`                            | `dperc`                            |                                    |                                    | Incremental Percolation          |        |                sh4                  | complete_data |
 |                                    | `supply_sw`                        | `Total_Supply_Surface_Water`       |                                    | Total Supply Surface Water       |        |                sh4  sh5             | complete_data |
@@ -306,6 +306,22 @@ GIS data
 |                                    | withdrawls                         |                                    |                                    |                                  |        |                     sh5             | results |
 |                                    | return_gw_sw                       |                                    |                                    |                                  |        |                     sh5             | results |
 |                                    | return_sw_sw                       |                                    |                                    |                                  |        |                     sh5             | results |
+| **Sheet 7**                                                                                                                                                                                                                         |
+|                                    | cattle                             |                                    |                                    |                                  |        |                               sh7   | global_data |
+|                                    | root_depth                         |                                    |                                    |                                  |        |                               sh7   | global_data |
+|                                    | recharge                           |                                    |                                    |                                  |        |                               sh7   | complete_data |
+|                                    | rzsm                               |                                    |                                    |                                  |        |                               sh7   | complete_data |
+|                                    | tot_runoff                         |                                    |                                    |                                  |        |                               sh7   | results |
+|                                    | feed_incremental                   |                                    |                                    |                                  |        |                               sh7   | results |
+|                                    | feed_landscape                     |                                    |                                    |                                  |        |                               sh7   | results |
+|                                    | fuel_incremental                   |                                    |                                    |                                  |        |                               sh7   | results |
+|                                    | fuel_landscape                     |                                    |                                    |                                  |        |                               sh7   | results |
+|                                    | baseflow                           |                                    |                                    |                                  |        |                               sh7   | results |
+|                                    | gw_rech                            |                                    |                                    |                                  |        |                               sh7   | results |
+|                                    | root_storage                       |                                    |                                    |                                  |        |                               sh7   | results |
+|                                    | atm_recycl_landscape               |                                    |                                    |                                  |        |                               sh7   | results |
+|                                    | atm_recycl_incremental             |                                    |                                    |                                  |        |                               sh7   | results |
+|                                    | # fish                             |                                    |                                    |                                  |        |                               sh7   | results |
 
 
 _Template 2D variable_
