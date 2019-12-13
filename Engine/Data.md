@@ -251,7 +251,7 @@ GIS data
 |                                    |                                    | `Recovable_Flow_Surface_Water`     |                                    | Recovable Flow Surface Water     |        |                sh4                  |
 |                                    |                                    | `Non_Recovable_Flow`               |                                    | Non Recovable Flow               |        |                sh4                  |
 |                                    |                                    | `Recovable_Flow`                   |                                    | Recovable Flow                   |        |                sh4                  |
-|                                    |                                    | `Surface_Withdrawal`               |                                    | Surface Withdrawal               |        |                     sh5             |
+|                                    | withdrawls:                        | `Surface_Withdrawal`               |                                    | Surface Withdrawal               |        |                     sh5             |
 
 _Template 2D variable_
 
