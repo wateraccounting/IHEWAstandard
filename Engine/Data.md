@@ -170,33 +170,33 @@ Parameter, csv data
 
 > not inculded in NetCDF file
 
-| Variable Name/Code         | Standard Name                | units | Description                    |
-| -------------------------: | ---------------------------- | ----- | ------------------------------ |
-| **0D, Parameter**                                                                                  |
-| `name`                     | Basin name                   |       | VGTB                           |
-| `recycling_ratio`          | Ratio                        |       |                                |
-| `water_year_start_month`   | Start month of water year    |       |                                |
-| **0D, Extra**                                                                                      |
-| `grace`                    | GRACE                        |       |                                |
-| `grace_supply_split`       | GRACE                        |       |                                |
-| `grace_split_alpha_bounds` | GRACE                        |       |                                |
-| `ndm_max_original`         | National Drought Model       |       |                                |
-| **1D, Parameter**                                                                                  |
-| `dico_in`                  | subbasin in or outflow point |       |                                |
-| `dico_out`                 | subbasin in or outflow point |       |                                |
-| `fraction_xs`              | Fraction                     |       |                                |
-| **1D, Calendar**                                                                                   |
-| Crops                                                                                              |
-| `rice-rainfed`             | Crops                        |       | Cereals                        |
-| `rice-irrigated`           | Crops                        |       | Cereals                        |
-| `tea`                      | Crops                        |       | Beverage crops                 |
-| `fodder`                   | Crops                        |       | Other crops                    |
-| `sugar cane`               | Crops                        |       | Non-cereals                    |
-| Non-Crops                                                                                          |
-| `meat`                     | Non-Crops                    |       | STATS_GSOV                     |
-| `milk`                     | Non-Crops                    |       | STATS_GSOV                     |
-| `timber`                   | Non-Crops                    |       | STATS_GSOV                     |
-| `aquaculture`              | Non-Crops                    |       | STATS_GSOV                     |
+| Variable Name/Code                 | Standard Name                | units  | Description                    |
+| ---------------------------------: | ---------------------------- | ------ | ------------------------------ |
+| **0D, Parameter**                                                                                           |
+| `name`                             | Basin name VGTB              |        | sh1                            |
+| `recycling_ratio`                  | Ratio                        |        | sh1                            |
+| `water_year_start_month`           | Start month of water year    |        | sh1                 sh5        |
+| **0D, Extra**                                                                                               |
+| `grace`                            | GRACE                        |        |                                |
+| `grace_supply_split`               | GRACE                        |        |                                |
+| `grace_split_alpha_bounds`         | GRACE                        |        |                                |
+| `ndm_max_original`                 | National Drought Model       |        |                                |
+| **1D, Parameter**                                                                                           |
+| `dico_in`                          | subbasin in or outflow point |        |                     sh5        |
+| `dico_out`                         | subbasin in or outflow point |        |                     sh5        |
+| `fraction_xs`                      | Fraction                     |        |                     sh5        |
+| **1D, Calendar**                                                                                            |
+| Crops                                                                                                       |
+| `rice-rainfed`                     | Crops Cereals                |        |                                |
+| `rice-irrigated`                   | Crops Cereals                |        |                                |
+| `tea`                              | Crops Beverage crops         |        |                                |
+| `fodder`                           | Crops Other crops            |        |                                |
+| `sugar cane`                       | Crops Non-cereals            |        |                                |
+| Non-Crops                                                                                                   |
+| `meat`                             | Non-Crops STATS_GSOV         |        |                                |
+| `milk`                             | Non-Crops STATS_GSOV         |        |                                |
+| `timber`                           | Non-Crops STATS_GSOV         |        |                                |
+| `aquaculture`                      | Non-Crops STATS_GSOV         |        |                                |
 
 GIS data
 
@@ -206,42 +206,43 @@ GIS data
 | ---------------------------------: | ---------------------------------- | ---------------------------------- | ---------------------------------- | -------------------------------- | ------ | ----------------------------------- |
 | **2D, Static Map**                                                                                                                                                                                                                  |
 | Integer                                                                                                                                                                                                                             |
-| `lu`                               | `lu`                               | `Landuse`                          | `LCC`                              | VGTB                             |        |                     sh5             |
+| `lu`                               | `lu`                               | `Landuse`                          | `LCC`                              | VGTB                             |        | sh1                 sh5             |
 | `full_basin_mask`                  | `full_basin_mask`                  |                                    |                                    | VGTB                             |        |                                     |
-| `masks`                            | `masks`                            |                                    |                                    | VGTB                             |        |                                     |
+| `masks`                            | `masks`                            |                                    |                                    | VGTB                             |        |                     sh5             |
 | `population_tif`                   | `population_tif`                   |                                    |                                    | VNM-POP VNM_pph_v2b_2009         |        |                                     |
 | Float                                                                                                                                                                                                                               |
 |                                    |                                    | `Water_Occurrence`                 |                                    | Water Occurrence                 |        |                     WPx             |
-| `dem`                              | `dem`                              |                                    |                                    | Elevation                        |        |                     WPx             |
-| `dir`                              | `dir`                              |                                    |                                    | Direction                        |        |                     WPx             |
+| `dem`                              | `dem`                              |                                    |                                    | Elevation                        |        |                     sh5             |
+| `dir`                              | `dir`                              |                                    |                                    | Direction                        |        |                     sh5             |
 | `equiped_sw_irrigation`            | `equiped_sw_irrigation`            |                                    |                                    | GMIA FAO                         |        |                                     |
-| `environ_water_req`                | `environ_water_req`                |                                    |                                    | EF EWR                           |        |                                     |
-| `wpl_tif`                          | `wpl_tif`                          | `Grey_Water_Footprint`             |                                    | Grey Water Footprint             |        |           sh4                       |
+| `environ_water_req`                | `environ_water_req`                |                                    |                                    | EF EWR                           |        | sh1                 sh5             |
+| `wpl_tif`                          | `wpl_tif`                          | `Grey_Water_Footprint`             |                                    | Grey Water Footprint             |        | sh1       sh4       sh5             |
 |                                    |                                    | `Theta_Saturated_Topsoil`          |                                    | Theta Saturated Topsoil          |        |           sh4                       |
 |                                    |                                    | `Fraction_Surface_Water_Supply`    |                                    | Fraction Surface Water Supply    |        |                     sh5             |
+| `fractions`                        | `fractions`                        |                                    |                                    | Fractions                        |        | sh1                 sh5             |
 | **3D, Timeserise Map**                                                                                                                                                                                                              |
-| `pcp`                              | `pcp`                              | `Precipitation`                    | `PCP`                              | Precipitation                    | mm     | sh1  sh2  sh3  sh4  sh5             |
+| `pcp`                              | `p`                                | `Precipitation`                    | `PCP`                              | Precipitation                    | mm     | sh1  sh2  sh3  sh4  sh5             |
 |                                    |                                    | `Evaporation`                      |                                    | Evaporation                      |        |      sh2                            |
 |                                    |                                    | `Transpiration`                    |                                    | Transpiration                    |        |      sh2                            |
 |                                    |                                    | `Interception`                     |                                    | Interception                     |        |      sh2                            |
 | `pet`                              | `pet`                              |                                    |                                    | Potential EvapoTranspiration     | mm     |                                     |
 | `ret`                              | `ret`                              | `Reference_Evapotranspiration`     | `RET`                              | Reference EvapoTranspiration     |        |           sh3  sh4  sh5             |
 | `aet`                              |                                    | `Actual_Evapotranspiration`        | `RET`                              | Actual EvapoTranspiration        |        |      sh2  sh3  sh4  sh5             |
-| `bet`                              | `bet`                              | `Blue_Evapotranspiration`          |                                    | Blue EvapoTranspiration          |        |           sh3  sh4                  |
-| `get`                              | `get`                              | `Green_Evapotranspiration`         |                                    | Green EvapoTranspiration         |        |           sh3  sh4                  |
+| `bet`                              | `bet`                              | `Blue_Evapotranspiration`          |                                    | Blue EvapoTranspiration          |        | sh1       sh3  sh4                  |
+| `get`                              | `get`                              | `Green_Evapotranspiration`         |                                    | Green EvapoTranspiration         |        | sh1       sh3  sh4                  |
 | `et`                               | `et`                               |                                    |                                    | Evapotranspiration               |        |                                     |
 | `n`                                | `n`                                | `Rainy_Days`                       |                                    | Rainy Days                       |        |      sh2                            |
 | `ndm`                              | `ndm`                              | `Normalized_Dry_Matter`            |                                    | National Drought Model           | kg_ha  |      sh2  sh3                       |
 | `lai`                              | `lai`                              | `LAI`                              |                                    | Leaf Area Index                  | m2-m-2 |      sh2                            |
-| `bf`                               | `bf`                               |                                    |                                    | Baseflow                         |        |                                     |
+| `bf`                               | `bf`                               |                                    |                                    | Baseflow                         |        |                     sh5             |
 | `sr`                               | `sr`                               | `Surface_Runoff`                   |                                    | Surface Runoff                   |        |                     sh5             |
 | `dro`                              | `dro`                              |                                    |                                    | Incremental Runoff               |        |                                     |
-| `tr`                               | `tr`                               |                                    |                                    | Total Runoff                     |        |                     WPx             |
+| `tr`                               | `tr`                               |                                    |                                    | Total Runoff                     |        | sh1                 sh5             |
 | `perc`                             | `perc`                             |                                    |                                    | Percolation                      |        |                                     |
 | `dperc`                            | `dperc`                            |                                    |                                    | Incremental Percolation          |        |                                     |
 |                                    |                                    | `Total_Supply_Surface_Water`       |                                    | Total Supply Surface Water       |        |                                     |
 |                                    |                                    | `Total_Supply_Ground_Water`        |                                    | Total Supply Ground Water        |        |                                     |
-| `supply`                           | `supply`                           | `Total_Supply`                     |                                    | Supply                           |        |                sh4  WPx             |
+| `supply`                           | `supply_sw`                        | `Total_Supply`                     |                                    | Supply                           |        |                sh4  sh5             |
 |                                    |                                    | `Non_Consumed_Water`               |                                    | Non Consumed Water               |        |                sh4                  |
 |                                    |                                    | `NDVI`                             |                                    | NDVI                             |        |           sh3                       |
 |                                    |                                    | `Non_Recovable_Flow_Ground_Water`  |                                    | Non Recovable Flow Ground Water  |        |                sh4                  |
