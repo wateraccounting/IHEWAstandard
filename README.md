@@ -10,6 +10,7 @@ Define the **standard** of WaterAccounting Tools.
 
 ## Configuration, [link](./Configuration)
 
+  - [IHEWA](./Configuration/IHEWA.md)
   - [IHEWAcollect](./Configuration/IHEWAcollect.md)
   - [IHEWAengine](./Configuration/IHEWAengine.md)
 
