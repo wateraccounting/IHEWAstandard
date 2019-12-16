@@ -5,14 +5,14 @@ Define the **Configuration.IHEWA standard** of WaterAccounting Tools.
 **TOC**
 
   - [Standard](#standard)
-    - [project.yaml](#projectyaml)
+    - [IHEWA.yaml](#ihewayaml)
   - [Resources](#resources)
   - [Examples](#examples)
 
 
 ## Standard
 
-### project.yaml
+### IHEWA.yaml
 
 
 ## Resources
