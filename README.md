@@ -2,8 +2,6 @@
 
 Define the **standard** of WaterAccounting Tools.
 
-![alt text](./20190911-WA_DEV.JPG "IHEWA, Architecture")
-
 
 ## Architecture, [link](./Architecture)
 
