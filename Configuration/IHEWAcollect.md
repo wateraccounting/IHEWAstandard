@@ -76,6 +76,7 @@ Temporal Resolution, [watools.Functions.Start.Download_Data.Set_Start_End_Dates(
 | Name           | datetime | pandas   |
 | -------------: | -------- | -------- |
 | hourly         | %H       | H        |
+| three_hourly   |          | 3H       |
 | six_hourly     |          | 6H       |
 | daily          | %d       | D        |
 | weekly         | %W / %U  | 7D       |
