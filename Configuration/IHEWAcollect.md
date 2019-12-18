@@ -31,16 +31,25 @@ accounts:
 
 Base configuration Yaml file, contains `messages` and `products`.
 
+`products` has the structure, _product_ -> _version_ -> _parameter_ -> _resolution_ -> _variable_.
+
 **None value**
 
-YAML string '`null`' applyed to: 
+YAML value `null` applyed to: 
 
-  * `account`
-  * data
-    * `ftype`
-    * `freq`
-    * `unit`
-    * `time`
+  - _roduct_
+    - `account:`
+    - _version_
+      - _parameter_
+        - _resolution_
+          - `freq:`
+          - `variables:`
+            - _variable_
+              - `fname:`
+              - `ftype:`
+              - `dtype:`
+              - `unit:`
+              - `time:`
 
 **Name**
 
@@ -158,6 +167,77 @@ File driver
 | Memory            | Raster file      | [MEM](https://gdal.org/drivers/raster/mem.html#raster-mem)          |
 | DODS/OPeNDAP      | Vector file      | [DODS](https://gdal.org/drivers/vector/dods.html#vector-dods)       |
 
+_Template_
+
+```Yaml
+products:
+  ALEXI:                                                                            # `product`
+    account: 'FTP_WA'                                                               # accounts.yml
+    meta:                                                                           # product metadata
+      owner: 'IHE Delft'                                                            #   product owner/developer/maintainer...
+      description:                                                                  #   description
+        'Product description'                                                       #   
+      websites:                                                                     #   official websites
+        - 'https://www.wateraccounting.org'
+      protocols:                                                                    #   web protocols, ex. HTTP/HTTPS...
+        - 'FTP'
+      methods:                                                                      #   dependency (python) used to download 
+        - 'ftp'
+      ftypes:                                                                       #   hosted file types
+        - 'gz'
+        - 'GTiff'
+      versions:                                                                     #   version list
+        - 'v1'
+      datasets:                                                                     #   datasets
+        - 'Evaporation'
+      datatypes:                                                                    #   temporal/spacial resolution
+        - 'daily'
+        - 'weekly'
+      projection:                                                                   #   EPSG Geodetic Parameter Dataset of Coordinate Reference Systems (crs)
+        - 'EPSG:4326 - WGS 84 - Geographic'
+    v1:                                                                             # `product.version`
+      Evaporation:                                                                  # `product.version.parameter`
+        daily:                                                                      # `product.version.parameter.resolution`
+          url: 'ftp://ftp.wateraccounting.unesco-ihe.org'                           #   data potal/repository url
+          method: 'get'                                                             #   request methods [get, post, ...]
+          freq: 'D'                                                                 #   `resolution` short name, follow pandas.datetime
+          variables:                                                                #
+            ETa:                                                                    # `product.version.parameter.resolution.variable`
+              name: 'Daily Evaporation'                                             #   long name 
+              description:                                                          #   description
+                ''                                                                  # 
+              dir: '/WaterAccounting/Data_Satellite/Evaporation/ALEXI/'             #   data location on the data potal/repository
+              fname:                                                                #   file name
+                r: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat.gz'                             #     remote file,            string, template
+                t: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat'                                #     temporary file,         string, template
+                l: 'ETa-ALEXI_v1_mmpd_daily-{Y:>04s}_{m:>02s}_{d:>02s}.tif'         #     local/downloaded file,  string, template
+              ftype:                                                                #   file type/extension
+                r: 'gz'                                                             #     remote file,            string
+                t: 'dat'                                                            #     temporary file,         string
+                l: 'GTiff'                                                          #     local/downloaded file,  string
+              dtype:                                                                #   data type
+                r: 'binary'                                                         #     remote file,            string, numpy style
+                t: 'float32'                                                        #     temporary file,         string, numpy style
+                l: 'float32'                                                        #     local/downloaded file,  string, numpy style
+              unit:                                                                 #   data unit
+                r: 'MJ/m2d'                                                         #     remote file,            string
+                l: 'mm/d'                                                           #     local/downloaded file,  string
+                m: 2.45                                                             #     multiplyer,             float
+              lat:                                                                  #   latitude
+                s: -60.0                                                            #     south,                  float
+                n: 70.0                                                             #     north,                  float
+                r: 0.05                                                             #     resolution,             float
+              lon:                                                                  #   longitude
+                w: -180.0                                                           #     west,                   float
+                e: 180.0                                                            #     east,                   float
+                r: 0.05                                                             #     resolution,             float
+              time:                                                                 #   time
+                s: 2005-01-01                                                       #     start,                  string, 'yyyy-mm-dd'
+                e: null                                                             #     end,                    string, 'yyyy-mm-dd'
+              dem:                                                                  #   demension
+                w: -9999                                                            #     width,                  integer
+                h: -9999                                                            #     height,                 integer
+```
 
 ## Resources
 
