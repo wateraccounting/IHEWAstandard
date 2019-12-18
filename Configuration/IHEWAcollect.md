@@ -136,9 +136,9 @@ File name
 
 | Name       | Description                                           |
 | ---------: |------------------------------------------------------ |
-| rmtfile    | downloaded to `./remote/`                             |
-| tmpfile    | generated to `./temporary/`, to be deleted at the end |
-| locfile    | saved to `./download/`                                |
+| rmtfile    | remote file downloaded to `./remote/`, to delete      |
+| tmpfile    | temporary file generated to `./temporary/`, te delete |
+| locfile    | WaterAccounting file saved to `./download/`, to keep  |
 
 File driver
 
