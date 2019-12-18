@@ -254,6 +254,8 @@ Hydrologic Cycle, FAO, [NOAA](https://www.nwrfc.noaa.gov/info/water_cycle/hydrol
 | **Ground-water discharge** |
 | `BF`                   | baseflow                                         | Baseflow                                         |                                     |                                     |       |
 | **Storage, by planetary water cycle** |
+| **Irrigation** |
+| `RF`                   | return_flow                                      | Return Flow                                      |                                     |                                     |       |
 | **Runoff, from rainfall and snowmelt** |
 | `TR`                   | total_runoff                                     | Total Runoff                                     |                                     |                                     |       |
 | `SR`                   | surface_runoff                                   | Surface Runoff                                   |                                     |                                     |       |
