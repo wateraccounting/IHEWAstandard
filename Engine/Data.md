@@ -192,7 +192,7 @@ Parameter, csv data
 | **1D, Parameter**                                                                                                        |
 | `dico_in`                          | subbasin in or outflow point |        |                     sh5I            | metadata |
 | `dico_out`                         | subbasin in or outflow point |        |                     sh5I            | metadata |
-| `fraction_xs`                      | Fraction                     |        |                     sh5I            | metadata |
+| `fraction_xs`                      | Fraction Altitude XS         |        |                     sh5I            | metadata |
 | **1D, Calendar**                                                                                                         |
 | Crops, Sheet 3, metadata                                                                                                 |
 | `rice-rainfed`                     | Crops Cereals                |        |                                     |       |
@@ -321,8 +321,8 @@ _Variable Name, Input/Output, Map_
 |                                    | ` `                                | `Recovable_Flow_Surface_Water`     |                                    | Recovable Flow Surface Water     |        |                sh4O                 | `recov_sw_tif`, `RECOVERABLE_SURFACEWATER` |
 |                                    | ` `                                | `Recovable_Flow_Ground_Water`      |                                    | Recovable Flow Ground Water      |        |                sh4O                 | `recov_gw_tif`, `RECOVERABLE_GROUNDWATER` |
 |                                    | ` `                                | `Recovable_Flow`                   |                                    | Recovable Flow                   |        |                sh4O                 | `recov_tif` |
-|                                    | `return_flow_sw_sw`                |                                    |                                    |                                  |        |                          sh6O       | complete_data, `return_flow_sw_sw_tif` |
-|                                    | `return_flow_sw_gw`                |                                    |                                    |                                  |        |                     sh5I sh6O       | complete_data, `return_flow_sw_gw_tif` |
+|                                    | `return_flow_sw_sw`                |                                    |                                    |                                  |        |                     sh5I sh6O       | complete_data, `return_flow_sw_sw_tif` |
+|                                    | `return_flow_sw_gw`                |                                    |                                    |                                  |        |                          sh6O       | complete_data, `return_flow_sw_gw_tif` |
 |                                    | `return_flow_gw_sw`                |                                    |                                    |                                  |        |                     sh5I sh6O       | complete_data, `return_flow_gw_sw_tif` |
 |                                    | `return_flow_gw_gw`                |                                    |                                    |                                  |        |                          sh6O       | complete_data, `return_flow_gw_gw_tif` |
 |                                    | `withdrawls`                       | `Surface_Withdrawal`               |                                    | Surface Withdrawal               |        |                     sh5O            |       |
