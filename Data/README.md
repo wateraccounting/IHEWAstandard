@@ -7,12 +7,13 @@ Define the **Data standard** of WaterAccounting Tools.
 
 ## [GTiff](./GTiff.md)
 
+## [gz](./gz.md)
 
 ## [NetCDF](./NetCDF.md)
 
-
 ## [SVG](./SVG.md)
 
+## [zip](./zip.md)
 
 ## Note
 

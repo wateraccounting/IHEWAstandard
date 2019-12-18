@@ -24,8 +24,11 @@ YAML, etc.
 Format, etc.
 
   - [GTiff](./Data/GTiff.md)
+  - [gz](./Data/gz.md)
   - [NetCDF](./Data/NetCDF.md)
   - [SVG](./Data/SVG.md)
+  - [zip](./Data/zip.md)
+
   - [Note](./Data/README.md#note)
 
 
