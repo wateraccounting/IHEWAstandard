@@ -56,7 +56,7 @@ ds = xr.Dataset.from_dict(
         'lon': {                                            # longitude,    np.ndarray
                 'dims': ('y', 'x'),
                 'attrs': {
-                        'standard_name': 'Longitude',
+                        'standard_name': 'longitude',
                         'long_name':     'Longitude',
                         'units':         'degrees_east',
                         'axis':          'x'
@@ -73,7 +73,7 @@ ds = xr.Dataset.from_dict(
         'lat': {                                            # latitude,    np.ndarray
                 'dims': ('y', 'x'),
                 'attrs': {
-                        'standard_name': 'Latitude',
+                        'standard_name': 'latitude',
                         'long_name':     'Latitude',
                         'units':         'degrees_north',
                         'axis':          'y'
@@ -91,7 +91,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time'),
                 'attrs': {
                         'standard_name': 'time',
-                        'long_name':     'time'
+                        'long_name':     'Time'
                 },
                 'data': np.array(                           # Temporal resolution, linked to file name
                         [
@@ -144,7 +144,7 @@ ds = xr.Dataset.from_dict(
         # 'name': {
         #         'dims': (),                             # variable dimensions, 0D
         #         'attrs': {
-        #                 'standard_name':    'Basin Name',
+        #                 'standard_name':    'basin_name',
         #                 'long_name':        'Basin Name'
         #         },
         #         'data': 'VGTB'
@@ -152,7 +152,7 @@ ds = xr.Dataset.from_dict(
         # 'recycling_ratio': {
         #         'dims': (),
         #         'attrs': {
-        #                 'standard_name':    'Recycling Ratio',
+        #                 'standard_name':    'recycling_ratio',
         #                 'long_name':        'Recycling Ratio'
         #         },
         #         'data': np.array(
@@ -166,7 +166,7 @@ ds = xr.Dataset.from_dict(
         #                 'time'
         #         ),
         #         'attrs': {
-        #                 'standard_name':    'Crop Calendar',
+        #                 'standard_name':    'crop_calendar',
         #                 'long_name':        'Crop Calendar'
         #         },
         #         'data': np.array(                           # variable data, np.array(, dtype=)
