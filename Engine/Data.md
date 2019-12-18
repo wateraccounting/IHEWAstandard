@@ -257,7 +257,7 @@ Data category, the idea is based on **SWAT+** Input/Output [Documentation](../re
 
 _Variable Name, Input/Output, Map_
 
-| Variables Name/Code                | Hyperloop                          | watools                            | WaPOR                              | Long Name                        | units  | Sheet                               | Other |
+| Variables Name/Code                | Hyperloop                          | watools                            | WaPOR                              | Long Name                        | units  | Sheet                               | Script |
 | ---------------------------------: | ---------------------------------- | ---------------------------------- | ---------------------------------- | -------------------------------- | ------ | ----------------------------------- | ----- |
 | **2D, Static Map** |
 | Integer           |
@@ -316,7 +316,7 @@ _Variable Name, Input/Output, Map_
 
 _Variable Name, Calculation/HYD Processes, Script_
 
-| Variables Name/Code                | Hyperloop                          | watools                            | WaPOR                              | Standard Name                    | units  | Sheet                               | Other |
+| Variables Name/Code                | Hyperloop                          | watools                            | WaPOR                              | Standard Name                    | units  | Sheet                               | Script |
 | ---------------------------------: | ---------------------------------- | ---------------------------------- | ---------------------------------- | -------------------------------- | ------ | ----------------------------------- | ----- |
 | **Sheet 1** |
 |                                    | et_advection                       |                                    |                                    |                                  |        | sh1                                 | results |
