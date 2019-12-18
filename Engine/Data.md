@@ -206,7 +206,7 @@ Parameter, csv data
 | `timber`                           | Non-Crops STATS_GSOV         |        |                                     |       |
 | `aquaculture`                      | Non-Crops STATS_GSOV         |        |                                     |       |
 
-GIS data
+GIS, NetCDF data
 > inculded in NetCDF file
 
   - **Variables Name**: All upper characters.
