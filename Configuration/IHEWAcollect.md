@@ -118,14 +118,14 @@ Spatial Resolution
 
 **Protocal types**
 
-| Protocal   | Python Dependency           |
-| ---------: |---------------------------- |
-| FTP        | from ftplib import FTP      |
-| HTTP/HTTPS | import requests (requests)  |
-| HTTP/HTTPS | urllib.request (urllib)     |
-| HTTP/HTTPS | pycurl.Curl (pycurl)        |
-| TDS        | pytds (python-tds)          |
-| ECMWF      | ecmwfapi (ecmwf-api-client) |
+| Protocals  | Python Dependency           | get | post | api |
+| ---------: |---------------------------- | --- | ---- | --- |
+| FTP        | from ftplib import FTP      | Y   |      |     |
+| HTTP/HTTPS | import requests (requests)  | Y   |      |     |
+| HTTP/HTTPS | urllib.request (urllib)     | Y   |      |     |
+| HTTP/HTTPS | pycurl.Curl (pycurl)        | Y   |      |     |
+| TDS        | pytds (python-tds)          | Y   |      |     |
+| ECMWF      | ecmwfapi (ecmwf-api-client) |     |      | Y   |
 
 **File types**
 
@@ -153,11 +153,15 @@ File driver
 | .hdr              | Header file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
 | .blw              | World file       | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
 | .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| In memory         | Raster file      | [MEM](https://gdal.org/drivers/raster/mem.html#raster-mem)          |
+| **Other**                                                                                                  |
+| Memory            | Raster file      | [MEM](https://gdal.org/drivers/raster/mem.html#raster-mem)          |
+| DODS/OPeNDAP      | Vector file      | [DODS](https://gdal.org/drivers/vector/dods.html#vector-dods)       |
 
 
 ## Resources
 
 [Products](https://ihewacollect.readthedocs.io/en/latest/)
+
+[NASA, OPeNDAP and GDS](https://disc.gsfc.nasa.gov/information/tools?title=OPeNDAP%20and%20GDS)
 
 # [Examples](examples/README.md#ihewacollect)

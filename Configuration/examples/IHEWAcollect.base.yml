@@ -10,14 +10,24 @@ products:
       owner: 'IHE Delft'                                                            #   product owner/developer/maintainer...
       description:                                                                  #   description
         'Product description'                                                       #   
-      websites: ['https://www.wateraccounting.org']                                 #   official websites
-      protocols: ['FTP']                                                            #   web protocols, ex. HTTP/HTTPS...
-      methods: ['ftp']                                                              #   dependency (python) used to download 
-      ftypes: ['gz', 'GTiff']                                                       #   hosted file types
-      versions: ['v1']                                                              #   version list
-      datasets: ['Evaporation']                                                     #   datasets
-      datatypes: ['daily', 'weekly']                                                #   temporal/spacial resolution
-      projection: ['EPSG:4326 - WGS 84 - Geographic']                               #   EPSG Geodetic Parameter Dataset of Coordinate Reference Systems (crs)
+      websites:                                                                     #   official websites
+        - 'https://www.wateraccounting.org'
+      protocols:                                                                    #   web protocols, ex. HTTP/HTTPS...
+        - 'FTP'
+      methods:                                                                      #   dependency (python) used to download 
+        - 'ftp'
+      ftypes:                                                                       #   hosted file types
+        - 'gz'
+        - 'GTiff'
+      versions:                                                                     #   version list
+        - 'v1'
+      datasets:                                                                     #   datasets
+        - 'Evaporation'
+      datatypes:                                                                    #   temporal/spacial resolution
+        - 'daily'
+        - 'weekly'
+      projection:                                                                   #   EPSG Geodetic Parameter Dataset of Coordinate Reference Systems (crs)
+        - 'EPSG:4326 - WGS 84 - Geographic'
     v1:                                                                             # `product.version`
       Evaporation:                                                                  # `product.version.parameter`
         daily:                                                                      # `product.version.parameter.resolution`
