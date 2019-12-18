@@ -178,7 +178,7 @@ ds = xr.Dataset.from_dict(
         # },
 
         # 2D, Integer
-        'lu': {                                             # variable short name
+        'LU': {                                             # variable short name
                 'dims': (                                   # variable dimensions
                         'y',
                         'x'
@@ -202,7 +202,7 @@ ds = xr.Dataset.from_dict(
                 )
         },
         # 2D, Float
-        'dem': {                                            # variable short name
+        'DEM': {                                            # variable short name
                 'dims': (                                   # variable dimensions
                         'y',
                         'x'
@@ -225,7 +225,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'dir': {
+        'DIR': {
                 'dims': (
                         'y',
                         'x'
@@ -249,7 +249,7 @@ ds = xr.Dataset.from_dict(
         },
 
         # 3D
-        'pcp': {                                            # variable short name
+        'PCP': {                                            # variable short name
                 'dims': (                                   # variable dimensions
                         'time',
                         'y',
@@ -280,7 +280,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'pet': {
+        'ETP': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -306,7 +306,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'ret': {
+        'ETR': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -332,7 +332,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'bet': {
+        'ETB': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -358,7 +358,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'get': {
+        'ETG': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -384,7 +384,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'et': {
+        'ET': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -410,7 +410,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'n': {
+        'N': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -436,7 +436,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'ndm': {
+        'NDM': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -462,7 +462,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'lai': {
+        'LAI': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -488,7 +488,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'bf': {
+        'BF': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -514,7 +514,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'sr': {
+        'SR': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -540,7 +540,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'dro': {
+        'DRO': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -566,7 +566,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'tr': {
+        'TR': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -592,7 +592,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'perc': {
+        'PERC': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -618,7 +618,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'dperc': {
+        'DPERC': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -644,7 +644,7 @@ ds = xr.Dataset.from_dict(
                         dtype=ds_data_vars_f4
                 )
         },
-        'supply': {
+        'SUPPLY': {
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
@@ -692,20 +692,14 @@ ds.to_netcdf(
             'dtype':        ds_data_vars_i4
         },
         # 2D, Integer
-        'lu': {
+        'LU': {
             'dtype':        ds_data_vars_i4,
             '_FillValue':   ds_FillValue_i4,
             'scale_factor': ds_data_vars_f4(1.0),
             'add_offset':   ds_data_vars_f4(0.0)
         },
         # 2D, Float
-        'pcp': {
-            'dtype':        ds_data_vars_f4,
-            '_FillValue':   ds_FillValue_f4,
-            'scale_factor': ds_data_vars_f4(1.0),
-            'add_offset':   ds_data_vars_f4(0.0)
-        },
-        'pet': {
+        'PCP': {
             'dtype':        ds_data_vars_f4,
             '_FillValue':   ds_FillValue_f4,
             'scale_factor': ds_data_vars_f4(1.0),
