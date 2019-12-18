@@ -215,6 +215,9 @@ GIS, NetCDF data
 
 Data category, the idea is based on **SWAT+** Input/Output [Documentation](../resources/Products-TWRI-swat2012_io_documentation.pdf) and FAO **WaPOR** [Database](../resources/Products.xlsx).
 
+Hydrologic Cycle
+![alt text](./img/Hydrologic_Cycle.gif "IHEWAengine.1, Hydrologic Cycle")
+
 | Variables Name/Code    | Standard Name                                    | Long Name                                        | Sheet Input                         | Sheet Output                        | Other |
 | ---------------------: | ------------------------------------------------ | ------------------------------------------------ | ----------------------------------- | ----------------------------------- | ----- |
 | `AB`                   | aa_bb                                            | Aa Bb                                            |  1,   2,   3,   4,   5,   6,   7,   |  1,   2,   3,   4,   5,   6,   7,   |       |
@@ -254,6 +257,9 @@ Data category, the idea is based on **SWAT+** Input/Output [Documentation](../re
 | `DPERC`                | incremental_percolation                          | Incremental Percolation                          |                                     |                                     |       |
 | **Supply** |
 | `SUPPLY`               | supply                                           | Supply                                           |                                     |                                     |       |
+| **Population** |
+| `POP`                  | population                                       | Population                                       |                                     |                                     |       |
+
 
 _Variable Name, Input/Output, Map_
 
@@ -264,7 +270,7 @@ _Variable Name, Input/Output, Map_
 | `LU`                               | `lu`                               | `Landuse`                          | `LCC`                              | VGTB                             |        | sh1I sh2I sh3I sh4I sh5I sh6I sh7I  | metadata |
 | `full_basin_mask`                  | `full_basin_mask`                  |                                    |                                    | VGTB                             |        |                                     |       |
 | `masks`                            | `masks`                            |                                    |                                    | VGTB                             |        |                     sh5I            | metadata |
-| `population_tif`                   | `population_tif`                   |                                    |                                    | VNM-POP VNM_pph_v2b_2009         |        |                sh4I           sh7   | global_data |
+| `POP`                              | `population_tif`                   |                                    |                                    | VNM-POP VNM_pph_v2b_2009         |        |                sh4I           sh7   | global_data |
 | Float                                                                                                                                                                                                                                       |
 |                                    |                                    | `Water_Occurrence`                 |                                    | Water Occurrence                 |        |                     WPx             |       |
 | `DEM`                              | `dem`                              |                                    |                                    | Elevation Void-filled            |        |                     sh5I            | global_data |
