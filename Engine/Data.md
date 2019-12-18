@@ -247,7 +247,7 @@ Data category, the idea is based on **SWAT+** Input/Output [Documentation](../re
 | **Supply** |
 | SUPPLY                 | supply                                           | Supply                                           |                                     |                                     |       |
 
-_Variable Name, Input/Output_
+_Variable Name, Input/Output, Map_
 
 | Variables Name/Code                | Hyperloop                          | watools                            | WaPOR                              | Long Name                        | units  | Sheet                               | Other |
 | ---------------------------------: | ---------------------------------- | ---------------------------------- | ---------------------------------- | -------------------------------- | ------ | ----------------------------------- | ----- |
@@ -306,7 +306,7 @@ _Variable Name, Input/Output_
 |                                    | `return_flow_gw_gw`                |                                    |                                    |                                  |        |                          sh6O       | complete_data, `return_flow_gw_gw_tif` |
 |                                    | `withdrawls`                       | `Surface_Withdrawal`               |                                    | Surface Withdrawal               |        |                     sh5O            |       |
 
-_Variable Name, Calculation
+_Variable Name, Calculation/HYD Processes, Script_
 
 | Variables Name/Code                | Hyperloop                          | watools                            | WaPOR                              | Standard Name                    | units  | Sheet                               | Other |
 | ---------------------------------: | ---------------------------------- | ---------------------------------- | ---------------------------------- | -------------------------------- | ------ | ----------------------------------- | ----- |
