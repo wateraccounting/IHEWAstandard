@@ -33,6 +33,12 @@ Base configuration Yaml file, contains `messages` and `products`.
 
 `products` has the structure, _product_ -> _version_ -> _parameter_ -> _resolution_ -> _variable_.
 
+  - _product_: All upper characters, ex. ALEXI.
+  - _version_: Start with 'v', ex. v1, v2.0.
+  - _parameter_: Use IHEWAstandard.Engine.Data.Long Name, ex. SoilWaterIndex.
+  - _resolution_: Following talbes, **Resolution types**, Temporal, Spatial Resolution.
+  - _variable_: Use IHEWAstandard.Engine.Data, and special variable cases, ex. **ASCAT**.soil_water_index.SWI_010, **CFSR**.Radiation.dlwsfc, **DEM**.DEM.af 
+
 **None value**
 
 YAML value `null` applyed to: 
@@ -116,15 +122,16 @@ Spatial Resolution
   
   * [LatLon](https://calgary.rasc.ca/latlong.htm)
 
-| Name       | sec/min        | degree   	         | meters/km                    |
-| ---------: |--------------- | ------------------ | ---------------------------- |
-| 0.1s       | 0.1 arc-second | 0.0000277777777777 | approx. 3 m at the equator   |
-| 1s         | 1 arc-second   | 0.0002777777777777 | approx. 30 m at the equator  |
-| 3s         | 3 arc-second   | 0.0008333333333333 | approx. 90 m at the equator  |
-| 15s        | 15 arc-second  | 0.0041666666666667 | approx. 500 m at the equator |
-| 30s        | 30 arc-second  | 0.0083333333333333 | approx. 1 km at the equator  |
-| 1m         | 1 minute       | 0.0277777777777777 | approx. 2 km at the equator  |
-| 5m         | 5 minute       | 0.0833333333333333 | approx. 10 km at the equator |
+| Name       | sec/min        | degree   	         | meters/km                      |
+| ---------: |--------------- | ------------------ | ------------------------------ |
+| 0.1s       | 0.1 arc-second | 0.0000277777777777 | approx. 3 m at the equator     |
+| 1s         | 1 arc-second   | 0.0002777777777777 | approx. 30 m at the equator    |
+| 3s         | 3 arc-second   | 0.0008333333333333 | approx. 90 m at the equator    |
+| 15s        | 15 arc-second  | 0.0041666666666667 | approx. 500 m at the equator   |
+| 30s        | 30 arc-second  | 0.0083333333333333 | approx. 1 km at the equator    |
+| 1m         | 1 minute       | 0.0277777777777777 | approx. 2 km at the equator    |
+| 5m         | 5 minute       | 0.0833333333333333 | approx. 10 km at the equator   |
+| 6m         | 6 minute       | 0.1                | approx. 12.5 km at the equator |
 
 **Protocal types**
 
@@ -189,20 +196,20 @@ products:
       versions:                                                                     #   version list
         - 'v1'
       datasets:                                                                     #   datasets
-        - 'Evaporation'
+        - 'Evapotranspiration'
       datatypes:                                                                    #   temporal/spacial resolution
         - 'daily'
         - 'weekly'
       projection:                                                                   #   EPSG Geodetic Parameter Dataset of Coordinate Reference Systems (crs)
         - 'EPSG:4326 - WGS 84 - Geographic'
     v1:                                                                             # `product.version`
-      Evaporation:                                                                  # `product.version.parameter`
+      evapotranspiration:                                                                  # `product.version.parameter`
         daily:                                                                      # `product.version.parameter.resolution`
           url: 'ftp://ftp.wateraccounting.unesco-ihe.org'                           #   data potal/repository url
           method: 'get'                                                             #   request methods [get, post, ...]
           freq: 'D'                                                                 #   `resolution` short name, follow pandas.datetime
           variables:                                                                #
-            ETa:                                                                    # `product.version.parameter.resolution.variable`
+            ETA:                                                                    # `product.version.parameter.resolution.variable`
               name: 'Daily Evaporation'                                             #   long name 
               description:                                                          #   description
                 ''                                                                  # 
