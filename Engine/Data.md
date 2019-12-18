@@ -211,7 +211,7 @@ GIS data
   - **Standard name**: lower characters with underscore for white space.
   - **Long name**: First upper character with white space.
 
-Data category, the idea is based on **SWAT+** Input/Output [Documentation](../resources/Products-TWRI-swat2012_io_documentation.pdf).
+Data category, the idea is based on **SWAT+** Input/Output [Documentation](../resources/Products-TWRI-swat2012_io_documentation.pdf) and FAO **WaPOR** [Database](../resources/Products.xlsx).
 
 | Variables Name/Code    | Standard Name                                    | Long Name                                        | Sheet Input                         | Sheet Output                        | Other |
 | ---------------------: | ------------------------------------------------ | ------------------------------------------------ | ----------------------------------- | ----------------------------------- | ----- |
