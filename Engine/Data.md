@@ -172,7 +172,7 @@ _Template_
 
 #### Variables
 
-Parameter, csv data
+Parameter, **csv** data
 > not inculded in NetCDF file
 
 | Variable Name/Code                 | Standard Name                | units  | Sheet                               | Other |
@@ -206,7 +206,7 @@ Parameter, csv data
 | `timber`                           | Non-Crops STATS_GSOV         |        |                                     |       |
 | `aquaculture`                      | Non-Crops STATS_GSOV         |        |                                     |       |
 
-GIS, NetCDF data
+GIS, **NetCDF** data
 > inculded in NetCDF file
 
   - **Variables Name**: All upper characters.
