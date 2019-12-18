@@ -215,7 +215,8 @@ GIS, NetCDF data
 
 Data category, the idea is based on **SWAT+** Input/Output [Documentation](../resources/Products-TWRI-swat2012_io_documentation.pdf) and FAO **WaPOR** [Database](../resources/Products.xlsx).
 
-Hydrologic Cycle
+Hydrologic Cycle, FAO, [NOAA](https://www.nwrfc.noaa.gov/info/water_cycle/hydrology.cgi)
+
 ![alt text](./img/Hydrologic_Cycle.gif "IHEWAengine.1, Hydrologic Cycle")
 
 | Variables Name/Code    | Standard Name                                    | Long Name                                        | Sheet Input                         | Sheet Output                        | Other |
@@ -228,10 +229,12 @@ Hydrologic Cycle
 | `DIR`                  | drainage_direction_model                         | Drainage Direction Model                         |                                     |                                     |       |
 | **Land** |
 | `LU`                   | landuse_landcover                                | Landuse Landcover                                |                                     |                                     |       |
+| **Canopy** |
+| `LAI`                  | leaf_area_index                                  | Leaf Area Index                                  |                                     |                                     |       |
+| **Condensation** |
 | **Precipitation** |
 | `PCP`                  | precipitation                                    | Precipitation                                    |                                     |                                     |       |
 | `N`                    | rainy_days                                       | Rainy Days                                       |                                     |                                     |       |
-| `I`                    | interception                                     | Interception                                     |                                     |                                     |       |
 | **Evapotranspiration** |
 | `ET`                   | evapotranspiration                               | Evapotranspiration                               |                                     |                                     |       |
 | `ETR`                  | reference_evapoTranspiration                     | Reference EvapoTranspiration                     |                                     |                                     |       |
@@ -240,21 +243,23 @@ Hydrologic Cycle
 | `ETG`                  | green_evapoTranspiration                         | Green EvapoTranspiration                         |                                     |                                     |       |
 | **Evaporation, from soil and surface-water bodies** |
 | `E`                    | evaporation                                      | Evaporation                                      |                                     |                                     |       |
-| **Transpiration, by vegetation** |
+| **Interception, by vegetal cover or depression storage** |
+| `I`                    | interception                                     | Interception                                     |                                     |                                     |       |
+| **Transpiration, by biological process, plants is transferred from the plant to the atmosphere** |
 | `T`                    | transpiration                                    | Transpiration                                    |                                     |                                     |       |
-| **Draught** |
-| `NDM`                  | national_drought_model                           | National Drought Model                           |                                     |                                     |       |
-| **Canopy** |
-| `LAI`                  | leaf_area_index                                  | Leaf Area Index                                  |                                     |                                     |       |
+| **Infiltration, by soil** |
+| **Percolation, Ground-water recharge** |
+| `PERC`                 | percolation                                      | Percolation                                      |                                     |                                     |       |
+| `DPERC`                | incremental_percolation                          | Incremental Percolation                          |                                     |                                     |       |
+| **Ground-water discharge** |
+| `BF`                   | baseflow                                         | Baseflow                                         |                                     |                                     |       |
+| **Storage, by planetary water cycle** |
 | **Runoff, from rainfall and snowmelt** |
 | `TR`                   | total_runoff                                     | Total Runoff                                     |                                     |                                     |       |
 | `SR`                   | surface_runoff                                   | Surface Runoff                                   |                                     |                                     |       |
 | `DRO`                  | incremental_runoff                               | Incremental Runoff                               |                                     |                                     |       |
-| **Ground-water recharge, from surface-water bodies** |
-| `BF`                   | baseflow                                         | Baseflow                                         |                                     |                                     |       |
-| **Ground-water discharge, from aquifers** |
-| `PERC`                 | percolation                                      | Percolation                                      |                                     |                                     |       |
-| `DPERC`                | incremental_percolation                          | Incremental Percolation                          |                                     |                                     |       |
+| **Draught** |
+| `NDM`                  | national_drought_model                           | National Drought Model                           |                                     |                                     |       |
 | **Supply** |
 | `SUPPLY`               | supply                                           | Supply                                           |                                     |                                     |       |
 | **Population** |
