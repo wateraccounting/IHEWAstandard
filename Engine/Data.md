@@ -10,6 +10,8 @@ Define the **Engine.Data standard** of WaterAccounting Tools.
     - [Dimensions](#dimensions)
     - [Coordinates variables](#coordinates-variables)
     - [Data variables](#data-variables)
+      - [CRS](#crs)
+      - [Variables](#variables)
   - [Resources](#resources)
   - [Examples](#examples)
 
@@ -124,9 +126,9 @@ _Template_
 
 ### Data variables
 
-**Coordinate Reference System**
+#### CRS
 
-CRS
+Coordinate Reference System
 > inculded in NetCDF file
 > 
 > **DO NOT CHANGE 'crs'!**
@@ -168,7 +170,7 @@ _Template_
 }
 ```
 
-**Variables**
+#### Variables
 
 Parameter, csv data
 > not inculded in NetCDF file
