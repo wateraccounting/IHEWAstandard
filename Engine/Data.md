@@ -207,24 +207,53 @@ Parameter, csv data
 GIS data
 > inculded in NetCDF file
 
-**Standard name**: lower characters with underscore for white space.
-
-**Long name**: First upper character with white space.
+  - **Variables Name**: All upper characters.
+  - **Standard name**: lower characters with underscore for white space.
+  - **Long name**: First upper character with white space.
 
 Data category, the idea is based on **SWAT+** Input Output [Documentation](../resources/Products-TWRI-swat2012_io_documentation.pdf).
 
 | Variables Name/Code    | Standard Name                                    | Long Name                                        | Sheet Input                         | Sheet Output                        | Other |
 | ---------------------: | ------------------------------------------------ | ------------------------------------------------ | ----------------------------------- | ----------------------------------- | ----- |
+| AB                     | aa_bb                                            | Aa Bb                                            | _1_, _2_, _3_, _4_, _5_, _6_, _7_,  | _1_, _2_, _3_, _4_, _5_, _6_, _7_,  |       |
+| **Basin** |
+| BSN                    | basin                                            | Basin                                            |                                     |                                     |       |
+| SUB                    | subbasin                                         | Subbasin                                         |                                     |                                     |       |
+| DEM                    | digital_elevation_model                          | Digital Elevation Model                          |                                     |                                     |       |
+| DIR                    | drainage_direction_model                         | Drainage Direction Model                         |                                     |                                     |       |
+| LU                     | landuse_landcover                                | Landuse Landcover                                |                                     |                                     |       |
 | **Precipitation** |
-| PCP                    | precipitation                                    | Precipitation                                    | _1_,                                | _1_,                                |       |
-| **Evaporation** |
-| E                      | evaporation                                      | Evaporation                                      | _1_,                                | _1_,                                |       |
+| PCP                    | precipitation                                    | Precipitation                                    |                                     |                                     |       |
+| N                      | rainy_days                                       | Rainy Days                                       |                                     |                                     |       |
+| **Evapotranspiration** |
+| ET                     | evapotranspiration                               | Evapotranspiration                               |                                     |                                     |       |
+| ETR                    | reference_evapoTranspiration                     | Reference EvapoTranspiration                     |                                     |                                     |       |
+| ETP                    | potential_evapoTranspiration                     | Potential EvapoTranspiration                     |                                     |                                     |       |
+| ETB                    | blue_evapoTranspiration                          | Blue EvapoTranspiration                          |                                     |                                     |       |
+| ETG                    | green_evapoTranspiration                         | Green EvapoTranspiration                         |                                     |                                     |       |
+| E                      | evaporation                                      | Evaporation                                      |                                     |                                     |       |
+| T                      | transpiration                                    | Transpiration                                    |                                     |                                     |       |
+| I                      | interception                                     | Interception                                     |                                     |                                     |       |
+| **Draught** |
+| NDM                    | national_drought_model                           | National Drought Model                           |                                     |                                     |       |
+| LAI                    | leaf_area_index                                  | Leaf Area Index                                  |                                     |                                     |       |
+| **Runoff** |
+| TR                     | total_runoff                                     | Total Runoff                                     |                                     |                                     |       |
+| SR                     | surface_runoff                                   | Surface Runoff                                   |                                     |                                     |       |
+| DRO                    | incremental_runoff                               | Incremental Runoff                               |                                     |                                     |       |
+| BF                     | baseflow                                         | Baseflow                                         |                                     |                                     |       |
+| PERC                   | percolation                                      | Percolation                                      |                                     |                                     |       |
+| DPERC                  | incremental_percolation                          | Incremental Percolation                          |                                     |                                     |       |
+| **Supply** |
+| SUPPLY                 | supply                                           | Supply                                           |                                     |                                     |       |
+
+_Variable Name, Input/Output_
 
 | Variables Name/Code                | Hyperloop                          | watools                            | WaPOR                              | Long Name                        | units  | Sheet                               | Other |
 | ---------------------------------: | ---------------------------------- | ---------------------------------- | ---------------------------------- | -------------------------------- | ------ | ----------------------------------- | ----- |
 | **2D, Static Map** |
 | Integer           |
-| `lu`                               | `lu`                               | `Landuse`                          | `LCC`                              | VGTB                             |        | sh1I sh2I sh3I sh4I sh5I sh6I sh7I  | metadata |
+| `LU`                               | `lu`                               | `Landuse`                          | `LCC`                              | VGTB                             |        | sh1I sh2I sh3I sh4I sh5I sh6I sh7I  | metadata |
 | `full_basin_mask`                  | `full_basin_mask`                  |                                    |                                    | VGTB                             |        |                                     |       |
 | `masks`                            | `masks`                            |                                    |                                    | VGTB                             |        |                     sh5I            | metadata |
 | `population_tif`                   | `population_tif`                   |                                    |                                    | VNM-POP VNM_pph_v2b_2009         |        |                sh4I           sh7   | global_data |
@@ -240,7 +269,7 @@ Data category, the idea is based on **SWAT+** Input Output [Documentation](../re
 | **3D, Timeserise Map** |
 | `PCP`                              | `p`                                | `Precipitation`                    | `PCP`                              | Precipitation                    | mm     | sh1I sh2I sh3I sh4I sh5I      sh7   | complete_data |
 |                                    |                                    | `Evaporation`                      |                                    | Evaporation                      |        |     _sh2_                           |       |
-|                                    | `t`                                | `Transpiration`                    |                                    | Transpiration                    |        |      sh2I                           | complete_data |
+| `T`                                | `t`                                | `Transpiration`                    |                                    | Transpiration                    |        |      sh2I                           | complete_data |
 |                                    | `i`                                | `Interception`                     |                                    | Interception                     |        |      sh2I                           | complete_data |
 | `ETB`                              | `etb`                              | `Blue_Evapotranspiration`          |                                    | Blue EvapoTranspiration          |        | sh1I      sh3I sh4I      sh6I sh7   | complete_data, `conventional_et`, `CONSUMED_ET` |
 | `ETG`                              | `etg`                              | `Green_Evapotranspiration`         |                                    | Green EvapoTranspiration         |        | sh1I      sh3I_sh4_           sh7   | complete_data |
@@ -276,6 +305,8 @@ Data category, the idea is based on **SWAT+** Input Output [Documentation](../re
 |                                    | `return_flow_gw_sw`                |                                    |                                    |                                  |        |                     sh5I sh6O       | complete_data, `return_flow_gw_sw_tif` |
 |                                    | `return_flow_gw_gw`                |                                    |                                    |                                  |        |                          sh6O       | complete_data, `return_flow_gw_gw_tif` |
 |                                    | `withdrawls`                       | `Surface_Withdrawal`               |                                    | Surface Withdrawal               |        |                     sh5O            |       |
+
+_Variable Name, Calculation
 
 | Variables Name/Code                | Hyperloop                          | watools                            | WaPOR                              | Standard Name                    | units  | Sheet                               | Other |
 | ---------------------------------: | ---------------------------------- | ---------------------------------- | ---------------------------------- | -------------------------------- | ------ | ----------------------------------- | ----- |

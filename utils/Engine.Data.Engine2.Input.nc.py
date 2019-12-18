@@ -187,7 +187,7 @@ ds = xr.Dataset.from_dict(
                                                             # 'grid_mapping' linked with variable 'crs'
                         'grid_mapping':  'crs',
                         'standard_name': 'landuse_landcover',
-                        'long_name':     'Landuse',
+                        'long_name':     'Landuse Landcover',
                         'temp_res':      '',
                         'units':         '',
                         'from':          'FAO'
@@ -232,7 +232,7 @@ ds = xr.Dataset.from_dict(
                 ),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'digital_elevation_model',
+                        'standard_name': 'drainage_direction_model',
                         'long_name':     'Drainage Direction Model',
                         'temp_res':      '',
                         'units':         '',
