@@ -5,10 +5,14 @@ Define the **standard** of WaterAccounting Tools.
 
 ## Architecture, [folder](./Architecture)
 
+Diagram, Flowchart, etc.
+
   - [Version 1](./Architecture/v1.md)
 
 
 ## Configuration, [folder](./Configuration)
+
+YAML, etc.
 
   - [IHEWA](./Configuration/IHEWA.md)
   - [IHEWAcollect](./Configuration/IHEWAcollect.md)
@@ -17,6 +21,8 @@ Define the **standard** of WaterAccounting Tools.
 
 ## Data, [folder](./Data)
 
+Formate, etc.
+
   - [GTiff](./Data/GTiff.md)
   - [NetCDF](./Data/NetCDF.md)
   - [SVG](./Data/SVG.md)
@@ -24,6 +30,8 @@ Define the **standard** of WaterAccounting Tools.
 
 
 ## Engine, [folder](./Engine)
+
+Function, Arguments, Variable, etc.
 
   - [API](./Engine/API.md)
   - [Data](./Engine/Data.md)
