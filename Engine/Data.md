@@ -217,8 +217,8 @@ Data category, the idea is based on **SWAT+** Input/Output [Documentation](../re
 | ---------------------: | ------------------------------------------------ | ------------------------------------------------ | ----------------------------------- | ----------------------------------- | ----- |
 | AB                     | aa_bb                                            | Aa Bb                                            |  1,   2,   3,   4,   5,   6,   7,   |  1,   2,   3,   4,   5,   6,   7,   |       |
 | **Basin** |
-| BSN                    | basin                                            | Basin                                            |                                     |                                     |       |
-| SUB                    | subbasin                                         | Subbasin                                         |                                     |                                     |       |
+| ~~BSN~~                | basin                                            | Basin                                            |                                     |                                     |       |
+| ~~SUB~~                | subbasin                                         | Subbasin                                         |                                     |                                     |       |
 | DEM                    | digital_elevation_model                          | Digital Elevation Model                          |                                     |                                     |       |
 | DIR                    | drainage_direction_model                         | Drainage Direction Model                         |                                     |                                     |       |
 | LU                     | landuse_landcover                                | Landuse Landcover                                |                                     |                                     |       |
