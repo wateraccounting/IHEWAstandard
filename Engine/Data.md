@@ -215,7 +215,7 @@ Data category, the idea is based on **SWAT+** Input Output [Documentation](../re
 
 | Variables Name/Code    | Standard Name                                    | Long Name                                        | Sheet Input                         | Sheet Output                        | Other |
 | ---------------------: | ------------------------------------------------ | ------------------------------------------------ | ----------------------------------- | ----------------------------------- | ----- |
-| AB                     | aa_bb                                            | Aa Bb                                            | _1_, _2_, _3_, _4_, _5_, _6_, _7_,  | _1_, _2_, _3_, _4_, _5_, _6_, _7_,  |       |
+| AB                     | aa_bb                                            | Aa Bb                                            |  1,   2,   3,   4,   5,   6,   7,   |  1,   2,   3,   4,   5,   6,   7,   |       |
 | **Basin** |
 | BSN                    | basin                                            | Basin                                            |                                     |                                     |       |
 | SUB                    | subbasin                                         | Subbasin                                         |                                     |                                     |       |
