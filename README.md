@@ -31,7 +31,7 @@ Format, etc.
 
 ## Engine, [folder](./Engine)
 
-Function, Arguments, Variable, etc.
+Function, Arguments, Variables, etc.
 
   - [API](./Engine/API.md)
   - [Data](./Engine/Data.md)
