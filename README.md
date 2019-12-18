@@ -21,7 +21,7 @@ YAML, etc.
 
 ## Data, [folder](./Data)
 
-Formate, etc.
+Format, etc.
 
   - [GTiff](./Data/GTiff.md)
   - [NetCDF](./Data/NetCDF.md)
