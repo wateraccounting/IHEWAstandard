@@ -133,8 +133,8 @@ _Template_
 'crs': {                                        # variable short name, 'crs': 'EPSG:4326 - WGS 84 - Geographic'
         'dims': (),
         'attrs': {
-                'standard_name':                'CRS',
-                'long_name':                    'Coordinate Reference System',
+                'standard_name':                'coordinate_reference_system',
+                'long_name':                    'Lon/Lat Coords in WGS84',
                 'grid_mapping_name':            'latitude_longitude',
                 
                 'spatial_ref':                  'GEOGCS['
@@ -203,9 +203,13 @@ Parameter, csv data
 
 GIS data
 
+**Standard name**: lower characters with underscore for white space.
+
+**Long name**: First upper character with white space.
+
 > inculded in NetCDF file
 
-| Variables Name/Code                | Hyperloop                          | watools                            | WaPOR                              | Standard Name                    | units  | Sheet                               | Other |
+| Variables Name/Code                | Hyperloop                          | watools                            | WaPOR                              | Long Name                        | units  | Sheet                               | Other |
 | ---------------------------------: | ---------------------------------- | ---------------------------------- | ---------------------------------- | -------------------------------- | ------ | ----------------------------------- | ----- |
 | **2D, Static Map**                                                                                                                                                                                                                          |
 | Integer                                                                                                                                                                                                                                     |
@@ -335,8 +339,8 @@ _Template 2D variable_
         'attrs': {                              # variable attributes
                                                 # 'grid_mapping' linked with variable 'crs'
                 'grid_mapping':  'crs',
-                'standard_name': 'Digital Elevation Model',
-                'long_name':     'DEM',
+                'standard_name': 'digital_elevation_model',
+                'long_name':     'Digital Elevation Model',
                 'units':         '',
                 'from':          'HydroSHED'
         },
@@ -361,7 +365,7 @@ _Template 3D variable_
         ),
         'attrs': {                              # variable attributes
                 'grid_mapping':  'crs',         # 'grid_mapping' linked with variable 'crs'
-                'standard_name': 'Precipitation',
+                'standard_name': 'precipitation',
                 'long_name':     'Precipitation',
                 'temp_res':      'day',
                 'units':         'mm',

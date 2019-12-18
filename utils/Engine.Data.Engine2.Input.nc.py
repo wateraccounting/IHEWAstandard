@@ -110,7 +110,7 @@ ds = xr.Dataset.from_dict(
                                                             # DO NOT CHANGE 'crs'!
                 'dims': (),
                 'attrs': {
-                        'standard_name':                    'Coordinate Reference System',
+                        'standard_name':                    'coordinate_reference_system',
                         'long_name':                        'Lon/Lat Coords in WGS84',
                         'grid_mapping_name':                'latitude_longitude',
                         
@@ -186,7 +186,7 @@ ds = xr.Dataset.from_dict(
                 'attrs': {                                  # variable attributes
                                                             # 'grid_mapping' linked with variable 'crs'
                         'grid_mapping':  'crs',
-                        'standard_name': 'Landuse',
+                        'standard_name': 'landuse_landcover',
                         'long_name':     'Landuse',
                         'temp_res':      '',
                         'units':         '',
@@ -210,8 +210,8 @@ ds = xr.Dataset.from_dict(
                 'attrs': {                                  # variable attributes
                                                             # 'grid_mapping' linked with variable 'crs'
                         'grid_mapping':  'crs',
-                        'standard_name': 'Digital Elevation Model',
-                        'long_name':     'DEM',
+                        'standard_name': 'digital_elevation_model',
+                        'long_name':     'Digital Elevation Model',
                         'temp_res':      '',
                         'units':         '',
                         'from':          'HydroSHED'
@@ -232,8 +232,8 @@ ds = xr.Dataset.from_dict(
                 ),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Digital Direction Model',
-                        'long_name':     'DIR',
+                        'standard_name': 'digital_elevation_model',
+                        'long_name':     'Drainage Direction Model',
                         'temp_res':      '',
                         'units':         '',
                         'from':          'HydroSHED'
@@ -258,7 +258,7 @@ ds = xr.Dataset.from_dict(
                 'attrs': {                                  # variable attributes
                                                             # 'grid_mapping' linked with variable 'crs'
                         'grid_mapping':  'crs',
-                        'standard_name': 'Precipitation',
+                        'standard_name': 'precipitation',
                         'long_name':     'Precipitation',
                         'temp_res':      'day',
                         'units':         'mm',
@@ -284,7 +284,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Potential EvapoTranspiration',
+                        'standard_name': 'potential_evapoTranspiration',
                         'long_name':     'Potential EvapoTranspiration',
                         'temp_res':      'day',
                         'units':         'mm',
@@ -310,7 +310,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Reference EvapoTranspiration',
+                        'standard_name': 'reference_evapoTranspiration',
                         'long_name':     'Reference EvapoTranspiration',
                         'temp_res':      'day',
                         'units':         'mm',
@@ -336,7 +336,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Blue EvapoTranspiration',
+                        'standard_name': 'blue_evapoTranspiration',
                         'long_name':     'Blue EvapoTranspiration',
                         'temp_res':      'day',
                         'units':         'mm',
@@ -362,7 +362,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Green EvapoTranspiration',
+                        'standard_name': 'green_evapoTranspiration',
                         'long_name':     'Green EvapoTranspiration',
                         'temp_res':      'day',
                         'units':         'mm',
@@ -388,7 +388,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'EvapoTranspiration',
+                        'standard_name': 'evapoTranspiration',
                         'long_name':     'EvapoTranspiration',
                         'temp_res':      'day',
                         'units':         'mm',
@@ -414,7 +414,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Rainy Days',
+                        'standard_name': 'rainy_days',
                         'long_name':     'Rainy Days',
                         'temp_res':      'day',
                         'units':         '',
@@ -440,7 +440,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'National Drought Model',
+                        'standard_name': 'national_drought_model',
                         'long_name':     'National Drought Model',
                         'temp_res':      'day',
                         'units':         '',
@@ -466,7 +466,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Leaf Area Index',
+                        'standard_name': 'leaf_area_index',
                         'long_name':     'Leaf Area Index',
                         'temp_res':      'day',
                         'units':         '',
@@ -492,7 +492,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Baseflow',
+                        'standard_name': 'baseflow',
                         'long_name':     'Baseflow',
                         'temp_res':      'day',
                         'units':         '',
@@ -518,7 +518,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Surface Runoff',
+                        'standard_name': 'surface_runoff',
                         'long_name':     'Surface Runoff',
                         'temp_res':      'day',
                         'units':         '',
@@ -544,7 +544,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Incremental Runoff',
+                        'standard_name': 'incremental_runoff',
                         'long_name':     'Incremental Runoff',
                         'temp_res':      'day',
                         'units':         '',
@@ -570,7 +570,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Total Runoff',
+                        'standard_name': 'total_runoff',
                         'long_name':     'Total Runoff',
                         'temp_res':      'day',
                         'units':         '',
@@ -596,7 +596,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Percolation',
+                        'standard_name': 'percolation',
                         'long_name':     'Percolation',
                         'temp_res':      'day',
                         'units':         '',
@@ -622,7 +622,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Incremental Percolation',
+                        'standard_name': 'incremental_percolation',
                         'long_name':     'Incremental Percolation',
                         'temp_res':      'day',
                         'units':         '',
@@ -648,7 +648,7 @@ ds = xr.Dataset.from_dict(
                 'dims': ('time', 'y', 'x'),
                 'attrs': {
                         'grid_mapping':  'crs',
-                        'standard_name': 'Supply',
+                        'standard_name': 'supply',
                         'long_name':     'Supply',
                         'temp_res':      'day',
                         'units':         '',
