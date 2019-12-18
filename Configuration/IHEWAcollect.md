@@ -158,12 +158,6 @@ File driver
 
 ## Resources
 
-Products
-
-| Product       | Version  | Parameter         | resolution        | resolution       | variable  |
-| ------------: | -------- | ----------------- | ----------------- |----------------- | --------- |
-| ALEXI         | v1       | Evaporation       | resolution        | daily            | ETa       |
-| _ECMWF_       |          |                   |                   |                  |           |
-
+[Products](https://ihewacollect.readthedocs.io/en/latest/)
 
 # [Examples](examples/README.md#ihewacollect)
