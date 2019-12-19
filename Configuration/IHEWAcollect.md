@@ -41,7 +41,17 @@ Base configuration Yaml file, contains `messages` and `products`.
 
 File Name Template
 
-_product_ '\_' _version_ '\_' _`units:l:`_ '\_' _`freq:`_ `Y` `M` `D` '\_' `h` `m` '.tif'
+Year:
+> _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` .tif
+
+Month:
+> _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` .tif
+
+Day:
+> _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` `D` .tif
+
+Hour, Minute:
+> _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` `D` \_ `h` `m` .tif
 
 **None value**
 
