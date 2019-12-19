@@ -43,7 +43,7 @@ Base configuration Yaml file, contains `messages` and `products`.
 
 YAML value `null` applyed to: 
 
-  - _roduct_
+  - _product_
     - `account:`
     - _version_
       - _parameter_
@@ -59,20 +59,32 @@ YAML value `null` applyed to:
 
 **Name**
 
-| Name       | Description                               | Format              | Example   |
+File name alias.
+
+| Alias      | Description                               | Format              | Example   |
 | ---------: |------------------------------------------ | ------------------- | --------- |
-| ~~var~~    | variable name, lower case                 | `{var:s}`           |           |
-| ~~Var~~    | variable name, upper case                 | `{Var:s}`           |           |
+| **Variable Name**                                                                        |
+| ~~var~~    | Variable name, lower case                 | `{var:s}`           |           |
+| ~~Var~~    | Variable name, upper case                 | `{Var:s}`           |           |
+| **File Part**                                                                            |
 | i          | ith part of file, `for i in range(4)`     | `{i:d}`             | 1         |
-| Y          | year                                      | `{Y:>04s}`          | '2019'    |
-| M          | month                                     | `{M:>02s}`          | '01'      |
-| D          | day of month                              | `{D:>02s}`          | '01'      |
-| d          | day of year                               | `{d:>03s}`          | '365'     |
-| h          | hour                                      | `{h:>02s}`          | '24'      |
-| m          | minute                                    | `{m:>02s}`          | '01'      |
-| s          | second                                    | `{s:>02s}`          | '01'      |
-| ms         | millisecond                               | `{ms:>02s}`         | ''        |
+| **Lat Lon**                                                                              |
 | ~~latlon~~ | DEM tile's name                           | `{n:>03s}{e:>03s}`  | 'n00e005' |
+| **Datetime**                                                                             |
+| Y          | Year                                      | `{Y:>04s}`          | '2019'    |
+| M          | Month                                     | `{M:>02s}`          | '01'      |
+| D          | Day of month                              | `{D:>02s}`          | '01'      |
+| d          | Day of year                               | `{d:>03s}`          | '365'     |
+| h          | Hour                                      | `{h:>02s}`          | '24'      |
+| m          | Minute                                    | `{m:>02s}`          | '01'      |
+| s          | Second                                    | `{s:>02s}`          | '01'      |
+| ms         | Millisecond                               | `{ms:>02s}`         | ''        |
+| **Units**                                                                                |
+| mm         | Millimetre                                | `{n:>03s}{e:>03s}`  | 'n00e005' |
+
+_Template_
+
+_product_ + '_' + _version_ + `units:` + '_' + `freq:`
 
 example
 
