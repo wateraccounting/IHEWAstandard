@@ -209,10 +209,11 @@ if freq == '16D':
 
 | Protocals  | Python Dependency           | get | post | api |
 | ---------: |---------------------------- | --- | ---- | --- |
-| FTP        | from ftplib import FTP      | Y   |      |     |
-| HTTP/HTTPS | import requests (requests)  | Y   |      |     |
-| HTTP/HTTPS | urllib.request (urllib)     | Y   |      |     |
-| HTTP/HTTPS | pycurl.Curl (pycurl)        | Y   |      |     |
+| FTP        | ftplib                      | Y   |      |     |
+| SFTP       | paramiko                    | Y   |      |     |
+| HTTP/HTTPS | requests                    | Y   |      |     |
+| HTTP/HTTPS | urllib                      | Y   |      |     |
+| HTTP/HTTPS | pycurl                      | Y   |      |     |
 | TDS        | pytds (python-tds)          | Y   |      |     |
 | ECMWF      | ecmwfapi (ecmwf-api-client) |     |      | Y   |
 
@@ -252,7 +253,7 @@ products:
           freq: 'D'                                                                 #   `resolution` short name, follow pandas.datetime
           variables:                                                                #
             ETA:                                                                    # `product.version.parameter.resolution.variable`
-              name: 'Daily Evaporation'                                             #   long name 
+              name: 'Daily Evapotranspiration'                                      #   long name 
               description:                                                          #   description
                 ''                                                                  # 
               dfmt: null                                                            #   remote dir format
@@ -285,7 +286,7 @@ products:
                 r: 0.05                                                             #     resolution,             float
               time:                                                                 #   time
                 s: 2005-01-01                                                       #     start,                  string, 'yyyy-mm-dd'
-                e: null                                                             #     end,                    string, 'yyyy-mm-dd'
+                e: 2016-12-31                                                       #     end,                    string, 'yyyy-mm-dd'
               dem:                                                                  #   demension
                 w: -9999                                                            #     width,                  integer
                 h: -9999                                                            #     height,                 integer

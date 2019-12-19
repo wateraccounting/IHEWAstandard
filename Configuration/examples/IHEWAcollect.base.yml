@@ -36,7 +36,7 @@ products:
           freq: 'D'                                                                 #   `resolution` short name, follow pandas.datetime
           variables:                                                                #
             ETA:                                                                    # `product.version.parameter.resolution.variable`
-              name: 'Daily Evaporation'                                             #   long name 
+              name: 'Daily Evapotranspiration'                                      #   long name 
               description:                                                          #   description
                 ''                                                                  # 
               dfmt: null                                                            #   remote dir format
