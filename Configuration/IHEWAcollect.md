@@ -59,16 +59,20 @@ YAML value `null` applyed to:
 
 **Name**
 
-| Name       | Description                               |
-| ---------: |------------------------------------------ |
-| var        | variable name, lower case                 |
-| Var        | variable name, upper case                 |
-| i          | ith part of file, `for i in range(0, 4):` |
-| Y          | year, `stirng[4]`                         |
-| m          | month, `stirng[2]`                        |
-| d          | day, `stirng[2]`                          |
-| j          | day of year, `stirng[3]`                  |
-| latlon     | DEM tile's name, `string[7]`, _n00e005_   |
+| Name       | Description                               | Format              | Example   |
+| ---------: |------------------------------------------ | ------------------- | --------- |
+| ~~var~~    | variable name, lower case                 | `{var:s}`           |           |
+| ~~Var~~    | variable name, upper case                 | `{Var:s}`           |           |
+| i          | ith part of file, `for i in range(4)`     | `{i:d}`             | 1         |
+| Y          | year                                      | `{Y:>04s}`          | '2019'    |
+| M          | month                                     | `{M:>02s}`          | '01'      |
+| D          | day of month                              | `{D:>02s}`          | '01'      |
+| d          | day of year                               | `{d:>03s}`          | '365'     |
+| h          | hour                                      | `{h:>02s}`          | '24'      |
+| m          | minute                                    | `{m:>02s}`          | '01'      |
+| s          | second                                    | `{s:>02s}`          | '01'      |
+| ms         | millisecond                               | `{ms:>02s}`         | ''        |
+| ~~latlon~~ | DEM tile's name                           | `{n:>03s}{e:>03s}`  | 'n00e005' |
 
 example
 
@@ -217,9 +221,9 @@ products:
                 ''                                                                  # 
               dir: '/WaterAccounting/Data_Satellite/Evaporation/ALEXI/'             #   data location on the data potal/repository
               fname:                                                                #   file name
-                r: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat.gz'                             #     remote file,            string, template
-                t: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat'                                #     temporary file,         string, template
-                l: 'ALEXI_v1_mmpd_daily-{Y:>04s}_{m:>02s}_{d:>02s}.tif'             #     local/downloaded file,  string, template
+                r: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat.gz'                             #     remote file,            string, template
+                t: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat'                                #     temporary file,         string, template
+                l: 'ALEXI_v1_mmpd_daily-{Y:>04s}_{M:>02s}_{D:>02s}.tif'             #     local/downloaded file,  string, template
               ftype:                                                                #   file type/extension
                 r: 'gz'                                                             #     remote file,            string
                 t: 'dat'                                                            #     temporary file,         string

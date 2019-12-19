@@ -41,9 +41,9 @@ products:
                 ''                                                                  # 
               dir: '/WaterAccounting/Data_Satellite/Evaporation/ALEXI/'             #   data location on the data potal/repository
               fname:                                                                #   file name
-                r: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat.gz'                             #     remote file,            string, template
-                t: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat'                                #     temporary file,         string, template
-                l: 'ALEXI_v1_mmpd_daily-{Y:>04s}_{m:>02s}_{d:>02s}.tif'             #     local/downloaded file,  string, template
+                r: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat.gz'                             #     remote file,            string, template
+                t: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat'                                #     temporary file,         string, template
+                l: 'ALEXI_v1_mmpd_daily-{Y:>04s}_{M:>02s}_{D:>02s}.tif'             #     local/downloaded file,  string, template
               ftype:                                                                #   file type/extension
                 r: 'gz'                                                             #     remote file,            string
                 t: 'dat'                                                            #     temporary file,         string
