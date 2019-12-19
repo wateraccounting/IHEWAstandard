@@ -80,7 +80,10 @@ File name alias.
 | s          | Second                                    | `{s:>02s}`          | '01'      |
 | ms         | Millisecond                               | `{ms:>02s}`         | ''        |
 | **Units**                                                                                |
-| mm         | Millimetre                                | `{n:>03s}{e:>03s}`  | 'n00e005' |
+| mm         | Millimetre                                | `{units:s}`         | 'mm'      |
+| mm_d       | Millimetre per Day                        | `{units:s}`         | 'mm/d'    |
+
+\\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\]
 
 _Template_
 
