@@ -46,7 +46,7 @@ products:
               fname:                                                                #   file name
                 r: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat.gz'                             #     remote file,            string, template
                 t: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat'                                #     temporary file,         string, template
-                l: 'ALEXI_v1_mm.d_D-{Y:>04s}_{M:>02s}_{D:>02s}.tif'                 #     local/downloaded file,  string, template
+                l: 'ALEXI_v1_mm.d_D-{Y:>04s}{M:>02s}{D:>02s}.tif'                   #     local/downloaded file,  string, template
               ftype:                                                                #   file type/extension
                 r: 'gz'                                                             #     remote file,            string
                 t: 'dat'                                                            #     temporary file,         string

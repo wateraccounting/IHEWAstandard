@@ -52,16 +52,16 @@ File Name Template
  _`freq:`_ = `null`:
 > ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ .tif
 
- _`freq:`_ = yearly:
+ _`freq:`_ = [yearly]:
 > ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` .tif
 
- _`freq:`_ = monthly:
+ _`freq:`_ = [monthly]:
 > ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` .tif
 
- _`freq:`_ = daily, weekly, dekadal:
+ _`freq:`_ = [daily, weekly, dekadal]:
 > ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` `D` .tif
 
- _`freq:`_ = hourly:
+ _`freq:`_ = [hourly]:
 > ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` `D` \_ `h` `m` .tif
 
 **None value**
@@ -261,7 +261,7 @@ products:
               fname:                                                                #   file name
                 r: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat.gz'                             #     remote file,            string, template
                 t: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat'                                #     temporary file,         string, template
-                l: 'ALEXI_v1_mm.d_D-{Y:>04s}_{M:>02s}_{D:>02s}.tif'                 #     local/downloaded file,  string, template
+                l: 'ALEXI_v1_mm.d_D-{Y:>04s}{M:>02s}{D:>02s}.tif'                 #     local/downloaded file,  string, template
               ftype:                                                                #   file type/extension
                 r: 'gz'                                                             #     remote file,            string
                 t: 'dat'                                                            #     temporary file,         string
