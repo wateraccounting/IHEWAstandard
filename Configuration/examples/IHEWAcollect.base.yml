@@ -39,6 +39,9 @@ products:
               name: 'Daily Evaporation'                                             #   long name 
               description:                                                          #   description
                 ''                                                                  # 
+              dfmt: null                                                            #   remote dir format
+              rfmt: 'Y_d'                                                           #   remote file format
+              tfmt: 'Y_d'                                                           #   temporary file format
               dir: '/WaterAccounting/Data_Satellite/Evaporation/ALEXI/'             #   data location on the data potal/repository
               fname:                                                                #   file name
                 r: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat.gz'                             #     remote file,            string, template
