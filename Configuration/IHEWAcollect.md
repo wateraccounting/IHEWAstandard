@@ -39,29 +39,31 @@ Base configuration Yaml file, contains `messages` and `products`.
   - _resolution_: Following talbes, **Resolution types**, Temporal, Spatial Resolution.
   - _variable_: Use IHEWAstandard.Engine.Data, and special variable cases, ex. **ASCAT**.soil_water_index.SWI_010, **CFSR**.Radiation.dlwsfc, **DEM**.DEM.af 
 
+File Name Template
+
+_product_ + '_' + _version_ + _`units:`_ + '_' + _`freq:`_ + `Y` + `M` + `D` + '_' + `h` + `m` + '.tif'
+
 **None value**
 
 YAML value `null` applyed to: 
 
   - _product_
-    - `account:`
+    - _`account:`_
     - _version_
       - _parameter_
         - _resolution_
-          - `freq:`
-          - `variables:`
+          - _`freq:`_
+          - _`variables:`_
             - _variable_
-              - `fname:`
-              - `ftype:`
-              - `dtype:`
-              - `unit:`
-              - `time:`
+              - _`fname:`_
+              - _`ftype:`_
+              - _`dtype:`_
+              - _`unit:`_
+              - _`time:`_
 
-**Name**
+**File Name Alias**
 
-File name alias.
-
-| Alias      | Description                               | Format              | Example   |
+| Name/Code  | Description                               | Format              | Example   |
 | ---------: |------------------------------------------ | ------------------- | --------- |
 | **Variable Name**                                                                        |
 | ~~var~~    | Variable name, lower case                 | `{var:s}`           |           |
@@ -80,14 +82,9 @@ File name alias.
 | s          | Second                                    | `{s:>02s}`          | '01'      |
 | ms         | Millisecond                               | `{ms:>02s}`         | ''        |
 | **Units**                                                                                |
-| mm         | Millimetre                                | `{units:s}`         | 'mm'      |
-| mm_d       | Millimetre per Day                        | `{units:s}`         | 'mm/d'    |
-
-\\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\]
-
-_Template_
-
-_product_ + '_' + _version_ + `units:` + '_' + `freq:`
+| mm         | Millimetre                                |                     |           |
+| mm.d       | Millimetre per Day                        |                     |           |
+| MJ.m2d     |                                           |                     |           |
 
 example
 
@@ -98,6 +95,38 @@ print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
 "2001-02-03 04:05"
 ```
 
+**File types**
+
+`Driver.FileExtension`
+
+File name
+
+| Name       | Description                                           |
+| ---------: |------------------------------------------------------ |
+| rmtfile    | remote file downloaded to `./remote/`, to delete      |
+| tmpfile    | temporary file generated to `./temporary/`, te delete |
+| locfile    | WaterAccounting file saved to `./download/`, to keep  |
+
+File driver
+
+| Name/Code  | Ext               | File type        | GDAL Drivers                                                        |
+| ---------: | ----------------- | ---------------- | ------------------------------------------------------------------- |
+| GRIB       | .grb2             | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       |
+| GRIB       | .grib2            | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       |
+| GTiff      | .tif              | Raster file      | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff)    |
+| NetCDF     | .nc               | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
+| NetCDF     | .nc4              | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
+| AIG        | .adf              | Raster file      | [AIG](https://gdal.org/drivers/raster/aig.html#raster-aig)          |
+| EHdr       | .bil              | Raster file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
+| EHdr       | .hdr              | Header file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
+| EHdr       | .blw              | World file       | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
+| EHdr       | .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
+| **Other**                                                                                                               |
+| gz         | .gz -> dat(`<f4`) | Binary file      |                                                                     |
+| zip        | .zip              | Binary file      |                                                                     |
+| MEM        | Memory            | Raster file      | [MEM](https://gdal.org/drivers/raster/mem.html#raster-mem)          |
+| DODS       | DODS/OPeNDAP      | Vector file      | [DODS](https://gdal.org/drivers/vector/dods.html#vector-dods)       |
+
 **Resolution types**
 
 Temporal Resolution, [watools.Functions.Start.Download_Data.Set_Start_End_Dates()](https://github.com/wateraccounting/watools/blob/master/Functions/Start/Download_Data.py#L771)
@@ -107,20 +136,20 @@ Temporal Resolution, [watools.Functions.Start.Download_Data.Set_Start_End_Dates(
   * [pandas DateOffset](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects)
   * [pandas date_range alias](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#timeseries-offset-aliases)
 
-| Name           | datetime | pandas   |
-| -------------: | -------- | -------- |
-| hourly         | %H       | H        |
-| three_hourly   |          | 3H       |
-| six_hourly     |          | 6H       |
-| daily          | %d       | D        |
-| weekly         | %W / %U  | 7D       |
-| eight_daily    |          | 8D       |
-| dekadal        |          | 10D      |
-| sixteen_daily  |          | 16D      |
-| monthly, start | %m       | MS       |
-| monthly, end   | %m       | M        |
-| yearly, start  | %Y       | AS       |
-| yearly, end    | %Y       | Y        |
+| Name/Code  | Standard Name  | Long Name      | datetime | pandas   | Description   |
+| ---------: | -------------- | -------------- | -------- | -------- | ------------- |
+| H          | hourly         | Hourly         | %H       | H        |               |
+| 3H         | three_hourly   | Three Hourly   |          | 3H       |               |
+| 6H         | six_hourly     | Six Hourly     |          | 6H       |               |
+| D          | daily          | Daily          | %d       | D        |               |
+| 7D         | weekly         | Weekly         | %W / %U  | 7D       |               |
+| 8D         | eight_daily    | Eight Daily    |          | 8D       |               |
+| 10D        | dekadal        | Dekadal        |          | 10D      |               |
+| 16D        | sixteen_daily  | Sixteen Daily  |          | 16D      |               |
+| MS         | monthly        | Monthly        | %m       | MS       | Monthly Start |
+| M          | monthly        | Monthly        | %m       | M        | Monthly End   |
+| AS         | yearly         | Yearly         | %Y       | AS       | Yearly Start  |
+| Y          | yearly         | Yearly         | %Y       | Y        | Yearly End    |
 
 _Template_
 
@@ -141,7 +170,7 @@ Spatial Resolution
   
   * [LatLon](https://calgary.rasc.ca/latlong.htm)
 
-| Name       | sec/min        | degree   	         | meters/km                      |
+| Name/Code  | sec/min        | degree   	         | meters/km                      |
 | ---------: |--------------- | ------------------ | ------------------------------ |
 | 0.1s       | 0.1 arc-second | 0.0000277777777777 | approx. 3 m     at the equator |
 | 1s         | 1 arc-second   | 0.0002777777777777 | approx. 30 m    at the equator |
@@ -163,37 +192,6 @@ Spatial Resolution
 | HTTP/HTTPS | pycurl.Curl (pycurl)        | Y   |      |     |
 | TDS        | pytds (python-tds)          | Y   |      |     |
 | ECMWF      | ecmwfapi (ecmwf-api-client) |     |      | Y   |
-
-**File types**
-
-`Driver.FileExtension`
-
-File name
-
-| Name       | Description                                           |
-| ---------: |------------------------------------------------------ |
-| rmtfile    | remote file downloaded to `./remote/`, to delete      |
-| tmpfile    | temporary file generated to `./temporary/`, te delete |
-| locfile    | WaterAccounting file saved to `./download/`, to keep  |
-
-File driver
-
-| Name      | Ext               | File type        | GDAL Drivers                                                        |
-|           | ----------------: | ---------------- | ------------------------------------------------------------------- |
-| GRIB      | .grb2             | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       |
-| GRIB      | .grib2            | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       |
-| GTiff     | .tif              | Raster file      | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff)    |
-| NetCDF    | .nc               | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
-| AIG       | .adf              | Raster file      | [AIG](https://gdal.org/drivers/raster/aig.html#raster-aig)          |
-| EHdr      | .bil              | Raster file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| EHdr      | .hdr              | Header file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| EHdr      | .blw              | World file       | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| EHdr      | .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| **Other**                                                                                                              |
-| gz        | .gz -> dat(`<f4`) | Binary file      |                                                                     |
-| zip       | .zip              | Binary file      |                                                                     |
-| MEM       | Memory            | Raster file      | [MEM](https://gdal.org/drivers/raster/mem.html#raster-mem)          |
-| DODS      | DODS/OPeNDAP      | Vector file      | [DODS](https://gdal.org/drivers/vector/dods.html#vector-dods)       |
 
 _Template_
 
@@ -238,7 +236,7 @@ products:
               fname:                                                                #   file name
                 r: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat.gz'                             #     remote file,            string, template
                 t: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat'                                #     temporary file,         string, template
-                l: 'ALEXI_v1_mmpd_daily-{Y:>04s}_{M:>02s}_{D:>02s}.tif'             #     local/downloaded file,  string, template
+                l: 'ALEXI_v1_mm.d_D-{Y:>04s}_{M:>02s}_{D:>02s}.tif'                 #     local/downloaded file,  string, template
               ftype:                                                                #   file type/extension
                 r: 'gz'                                                             #     remote file,            string
                 t: 'dat'                                                            #     temporary file,         string
@@ -247,9 +245,9 @@ products:
                 r: 'binary'                                                         #     remote file,            string, numpy style
                 t: 'float32'                                                        #     temporary file,         string, numpy style
                 l: 'float32'                                                        #     local/downloaded file,  string, numpy style
-              unit:                                                                 #   data unit
-                r: 'MJ/m2d'                                                         #     remote file,            string
-                l: 'mm/d'                                                           #     local/downloaded file,  string
+              units:                                                                #   data unit
+                r: 'MJ.m2d'                                                         #     remote file,            string
+                l: 'mm.d'                                                           #     local/downloaded file,  string
                 m: 2.45                                                             #     multiplyer,             float
               lat:                                                                  #   latitude
                 s: -60.0                                                            #     south,                  float
