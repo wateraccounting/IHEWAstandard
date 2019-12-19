@@ -41,7 +41,7 @@ Base configuration Yaml file, contains `messages` and `products`.
 
 File Name Template
 
-_product_ + '_' + _version_ + _`units:`_ + '_' + _`freq:`_ + `Y` + `M` + `D` + '_' + `h` + `m` + '.tif'
+_product_ '\_' _version_ '\_' _`units:l:`_ '\_' _`freq:`_ `Y` `M` `D` '\_' `h` `m` '.tif'
 
 **None value**
 
@@ -58,7 +58,7 @@ YAML value `null` applyed to:
               - _`fname:`_
               - _`ftype:`_
               - _`dtype:`_
-              - _`unit:`_
+              - _`units:`_
               - _`time:`_
 
 **File Name Alias**
