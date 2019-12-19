@@ -124,14 +124,15 @@ Spatial Resolution
 
 | Name       | sec/min        | degree   	         | meters/km                      |
 | ---------: |--------------- | ------------------ | ------------------------------ |
-| 0.1s       | 0.1 arc-second | 0.0000277777777777 | approx. 3 m at the equator     |
-| 1s         | 1 arc-second   | 0.0002777777777777 | approx. 30 m at the equator    |
-| 3s         | 3 arc-second   | 0.0008333333333333 | approx. 90 m at the equator    |
-| 15s        | 15 arc-second  | 0.0041666666666667 | approx. 500 m at the equator   |
-| 30s        | 30 arc-second  | 0.0083333333333333 | approx. 1 km at the equator    |
-| 1m         | 1 minute       | 0.0277777777777777 | approx. 2 km at the equator    |
-| 5m         | 5 minute       | 0.0833333333333333 | approx. 10 km at the equator   |
+| 0.1s       | 0.1 arc-second | 0.0000277777777777 | approx. 3 m     at the equator |
+| 1s         | 1 arc-second   | 0.0002777777777777 | approx. 30 m    at the equator |
+| 3s         | 3 arc-second   | 0.0008333333333333 | approx. 90 m    at the equator |
+| 15s        | 15 arc-second  | 0.0041666666666667 | approx. 500 m   at the equator |
+| 30s        | 30 arc-second  | 0.0083333333333333 | approx. 1 km    at the equator |
+| 1m         | 1 minute       | 0.0277777777777777 | approx. 2 km    at the equator |
+| 5m         | 5 minute       | 0.0833333333333333 | approx. 10 km   at the equator |
 | 6m         | 6 minute       | 0.1                | approx. 12.5 km at the equator |
+| 15m        | 15 minute      | 0.2499999999999999 | approx. 30 km   at the equator |
 
 **Protocal types**
 
@@ -218,7 +219,7 @@ products:
               fname:                                                                #   file name
                 r: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat.gz'                             #     remote file,            string, template
                 t: 'EDAY_CERES_{Y:>04s}{j:>03s}.dat'                                #     temporary file,         string, template
-                l: 'ETa-ALEXI_v1_mmpd_daily-{Y:>04s}_{m:>02s}_{d:>02s}.tif'         #     local/downloaded file,  string, template
+                l: 'ALEXI_v1_mmpd_daily-{Y:>04s}_{m:>02s}_{d:>02s}.tif'             #     local/downloaded file,  string, template
               ftype:                                                                #   file type/extension
                 r: 'gz'                                                             #     remote file,            string
                 t: 'dat'                                                            #     temporary file,         string

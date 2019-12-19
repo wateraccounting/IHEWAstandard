@@ -236,7 +236,7 @@ Hydrologic Cycle, FAO, [NOAA](https://www.nwrfc.noaa.gov/info/water_cycle/hydrol
 | `PCP`                  | precipitation                                    | Precipitation                                    |                                     |                                     |       |
 | `N`                    | rainy_days                                       | Rainy Days                                       |                                     |                                     |       |
 | **Evapotranspiration** |
-| `ET`                   | evapotranspiration                               | Evapotranspiration                               |                                     |                                     |       |
+| `ET`, _`ETA`_          | evapotranspiration                               | Evapotranspiration                               |                                     |                                     |       |
 | `ETR`                  | reference_evapoTranspiration                     | Reference EvapoTranspiration                     |                                     |                                     |       |
 | `ETP`                  | potential_evapoTranspiration                     | Potential EvapoTranspiration                     |                                     |                                     |       |
 | `ETB`                  | blue_evapoTranspiration                          | Blue EvapoTranspiration                          |                                     |                                     |       |
