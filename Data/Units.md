@@ -11,7 +11,7 @@ Define the **Data.Units standard** of WaterAccounting Tools.
 
 ## Standard
 
-SI: The International System of Units
+**SI: The International System of Units**
 
 ![alt text](./img/Units-SI_Prefixes.png "Units, SI Prefix")
 
@@ -29,7 +29,7 @@ SI: The International System of Units
 
 ![alt text](./img/Units-SI_Derived_Units-Thermodynamic.png "Units, Thermodynamic SI derived units")
 
-FAO
+**FAO**
 
 ![alt text](./img/Units-FAO.png "Units, FAO")
 

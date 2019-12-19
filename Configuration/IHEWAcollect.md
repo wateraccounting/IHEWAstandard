@@ -92,10 +92,12 @@ YAML value `null` applyed to:
 | s          | Second                                    | `{s:>02s}`          | '01'      |
 | ms         | Millisecond                               | `{ms:>02s}`         | ''        |
 | **Units**                                                                                |
-| .          | None                                      |                     |           |
+| `null`     | Index                                     |                     |           |
+| .          | Dimensionless                             |                     |           |
 | mm         | Millimetre                                |                     |           |
-| mm.d       | Millimetre per Day                        |                     |           |
-| MJ.m2d     |                                           |                     |           |
+| mm.d       | Millimetre per day                        |                     |           |
+| MJ.m2.d    | Mega Joule per m2 per day                 |                     |           |
+| W.m2       | Watt per m2                               |                     |           |
 
 example
 
@@ -257,7 +259,7 @@ products:
                 t: 'float32'                                                        #     temporary file,         string, numpy style
                 l: 'float32'                                                        #     local/downloaded file,  string, numpy style
               units:                                                                #   data unit
-                r: 'MJ.m2d'                                                         #     remote file,            string
+                r: 'MJ.m2.d'                                                        #     remote file,            string
                 l: 'mm.d'                                                           #     local/downloaded file,  string
                 m: 2.45                                                             #     multiplyer,             float
               lat:                                                                  #   latitude
