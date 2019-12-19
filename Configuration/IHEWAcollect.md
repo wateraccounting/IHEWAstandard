@@ -49,20 +49,20 @@ File
 
 File Name Template
 
- _`freq:`_ `null`:
-> ./download/ _parameter_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` .tif
+ _`freq:`_ = `null`:
+> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ .tif
 
- _`freq:`_ yearly:
-> ./download/ _parameter_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` .tif
+ _`freq:`_ = yearly:
+> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` .tif
 
- _`freq:`_ monthly:
-> ./download/ _parameter_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` .tif
+ _`freq:`_ = monthly:
+> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` .tif
 
- _`freq:`_ daily, weekly, dekadal:
-> ./download/ _parameter_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` `D` .tif
+ _`freq:`_ = daily, weekly, dekadal:
+> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` `D` .tif
 
- _`freq:`_ hourly:
-> ./download/ _parameter_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` `D` \_ `h` `m` .tif
+ _`freq:`_ = hourly:
+> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` `D` \_ `h` `m` .tif
 
 **None value**
 
