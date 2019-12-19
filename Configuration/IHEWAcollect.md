@@ -92,6 +92,7 @@ YAML value `null` applyed to:
 | s          | Second                                    | `{s:>02s}`          | '01'      |
 | ms         | Millisecond                               | `{ms:>02s}`         | ''        |
 | **Units**                                                                                |
+| .          | None                                      |                     |           |
 | mm         | Millimetre                                |                     |           |
 | mm.d       | Millimetre per Day                        |                     |           |
 | MJ.m2d     |                                           |                     |           |
