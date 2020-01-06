@@ -149,6 +149,7 @@ File driver
 
 **Resolution types**
 
+ - Minute and second, [Arc](https://en.wikipedia.org/wiki/Minute_and_second_of_arc)
  - Spatial Resolution, [LatLon](https://calgary.rasc.ca/latlong.htm)
  - Temporal Resolution, [watools.Functions.Start.Download_Data.Set_Start_End_Dates()](https://github.com/wateraccounting/watools/blob/master/Functions/Start/Download_Data.py#L771)
     - [strftime codes](http://strftime.org/)
@@ -165,10 +166,10 @@ _resolution_ [**Spatial**, 'Name/Code']
 | 3s         | 3 arc-second   | 0.0008333333333333 | approx. 90 m    at the equator |
 | 15s        | 15 arc-second  | 0.0041666666666667 | approx. 500 m   at the equator |
 | 30s        | 30 arc-second  | 0.0083333333333333 | approx. 1 km    at the equator |
-| 1m         | 1 minute       | 0.0277777777777777 | approx. 2 km    at the equator |
-| 5m         | 5 minute       | 0.0833333333333333 | approx. 10 km   at the equator |
-| 6m         | 6 minute       | 0.1                | approx. 12.5 km at the equator |
-| 15m        | 15 minute      | 0.2499999999999999 | approx. 30 km   at the equator |
+| 1m         | 1 arc-minute   | 0.0166666666666666 | approx. 2 km    at the equator |
+| 5m         | 5 arc-minute   | 0.0833333333333333 | approx. 10 km   at the equator |
+| 6m         | 6 arc-minute   | 0.1                | approx. 12 km   at the equator |
+| 15m        | 15 arc-minute  | 0.2499999999999999 | approx. 30 km   at the equator |
 
 _resolution_ [**Temporal**, 'Standard Name']
 
