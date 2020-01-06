@@ -97,15 +97,16 @@ YAML value `null` applyed to:
 | ~~latlon~~ | DEM tile's name                           | `{lat:>03s}{lon:>04s}` | 'n00e005'       |
 | `lat`      | DEM tile's name, Lat                      | `{lat:>03s}`           | 'n00' / 's01'   |
 | `lon`      | DEM tile's name, Lon                      | `{lon:>04s}`           | 'e001' / 'w001' |
-| **Datetime**                                                                                      |
-| `Y`        | Year                                      | `{Y:>04s}`             | '2019'          |
-| `M`        | Month                                     | `{M:>02s}`             | '01'            |
-| `D`        | Day of month                              | `{D:>02s}`             | '01'            |
-| `d`        | Day of year                               | `{d:>03s}`             | '365'           |
-| `h`        | Hour                                      | `{h:>02s}`             | '24'            |
-| `m`        | Minute                                    | `{m:>02s}`             | '01'            |
-| `s`        | Second                                    | `{s:>02s}`             | '01'            |
-| `ms`       | Millisecond                               | `{ms:>02s}`            | ''              |
+| **Datetime** [link](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) |
+| `%Y`       | Year                                      | `{Y:>04s}`             | '2019'          |
+| `%y`       | Year                                      | `{Y:>02s}`             | '19'      ,FEWS |
+| `%m`       | Month                                     | `{M:>02s}`             | '01'            |
+| `%d`       | Day of month                              | `{D:>02s}`             | '01'            |
+| `%j`       | Day of year                               | `{d:>03s}`             | '365'           |
+| `%H`       | Hour                                      | `{h:>02s}`             | '24'            |
+| `%M`       | Minute                                    | `{m:>02s}`             | '01'            |
+| `%S`       | Second                                    | `{s:>02s}`             | '01'            |
+| `%f`       | Millisecond                               | `{ms:>02s}`            | ''              |
 | **Units**                                                                                         |
 | '.'        | Dimensionless, Index                      |                        |                 |
 | 'mm'       | Millimetre                                |                        |                 |
@@ -118,7 +119,7 @@ example
 
 ```Python
 import datetime
-print('{ymd:%Y-%m-%d %H:%M}'.format(ymd=datetime.datetime(2001, 2, 3, 4, 5)))
+print('{dtime:%Y-%m-%d %H:%M}'.format(dtime=datetime.datetime(2001, 2, 3, 4, 5)))
 
 "2001-02-03 04:05"
 ```
