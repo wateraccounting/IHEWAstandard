@@ -217,8 +217,6 @@ Data category, the idea is based on **SWAT+** Input/Output [Documentation](../re
 
 Hydrologic Cycle, FAO, [NOAA](https://www.nwrfc.noaa.gov/info/water_cycle/hydrology.cgi)
 
-![alt text](./img/Hydrologic_Cycle.gif "IHEWAengine.1, Hydrologic Cycle")
-
 | Variables Name/Code | Standard Name                                    | Long Name                                        | Sheet Input                         | Sheet Output                        | Other |
 | ------------------: | ------------------------------------------------ | ------------------------------------------------ | ----------------------------------- | ----------------------------------- | ----- |
 | `AB`                | aa_bb                                            | Aa Bb                                            |  1,   2,   3,   4,   5,   6,   7,   |  1,   2,   3,   4,   5,   6,   7,   |       |
