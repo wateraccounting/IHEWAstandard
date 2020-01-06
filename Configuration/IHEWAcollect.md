@@ -53,16 +53,16 @@ File Name Template
 > ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ .tif
 
  _`freq:`_ = [yearly]:
-> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` .tif
+> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `%Y` .tif
 
  _`freq:`_ = [monthly]:
-> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` .tif
+> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `%Y` `%m` .tif
 
  _`freq:`_ = [daily, weekly, dekadal]:
-> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` `D` .tif
+> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `%Y` `%m` `%d` .tif
 
  _`freq:`_ = [hourly]:
-> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `Y` `M` `D` \_ `h` `m` .tif
+> ./download/ _parameter_ / _resolution_ / _variable_ / _product_ \_ _version_ \_ _`units:l:`_ \_ _`freq:`_ - `%Y` `%m` `%d` \_ `%H` `%M` .tif
 
 **None value**
 
@@ -91,13 +91,13 @@ YAML value `null` applyed to:
 | **Variable Name**                                                                                 |
 | ~~var~~    | Variable name, lower case                 | `{var:s}`              |                 |
 | ~~Var~~    | Variable name, upper case                 | `{Var:s}`              |                 |
-| **File Part**                                                                                     |
-| `i`        | ith part of file, `for i in range(4)`     | `{i:d}`                | 1               |
-| **Lat Lon**                                                                                       |
+| **File Part**, `ipart`                                                                            |
+| `i`        | ith part of file, `for i in range(4)`     | `{i:d}`                | 1         ,CFSR |
+| **Lat Lon**, `latlon`                                                                             |
 | ~~latlon~~ | DEM tile's name                           | `{lat:>03s}{lon:>04s}` | 'n00e005'       |
 | `lat`      | DEM tile's name, Lat                      | `{lat:>03s}`           | 'n00' / 's01'   |
 | `lon`      | DEM tile's name, Lon                      | `{lon:>04s}`           | 'e001' / 'w001' |
-| **Datetime** [link](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) |
+| **Datetime**, `dtime` [link](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) |
 | `%Y`       | Year                                      | `{Y:>04s}`             | '2019'          |
 | `%y`       | Year                                      | `{Y:>02s}`             | '19'      ,FEWS |
 | `%m`       | Month                                     | `{M:>02s}`             | '01'            |
@@ -260,13 +260,13 @@ products:
               description:                                                          #   description
                 ''                                                                  # 
               dfmt: null                                                            #   remote dir format
-              rfmt: 'Y_d'                                                           #   remote file format
-              tfmt: 'Y_d'                                                           #   temporary file format
+              rfmt: 'dtime'                                                         #   remote file format
+              tfmt: 'dtime'                                                         #   temporary file format
               dir: '/WaterAccounting/Data_Satellite/Evaporation/ALEXI/'             #   data location on the data potal/repository
               fname:                                                                #   file name
-                r: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat.gz'                             #     remote file,            string, template
-                t: 'EDAY_CERES_{Y:>04s}{d:>03s}.dat'                                #     temporary file,         string, template
-                l: 'ALEXI_v1_mm.d_D-{Y:>04s}{M:>02s}{D:>02s}.tif'                   #     local/downloaded file,  string, template
+                r: 'EDAY_CERES_{dtime:%Y%j}.dat.gz'                                 #     remote file,            string, template
+                t: 'EDAY_CERES_{dtime:%Y%j}.dat'                                    #     temporary file,         string, template
+                l: 'ALEXI_v1_mm.d_D-{dtime:%Y%m%d}.tif'                             #     local/downloaded file,  string, template
               ftype:                                                                #   file type/extension
                 r: 'gz'                                                             #     remote file,            string
                 t: 'dat'                                                            #     temporary file,         string
