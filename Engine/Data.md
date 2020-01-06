@@ -215,8 +215,6 @@ GIS, **NetCDF** data
 
 Data category, the idea is based on **SWAT+** Input/Output [Documentation](../resources/Products-TWRI-swat2012_io_documentation.pdf) and FAO **WaPOR** [Database](../resources/Products.xlsx).
 
-Hydrologic Cycle, FAO, [NOAA](https://www.nwrfc.noaa.gov/info/water_cycle/hydrology.cgi)
-
 | Variables Name/Code | Standard Name                                    | Long Name                                        | Sheet Input                         | Sheet Output                        | Other |
 | ------------------: | ------------------------------------------------ | ------------------------------------------------ | ----------------------------------- | ----------------------------------- | ----- |
 | `AB`                | aa_bb                                            | Aa Bb                                            |  1,   2,   3,   4,   5,   6,   7,   |  1,   2,   3,   4,   5,   6,   7,   |       |
