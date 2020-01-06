@@ -36,6 +36,7 @@ products:
           freq: 'D'                                                                 #   `resolution` short name, follow pandas.datetime
           variables:                                                                #
             ETA:                                                                    # `product.version.parameter.resolution.variable`
+              variable: null                                                        #   variable name in the NetCDF
               name: 'Daily Evapotranspiration'                                      #   long name 
               description:                                                          #   description
                 ''                                                                  # 
