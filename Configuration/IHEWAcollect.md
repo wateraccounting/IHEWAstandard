@@ -144,11 +144,11 @@ File driver
 | EHdr         | .hdr              | Header file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
 | EHdr         | .blw              | World file       | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
 | EHdr         | .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| **Other**                                                                                                               |
-| gz         | .gz -> dat(`<f4`) | Binary file      |                                                                     |
-| zip        | .zip              | Binary file      |                                                                     |
-| MEM        | Memory            | Raster file      | [MEM](https://gdal.org/drivers/raster/mem.html#raster-mem)          |
-| DODS       | DODS/OPeNDAP      | Vector file      | [DODS](https://gdal.org/drivers/vector/dods.html#vector-dods)       |
+| **Other**                                                                                                                 |
+| gz           | .gz -> dat(`<f4`) | Binary file      |                                                                     |
+| zip          | .zip              | Binary file      |                                                                     |
+| MEM          | Memory            | Raster file      | [MEM](https://gdal.org/drivers/raster/mem.html#raster-mem)          |
+| DODS         | DODS/OPeNDAP      | Vector file      | [DODS](https://gdal.org/drivers/vector/dods.html#vector-dods)       |
 
 **Resolution types**
 
