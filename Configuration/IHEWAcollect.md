@@ -137,7 +137,7 @@ File driver
 | GTiff        | .tif              | Raster file      | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff)    |         |
 | NetCDF       | .nc               | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |         |
 | NetCDF       | .nc4              | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) | GPM     |
-| NetCDF.Group | .HDF5, .HDF       | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) | GPM     |
+| NetCDF.Group | .HDF5, .HDF       | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) | GPM, MCD43 |
 | HDF5         | .HDF5             | HDF5 file        | [HDF5](https://gdal.org/drivers/raster/hdf5.html#raster-hdf5)       | GPM     |
 | HDF4         | .HDF              | HDF4 file        | [HDF4](https://gdal.org/drivers/raster/hdf4.html#raster-hdf4)       | MCD43   |
 | AIG          | .adf              | Raster file      | [AIG](https://gdal.org/drivers/raster/aig.html#raster-aig)          | DEM     |
