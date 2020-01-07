@@ -92,14 +92,14 @@ YAML value `null` applyed to:
 | ~~var~~    | Variable name, lower case                 | `{var:s}`              |                                    |
 | ~~Var~~    | Variable name, upper case                 | `{Var:s}`              |                                    |
 | **File Part**, `ipart`                                                                                               |
-| `i`        | ith part of file, `for i in range(4)`     | `{i:d}`                | 1                           , CFSR |
+| `i`        | ith part of file, `for i in range(4)`     | `{i:d}`                | 1, CFSR                            |
 | **Lat Lon**,   `latlon`                                                                                              |
 | ~~latlon~~ | DEM tile's name                           | `{lat:>03s}{lon:>04s}` | 'n00e005'                          |
-| `lat`      | DEM tile's name, Lat                      | `{lat:>03s}`           | 'n00' / 's01' / '80N'    , DEM JRC |
-| `lon`      | DEM tile's name, Lon                      | `{lon:>04s}`           | 'e001' / 'w001' / '180W' , DEM JRC |
+| `lat`      | DEM tile's name, Lat                      | `{lat:>03s}`           | 'n00'  's01',   DEM / '80N',  JRC  |
+| `lon`      | DEM tile's name, Lon                      | `{lon:>04s}`           | 'e001' 'w001' , DEM / '180W', JRC  |
 | **Datetime**,  `dtime` [link](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes)    |
 | `%Y`       | Year                                      | `{Y:>04s}`             | '2019'                             |
-| `%y`       | Year                                      | `{Y:>02s}`             | '19'                        , FEWS |
+| `%y`       | Year                                      | `{Y:>02s}`             | '19', FEWS                         |
 | `%m`       | Month                                     | `{M:>02s}`             | '01'                               |
 | `%d`       | Day of month                              | `{D:>02s}`             | '01'                               |
 | `%j`       | Day of year                               | `{d:>03s}`             | '365'                              |
@@ -108,7 +108,7 @@ YAML value `null` applyed to:
 | `%S`       | Second                                    | `{s:>02s}`             | '01'                               |
 | `%f`       | Millisecond                               | `{ms:>02s}`            | ''                                 |
 | **Units**                                                                                                            |
-| '.'        | Dimensionless, Index                      |                        |                                    |
+| '.'        | Dimensionless, Index, Percent             |                        |                                    |
 | 'mm'       | Millimetre                                |                        |                                    |
 | 'mm.d'     | Millimetre per day                        |                        |                                    |
 | 'MJ.m2.d'  | Mega Joule per m2 per day                 |                        |                                    |
