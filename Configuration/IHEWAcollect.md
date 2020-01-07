@@ -86,34 +86,34 @@ YAML value `null` applyed to:
 
 **File Name Alias**
 
-| Name/Code  | Description                               | Format                 | Example         |
-| ---------: |------------------------------------------ | ---------------------- | --------------- |
-| **Variable Name**                                                                                 |
-| ~~var~~    | Variable name, lower case                 | `{var:s}`              |                 |
-| ~~Var~~    | Variable name, upper case                 | `{Var:s}`              |                 |
-| **File Part**, `ipart`                                                                            |
-| `i`        | ith part of file, `for i in range(4)`     | `{i:d}`                | 1         ,CFSR |
-| **Lat Lon**,   `latlon`                                                                           |
-| ~~latlon~~ | DEM tile's name                           | `{lat:>03s}{lon:>04s}` | 'n00e005'       |
-| `lat`      | DEM tile's name, Lat                      | `{lat:>03s}`           | 'n00' / 's01'   |
-| `lon`      | DEM tile's name, Lon                      | `{lon:>04s}`           | 'e001' / 'w001' |
-| **Datetime**,  `dtime` [link](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) |
-| `%Y`       | Year                                      | `{Y:>04s}`             | '2019'          |
-| `%y`       | Year                                      | `{Y:>02s}`             | '19'      ,FEWS |
-| `%m`       | Month                                     | `{M:>02s}`             | '01'            |
-| `%d`       | Day of month                              | `{D:>02s}`             | '01'            |
-| `%j`       | Day of year                               | `{d:>03s}`             | '365'           |
-| `%H`       | Hour                                      | `{h:>02s}`             | '24'            |
-| `%M`       | Minute                                    | `{m:>02s}`             | '01'            |
-| `%S`       | Second                                    | `{s:>02s}`             | '01'            |
-| `%f`       | Millisecond                               | `{ms:>02s}`            | ''              |
-| **Units**                                                                                         |
-| '.'        | Dimensionless, Index                      |                        |                 |
-| 'mm'       | Millimetre                                |                        |                 |
-| 'mm.d'     | Millimetre per day                        |                        |                 |
-| 'MJ.m2.d'  | Mega Joule per m2 per day                 |                        |                 |
-| 'W.m2'     | Watt per m2                               |                        |                 |
-| 'kg.m2.s'  | Kilogram per m2 per second                |                        | 86400 * mm.d    |
+| Name/Code  | Description                               | Format                 | Example                            |
+| ---------: |------------------------------------------ | ---------------------- | ---------------------------------- |
+| **Variable Name**                                                                                                    |
+| ~~var~~    | Variable name, lower case                 | `{var:s}`              |                                    |
+| ~~Var~~    | Variable name, upper case                 | `{Var:s}`              |                                    |
+| **File Part**, `ipart`                                                                                               |
+| `i`        | ith part of file, `for i in range(4)`     | `{i:d}`                | 1                           , CFSR |
+| **Lat Lon**,   `latlon`                                                                                              |
+| ~~latlon~~ | DEM tile's name                           | `{lat:>03s}{lon:>04s}` | 'n00e005'                          |
+| `lat`      | DEM tile's name, Lat                      | `{lat:>03s}`           | 'n00' / 's01' / '80N'    , DEM JRC |
+| `lon`      | DEM tile's name, Lon                      | `{lon:>04s}`           | 'e001' / 'w001' / '180W' , DEM JRC |
+| **Datetime**,  `dtime` [link](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes)    |
+| `%Y`       | Year                                      | `{Y:>04s}`             | '2019'                             |
+| `%y`       | Year                                      | `{Y:>02s}`             | '19'                        , FEWS |
+| `%m`       | Month                                     | `{M:>02s}`             | '01'                               |
+| `%d`       | Day of month                              | `{D:>02s}`             | '01'                               |
+| `%j`       | Day of year                               | `{d:>03s}`             | '365'                              |
+| `%H`       | Hour                                      | `{h:>02s}`             | '24'                               |
+| `%M`       | Minute                                    | `{m:>02s}`             | '01'                               |
+| `%S`       | Second                                    | `{s:>02s}`             | '01'                               |
+| `%f`       | Millisecond                               | `{ms:>02s}`            | ''                                 |
+| **Units**                                                                                                            |
+| '.'        | Dimensionless, Index                      |                        |                                    |
+| 'mm'       | Millimetre                                |                        |                                    |
+| 'mm.d'     | Millimetre per day                        |                        |                                    |
+| 'MJ.m2.d'  | Mega Joule per m2 per day                 |                        |                                    |
+| 'W.m2'     | Watt per m2                               |                        |                                    |
+| 'kg.m2.s'  | Kilogram per m2 per second                |                        | 86400 * mm.d                       |
 
 example
 
