@@ -130,26 +130,26 @@ print('{dtime:%Y-%m-%d %H:%M}'.format(dtime=datetime.datetime(2001, 2, 3, 4, 5))
 
 File driver
 
-| Name/Code    | Ext               | File type        | GDAL Drivers                                                        |
-| -----------: | ----------------- | ---------------- | ------------------------------------------------------------------- |
-| GRIB         | .grb2             | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       |
-| GRIB         | .grib2            | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       |
-| GTiff        | .tif              | Raster file      | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff)    |
-| NetCDF       | .nc               | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
-| NetCDF       | .nc4              | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
-| NetCDF.Group | .HDF5, .HDF       | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
-| HDF5         | .HDF5             | HDF5 file        | [HDF5](https://gdal.org/drivers/raster/hdf5.html#raster-hdf5)       |
-| HDF4         | .HDF              | HDF4 file        | [HDF4](https://gdal.org/drivers/raster/hdf4.html#raster-hdf4)       |
-| AIG          | .adf              | Raster file      | [AIG](https://gdal.org/drivers/raster/aig.html#raster-aig)          |
-| EHdr         | .bil              | Raster file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| EHdr         | .hdr              | Header file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| EHdr         | .blw              | World file       | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| EHdr         | .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
-| **Other**                                                                                                                 |
-| gz           | .gz -> dat(`<f4`) | Binary file      |                                                                     |
-| zip          | .zip              | Binary file      |                                                                     |
-| MEM          | Memory            | Raster file      | [MEM](https://gdal.org/drivers/raster/mem.html#raster-mem)          |
-| DODS         | DODS/OPeNDAP      | Vector file      | [DODS](https://gdal.org/drivers/vector/dods.html#vector-dods)       |
+| Name/Code    | Ext               | File type        | GDAL Drivers                                                        | example |
+| -----------: | ----------------- | ---------------- | ------------------------------------------------------------------- | ------- |
+| GRIB         | .grb2             | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       | CFSR    |
+| GRIB         | .grib2            | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       | CFSR    |
+| GTiff        | .tif              | Raster file      | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff)    |         |
+| NetCDF       | .nc               | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |         |
+| NetCDF       | .nc4              | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) | GPM     |
+| NetCDF.Group | .HDF5, .HDF       | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) | GPM     |
+| HDF5         | .HDF5             | HDF5 file        | [HDF5](https://gdal.org/drivers/raster/hdf5.html#raster-hdf5)       | GPM     |
+| HDF4         | .HDF              | HDF4 file        | [HDF4](https://gdal.org/drivers/raster/hdf4.html#raster-hdf4)       | MCD43   |
+| AIG          | .adf              | Raster file      | [AIG](https://gdal.org/drivers/raster/aig.html#raster-aig)          | DEM     |
+| EHdr         | .bil              | Raster file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       | FEWS    |
+| EHdr         | .hdr              | Header file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       | FEWS    |
+| EHdr         | .blw              | World file       | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       | FEWS    |
+| EHdr         | .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       | FEWS    |
+| **Other**                                                                                                                           |
+| gz           | .gz -> dat(`<f4`) | Binary file      |                                                                     | ALEXI   |
+| zip          | .zip              | Binary file      |                                                                     || DEM     |
+| MEM          | Memory            | Raster file      | [MEM](https://gdal.org/drivers/raster/mem.html#raster-mem)          |         |
+| DODS         | DODS/OPeNDAP      | Vector file      | [DODS](https://gdal.org/drivers/vector/dods.html#vector-dods)       |         |
 
 **Resolution types**
 
