@@ -114,6 +114,7 @@ YAML value `null` applyed to:
 | 'MJ.m2.d'  | Mega Joule per m2 per day                 |                        |                                    |
 | 'W.m2'     | Watt per m2                               |                        |                                    |
 | 'kg.m2.s'  | Kilogram per m2 per second                |                        | 86400 * mm.d                       |
+| 'K'        | Temprature                                |                        |                                    |
 
 example
 
