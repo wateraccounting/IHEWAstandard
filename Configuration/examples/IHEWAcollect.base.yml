@@ -23,7 +23,7 @@ products:
         - 'v1'
       datasets:                                                                     #   datasets
         - 'Evapotranspiration'
-      datatypes:                                                                    #   temporal/spacial resolution
+      resolutions:                                                                  #   temporal/spacial resolution
         - 'daily'
         - 'weekly'
       projection:                                                                   #   EPSG Geodetic Parameter Dataset of Coordinate Reference Systems (crs)

@@ -137,8 +137,9 @@ File driver
 | GTiff        | .tif              | Raster file      | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff)    |
 | NetCDF       | .nc               | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
 | NetCDF       | .nc4              | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
-| NetCDF.Group | .HDF5             | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
-| HDF5         | .HDF5             | NetCDF file      | [HDF5](https://gdal.org/drivers/raster/hdf5.html#raster-hdf5)       |
+| NetCDF.Group | .HDF5, .HDF       | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |
+| HDF5         | .HDF5             | HDF5 file        | [HDF5](https://gdal.org/drivers/raster/hdf5.html#raster-hdf5)       |
+| HDF4         | .HDF              | HDF4 file        | [HDF4](https://gdal.org/drivers/raster/hdf4.html#raster-hdf4)       |
 | AIG          | .adf              | Raster file      | [AIG](https://gdal.org/drivers/raster/aig.html#raster-aig)          |
 | EHdr         | .bil              | Raster file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
 | EHdr         | .hdr              | Header file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       |
@@ -211,15 +212,25 @@ if freq == '16D':
 
 **Protocal types**
 
-| Protocals  | Python Dependency           | get | post | api |
-| ---------: |---------------------------- | --- | ---- | --- |
-| FTP        | ftplib                      | Y   |      |     |
-| SFTP       | paramiko                    | Y   |      |     |
-| HTTP/HTTPS | requests                    | Y   |      |     |
-| HTTP/HTTPS | urllib                      | Y   |      |     |
-| HTTP/HTTPS | pycurl                      | Y   |      |     |
-| TDS        | pytds (python-tds)          | Y   |      |     |
-| ECMWF      | ecmwfapi (ecmwf-api-client) |     |      | Y   |
+| Protocals  | Python Dependency           | auth | get | post | crawl | example |
+| ---------: |---------------------------- | ---- | --- | ---- | ----- | ------- |
+| FTP        | ftplib                      | Y    | Y   |      |       |         |
+| SFTP       | paramiko                    | Y    | Y   |      |       |         |
+| HTTP/HTTPS | requests                    | Y    | Y   |      |       |         |
+| HTTP/HTTPS | urllib                      | H    | Y   |      |       |         |
+| HTTP/HTTPS | pycurl                      |      | Y   |      |       |         |
+| HTTP/HTTPS | BeautifulSoup               |      |     |      | Y     | MCD43   |
+| TDS        | pytds (python-tds)          |      | Y   |      |       |         |
+| API        | ecmwfapi (ecmwf-api-client) | Y    |     |      |       | ECMWF   |
+
+_product_ -> _version_ -> _parameter_ -> _resolution_ -> _variable_.method
+  - get:  download, with single url
+  - auth: download, with single url and header
+  - post: download, with _product_._`account:`_ is not `null` and data
+
+  - crawl: scan resources
+  - Y: Yes
+  - H: Header, bas64encode
 
 _Template_
 
@@ -244,7 +255,7 @@ products:
         - 'v1'
       datasets:                                                                     #   datasets
         - 'Evapotranspiration'
-      datatypes:                                                                    #   temporal/spacial resolution
+      resolutions:                                                                  #   temporal/spacial resolution
         - 'daily'
         - 'weekly'
       projection:                                                                   #   EPSG Geodetic Parameter Dataset of Coordinate Reference Systems (crs)
