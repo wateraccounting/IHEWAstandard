@@ -93,11 +93,11 @@ YAML value `null` applyed to:
 | ~~Var~~    | Variable name, upper case                 | `{Var:s}`              |                 |
 | **File Part**, `ipart`                                                                            |
 | `i`        | ith part of file, `for i in range(4)`     | `{i:d}`                | 1         ,CFSR |
-| **Lat Lon**, `latlon`                                                                             |
+| **Lat Lon**,   `latlon`                                                                           |
 | ~~latlon~~ | DEM tile's name                           | `{lat:>03s}{lon:>04s}` | 'n00e005'       |
 | `lat`      | DEM tile's name, Lat                      | `{lat:>03s}`           | 'n00' / 's01'   |
 | `lon`      | DEM tile's name, Lon                      | `{lon:>04s}`           | 'e001' / 'w001' |
-| **Datetime**, `dtime` [link](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) |
+| **Datetime**,  `dtime` [link](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) |
 | `%Y`       | Year                                      | `{Y:>04s}`             | '2019'          |
 | `%y`       | Year                                      | `{Y:>02s}`             | '19'      ,FEWS |
 | `%m`       | Month                                     | `{M:>02s}`             | '01'            |
