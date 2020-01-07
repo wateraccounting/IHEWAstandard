@@ -11,6 +11,8 @@ Define the **Data.HDF standard** of WaterAccounting Tools.
 
 ## Standard
 
+Hierarchical Data Format - Earth Observing System (HDF-EOS)
+
   - [OGC Standard, HDF5](https://www.opengeospatial.org/standards/HDF5)
   - [HDF EOS](https://hdfeos.org/)
 
