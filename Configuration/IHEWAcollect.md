@@ -116,7 +116,7 @@ YAML value `null` applyed to:
 | 'W.m2'     | Watt per m2                               |                        |                                    |
 | 'kg.m2.s'  | Kilogram per m2 per second                |                        | mm.d / 86400                       |
 | 'kg.m2.8d' | Kilogram per m2 per 8 day                 |                        | mm.d / 0.125                       |
-| 'kgC.m2'   | Kelvin                                    |                        |                                    |
+| 'kgC.m2'   | Kilogram coulomb per square metre         |                        |                                    |
 
 
 example
