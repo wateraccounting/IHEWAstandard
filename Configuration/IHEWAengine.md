@@ -102,6 +102,7 @@ Landuse & Landcover
 
   - [FAO](http://www.fao.org/3/x0596e/X0596e00.htm#P-1_0)
   - [FAO, AQUASTAT](http://www.fao.org/aquastat/en/geospatial-information/global-maps-irrigated-areas)
+  - [NASA, MCD12](https://lpdaac.usgs.gov/products/mcd12q1v006)
   - [USGS, GLCC-2.0](https://www.usgs.gov/media/images/global-land-cover-characteristics-data-base-version-20)
   - [JRC, GLC2000](https://ec.europa.eu/jrc/en/scientific-tool/global-land-cover)
 
