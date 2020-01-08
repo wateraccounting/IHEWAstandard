@@ -18,4 +18,4 @@ Define the **Data.gz standard** of WaterAccounting Tools.
   - [gz Code, C](http://ftp.gnu.org/gnu/gzip/)
 
 
-# [Examples](examples/README.md#gtiff)
+# [Examples](examples/README.md#gz)

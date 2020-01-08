@@ -109,13 +109,15 @@ YAML value `null` applyed to:
 | `%f`       | Millisecond                               | `{ms:>02s}`            | ''                                 |
 | **Units**                                                                                                            |
 | '.'        | Dimensionless, Index, Percent             |                        |                                    |
+| 'K'        | Kelvin                                    |                        |                                    |
 | 'mm'       | Millimetre                                |                        |                                    |
 | 'mm.d'     | Millimetre per day                        |                        |                                    |
 | 'MJ.m2.d'  | Mega Joule per m2 per day                 |                        |                                    |
 | 'W.m2'     | Watt per m2                               |                        |                                    |
 | 'kg.m2.s'  | Kilogram per m2 per second                |                        | mm.d / 86400                       |
 | 'kg.m2.8d' | Kilogram per m2 per 8 day                 |                        | mm.d / 0.125                       |
-| 'K'        | Kelvin                                    |                        |                                    |
+| 'kgC.m2'   | Kelvin                                    |                        |                                    |
+
 
 example
 

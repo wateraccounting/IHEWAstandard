@@ -9,6 +9,8 @@ Define the **Data standard** of WaterAccounting Tools.
 
 ## [gz](./gz.md)
 
+## [HDF](./HDF.md)
+
 ## [NetCDF](./NetCDF.md)
 
 ## [SVG](./SVG.md)

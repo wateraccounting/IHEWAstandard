@@ -20,4 +20,4 @@ Hierarchical Data Format - Earth Observing System (HDF-EOS)
 ## Resources
 
 
-# [Examples](examples/README.md#netcdf)
+# [Examples](examples/README.md#hdf)

@@ -12,6 +12,9 @@ Define the **Data examples** of WaterAccounting Tools.
 ## gz
 
 
+## HDF
+
+
 ## NetCDF
 
 Nile basin, Precipitation
