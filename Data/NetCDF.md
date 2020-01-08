@@ -12,6 +12,8 @@ Define the **Data.NetCDF standard** of WaterAccounting Tools.
 ## Standard
 
   - [OGC Standard, NetCDF](https://www.opengeospatial.org/standards/netcdf)
+  - [NetCDF, CF Metadata Conventions](http://cfconventions.org/)
+  - [HDF, EOS](https://hdfeos.org/)
 
 
 ## Resources
