@@ -113,7 +113,8 @@ YAML value `null` applyed to:
 | 'mm.d'     | Millimetre per day                        |                        |                                    |
 | 'MJ.m2.d'  | Mega Joule per m2 per day                 |                        |                                    |
 | 'W.m2'     | Watt per m2                               |                        |                                    |
-| 'kg.m2.s'  | Kilogram per m2 per second                |                        | 86400 * mm.d                       |
+| 'kg.m2.s'  | Kilogram per m2 per second                |                        | mm.d / 86400                       |
+| 'kg.m2.8d' | Kilogram per m2 per 8 day                 |                        | mm.d / 0.125                       |
 | 'K'        | Kelvin                                    |                        |                                    |
 
 example
@@ -138,7 +139,7 @@ File driver
 | GTiff        | .tif              | Raster file      | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff)    |         |
 | NetCDF       | .nc               | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |         |
 | NetCDF       | .nc4              | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) | GPM     |
-| NetCDF.Group | .HDF5, .HDF       | Hierarchical file| [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) | GPM, MCD43 |
+| NetCDF.Group | .HDF5, .HDF       | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) | GPM, MCD43 |
 | HDF5         | .HDF5             | Hierarchical file| [HDF5](https://gdal.org/drivers/raster/hdf5.html#raster-hdf5)       | GPM     |
 | HDF4         | .HDF              | Hierarchical file| [HDF4](https://gdal.org/drivers/raster/hdf4.html#raster-hdf4)       | MCD43   |
 | AIG          | .adf              | Raster file      | [AIG](https://gdal.org/drivers/raster/aig.html#raster-aig)          | DEM     |
