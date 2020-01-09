@@ -17,8 +17,9 @@ Hierarchical Data Format - Earth Observing System (HDF-EOS)
   - [HDF, EOS](https://hdfeos.org/)
   - [NetCDF, CF Metadata Conventions](http://cfconventions.org/)
 
-
 ## Resources
+
+  - [HDF5, Python](https://www.h5py.org/)
 
 
 # [Examples](examples/README.md#hdf)
