@@ -167,17 +167,19 @@ File driver
 
 _resolution_ [**Spatial**, 'Name/Code']
 
-| Name/Code  | sec/min        | degree   	         | meters/km                      |
-| ---------: |--------------- | ------------------ | ------------------------------ |
-| 0.1s       | 0.1 arc-second | 0.0000277777777777 | approx. 3 m     at the equator |
-| 1s         | 1 arc-second   | 0.0002777777777777 | approx. 30 m    at the equator |
-| 3s         | 3 arc-second   | 0.0008333333333333 | approx. 90 m    at the equator |
-| 15s        | 15 arc-second  | 0.0041666666666667 | approx. 500 m   at the equator |
-| 30s        | 30 arc-second  | 0.0083333333333333 | approx. 1 km    at the equator |
-| 1m         | 1 arc-minute   | 0.0166666666666666 | approx. 2 km    at the equator |
-| 5m         | 5 arc-minute   | 0.0833333333333333 | approx. 10 km   at the equator |
-| 6m         | 6 arc-minute   | 0.1                | approx. 12 km   at the equator |
-| 15m        | 15 arc-minute  | 0.2499999999999999 | approx. 30 km   at the equator |
+| Name/Code  | sec/min        | degree   	         | meters/km | location       |
+| ---------: |--------------- | ------------------ | --------- | -------------- |
+| 0.1s       | 0.1 arc-second | 0.0000277777777777 | ~ 3     m | at the equator |
+| 1s         | 1 arc-second   | 0.0002777777777777 | ~ 30    m | at the equator |
+| 3s         | 3 arc-second   | 0.0008333333333333 | ~ 90    m | at the equator |
+| 4s         | 4 arc-second   | 0.0011111111111111 | ~ 100   m | at the equator |
+| 9s         | 9 arc-second   | 0.0024999999999999 | ~ 250   m | at the equator |
+| 15s        | 15 arc-second  | 0.0041666666666667 | ~ 500   m | at the equator |
+| 30s        | 30 arc-second  | 0.0083333333333333 | ~ 1    km | at the equator |
+| 1m         | 1 arc-minute   | 0.0166666666666666 | ~ 2    km | at the equator |
+| 5m         | 5 arc-minute   | 0.0833333333333333 | ~ 10   km | at the equator |
+| 6m         | 6 arc-minute   | 0.1                | ~ 12   km | at the equator |
+| 15m        | 15 arc-minute  | 0.2499999999999999 | ~ 30   km | at the equator |
 
 _resolution_ [**Temporal**, 'Standard Name']
 
