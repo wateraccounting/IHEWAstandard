@@ -172,7 +172,7 @@ _resolution_ [**Spatial**, 'Name/Code']
 | 0.1s       | 0.1 arc-second | 0.0000277777777777 | ~ 3     m | at the equator |
 | 1s         | 1 arc-second   | 0.0002777777777777 | ~ 30    m | at the equator |
 | 3s         | 3 arc-second   | 0.0008333333333333 | ~ 90    m | at the equator |
-|            |                | 0.0009920635       | 100     m | VITO           |
+|            |                | 0.0009920634920630 | 100     m | VITO           |
 | 4s         | 4 arc-second   | 0.0011111111111111 | ~ 100   m | at the equator |
 | 9s         | 9 arc-second   | 0.0024999999999999 | ~ 250   m | at the equator |
 | 15s        | 15 arc-second  | 0.0041666666666667 | ~ 500   m | at the equator |
