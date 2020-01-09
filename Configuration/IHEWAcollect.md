@@ -95,8 +95,8 @@ YAML value `null` applyed to:
 | `i`        | ith part of file, `for i in range(4)`     | `{i:d}`                | 1, CFSR                            |
 | **Lat Lon**,   `latlon`                                                                                              |
 | ~~latlon~~ | DEM tile's name                           | `{lat:>03s}{lon:>04s}` | 'n00e005'                          |
-| `lat`      | DEM tile's name, Lat                      | `{lat:>03s}`           | 'n00'  's01':  DEM, '80N':  JRC, 'h35': MOD09  |
-| `lon`      | DEM tile's name, Lon                      | `{lon:>04s}`           | 'e001' 'w001': DEM, '180W': JRC, 'v17': MOD09  |
+| `lat`      | DEM tile's name, Lat                      | `{lat:>03s}`           | 'n00'/'s01':   `DEM`, '80N':  `JRC`, 'h35': `MOD09`, 'Y00': `PROBAV` |
+| `lon`      | DEM tile's name, Lon                      | `{lon:>04s}`           | 'e001'/'w001': `DEM`, '180W': `JRC`, 'v17': `MOD09`, 'X35': `PROBAV` |
 | **Datetime**,  `dtime` [link](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes)    |
 | `%Y`       | Year                                      | `{Y:>04s}`             | '2019'                             |
 | `%y`       | Year                                      | `{Y:>02s}`             | '19', FEWS                         |
@@ -172,6 +172,7 @@ _resolution_ [**Spatial**, 'Name/Code']
 | 0.1s       | 0.1 arc-second | 0.0000277777777777 | ~ 3     m | at the equator |
 | 1s         | 1 arc-second   | 0.0002777777777777 | ~ 30    m | at the equator |
 | 3s         | 3 arc-second   | 0.0008333333333333 | ~ 90    m | at the equator |
+|            |                | 0.0009920635       | 100     m | VITO           |
 | 4s         | 4 arc-second   | 0.0011111111111111 | ~ 100   m | at the equator |
 | 9s         | 9 arc-second   | 0.0024999999999999 | ~ 250   m | at the equator |
 | 15s        | 15 arc-second  | 0.0041666666666667 | ~ 500   m | at the equator |
