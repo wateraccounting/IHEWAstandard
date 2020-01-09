@@ -20,6 +20,7 @@ Hierarchical Data Format - Earth Observing System (HDF-EOS)
 ## Resources
 
   - [HDF5, Python](https://www.h5py.org/)
+  - [HDF5, Group](https://www.hdfgroup.org/)
 
 
 # [Examples](examples/README.md#hdf)
