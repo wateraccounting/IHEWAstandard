@@ -151,9 +151,10 @@ File driver
 | EHdr         | .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       | FEWS    |
 | **Other**                                                                                                                           |
 | gz           | .gz -> dat(`<f4`) | Binary file      |                                                                     | ALEXI   |
-| zip          | .zip              | Binary file      |                                                                     || DEM     |
+| zip          | .zip              | Binary file      |                                                                     | DEM     |
 | MEM          | Memory            | Raster file      | [MEM](https://gdal.org/drivers/raster/mem.html#raster-mem)          |         |
 | DODS         | DODS/OPeNDAP      | Vector file      | [DODS](https://gdal.org/drivers/vector/dods.html#vector-dods)       |         |
+| Matlab       | Matlab            | Raster file      | [scipy.io](https://docs.scipy.org/doc/scipy/reference/tutorial/io.html) |         |
 
 **Resolution types**
 
