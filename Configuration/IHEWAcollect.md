@@ -114,9 +114,11 @@ YAML value `null` applyed to:
 | 'mm.d'     | Millimetre per day                        |                        |                                    |
 | 'MJ.m2.d'  | Mega Joule per m2 per day                 |                        |                                    |
 | 'W.m2'     | Watt per m2                               |                        |                                    |
-| 'kg.m2.s'  | Kilogram per m2 per second                |                        | mm.d / 86400                       |
-| 'kg.m2.8d' | Kilogram per m2 per 8 day                 |                        | mm.d / 0.125                       |
+| 'kg.m2.s'  | Kilogram per m2 per second                |                        | 86400 mm.d                         |
+| 'kg.m2.8d' | Kilogram per m2 per 8 day                 |                        | 0.125 mm.d                         |
 | 'kg.m3'    | Kilogram per cubic metre                  |                        |                                    |
+| 'g.kg'     | Gram per kilogram                         |                        | 0.001 kg.kg                        |
+| 't.ha'     | Ton per hectare                           |                        | 0.1   kg.m2                        |
 | 'kgC.m2'   | Kilogram coulomb per square metre         |                        |                                    |
 
 
@@ -176,6 +178,7 @@ _resolution_ [**Spatial**, 'Name/Code']
 | 3s         | 3 arc-second   | 0.0008333333333333 | ~ 90    m | at the equator |
 | ~ 4s       | ~ 4 arc-second | 0.0009920634920630 | 100     m | VITO           |
 | 4s         | 4 arc-second   | 0.0011111111111111 | ~ 100   m | at the equator |
+| ~ 9s       | ~ 9 arc-second | 0.0020833330000009 | 250     m | SoilGrids      |
 | 9s         | 9 arc-second   | 0.0024999999999999 | ~ 250   m | at the equator |
 | 15s        | 15 arc-second  | 0.0041666666666667 | ~ 500   m | at the equator |
 | 30s        | 30 arc-second  | 0.0083333333333333 | ~ 1    km | at the equator |
