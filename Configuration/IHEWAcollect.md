@@ -111,6 +111,7 @@ YAML value `null` applyed to:
 | '.'        | Dimensionless, Index, Percent             |                        |                                    |
 | 'K'        | Kelvin                                    |                        |                                    |
 | 'mm'       | Millimetre                                |                        |                                    |
+| 'mm.hr'    | Millimetre per hour                       |                        |                                    |
 | 'mm.d'     | Millimetre per day                        |                        |                                    |
 | 'MJ.m2.d'  | Mega Joule per m2 per day                 |                        |                                    |
 | 'W.m2'     | Watt per m2                               |                        |                                    |
