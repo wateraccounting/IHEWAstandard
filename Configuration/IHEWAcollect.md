@@ -113,7 +113,7 @@ YAML value `null` applyed to:
 | 'mm'       | Millimetre                                |                        |                                    |
 | 'mm.hr'    | Millimetre per hour                       |                        | 24 mm.d                            |
 | 'mm.d'     | Millimetre per day                        |                        |                                    |
-| 'MJ.m2.d'  | Mega Joule per m2 per day                 |                        |                                    |
+| 'MJ.m2.d'  | Mega Joule per m2 per day                 |                        | 0.408 mm.d                         |
 | 'W.m2'     | Watt per m2                               |                        |                                    |
 | 'kg.m2.s'  | Kilogram per m2 per second                |                        | 86400 mm.d                         |
 | 'kg.m2.8d' | Kilogram per m2 per 8 day                 |                        | 0.125 mm.d                         |
