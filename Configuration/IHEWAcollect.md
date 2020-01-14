@@ -111,7 +111,7 @@ YAML value `null` applyed to:
 | '.'        | Dimensionless, Index, Percent             |                        |                                    |
 | 'K'        | Kelvin                                    |                        |                                    |
 | 'mm'       | Millimetre                                |                        |                                    |
-| 'mm.hr'    | Millimetre per hour                       |                        |                                    |
+| 'mm.hr'    | Millimetre per hour                       |                        | 24 mm.d                            |
 | 'mm.d'     | Millimetre per day                        |                        |                                    |
 | 'MJ.m2.d'  | Mega Joule per m2 per day                 |                        |                                    |
 | 'W.m2'     | Watt per m2                               |                        |                                    |
@@ -140,19 +140,19 @@ File driver
 
 | Name/Code    | Ext               | File type        | GDAL Drivers                                                        | example |
 | -----------: | ----------------- | ---------------- | ------------------------------------------------------------------- | ------- |
-| GRIB         | .grb2             | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       | CFSR    |
-| GRIB         | .grib2            | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       | CFSR    |
-| GTiff        | .tif              | Raster file      | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff)    |         |
-| NetCDF       | .nc               | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |         |
-| NetCDF       | .nc4              | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) | GPM     |
-| NetCDF.Group | .HDF5, .HDF       | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) | GPM, MCD43 |
-| HDF5         | .HDF5             | Hierarchical file| [HDF5](https://gdal.org/drivers/raster/hdf5.html#raster-hdf5)       | GPM     |
-| HDF4         | .HDF              | Hierarchical file| [HDF4](https://gdal.org/drivers/raster/hdf4.html#raster-hdf4)       | MCD43   |
 | AIG          | .adf              | Raster file      | [AIG](https://gdal.org/drivers/raster/aig.html#raster-aig)          | DEM     |
 | EHdr         | .bil              | Raster file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       | FEWS    |
 | EHdr         | .hdr              | Header file      | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       | FEWS    |
 | EHdr         | .blw              | World file       | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       | FEWS    |
 | EHdr         | .stx              | Statistics file  | [EHdr](https://gdal.org/drivers/raster/ehdr.html#raster-ehdr)       | FEWS    |
+| GRIB         | .grb2             | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       | CFSR    |
+| GRIB         | .grib2            | Raster file      | [GRIB](https://gdal.org/drivers/raster/grib.html#raster-grib)       | CFSR    |
+| GTiff        | .tif              | Raster file      | [GTiff](https://gdal.org/drivers/raster/gtiff.html#raster-gtiff)    |         |
+| HDF4         | .HDF              | Hierarchical file| [HDF4](https://gdal.org/drivers/raster/hdf4.html#raster-hdf4)       | MCD43   |
+| HDF5         | .HDF5             | Hierarchical file| [HDF5](https://gdal.org/drivers/raster/hdf5.html#raster-hdf5)       | GPM     |
+| NetCDF       | .nc               | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) |         |
+| NetCDF       | .nc4              | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) | GPM     |
+| NetCDF.Group | .HDF, .HDF5       | NetCDF file      | [netCDF](https://gdal.org/drivers/raster/netcdf.html#raster-netcdf) | GPM, MCD43 |
 | **Other**                                                                                                                           |
 | gz           | .gz -> dat(`<f4`) | Binary file      |                                                                     | ALEXI   |
 | zip          | .zip              | Binary file      |                                                                     | DEM     |
