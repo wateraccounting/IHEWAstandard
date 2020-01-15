@@ -32,6 +32,7 @@ products:
       evapotranspiration:                                                                  # `product.version.parameter`
         daily:                                                                      # `product.version.parameter.resolution`
           url: 'ftp://ftp.wateraccounting.unesco-ihe.org'                           #   data potal/repository url
+          protocol: 'FTP'
           method: 'get'                                                             #   request methods [get, post, ...]
           freq: 'D'                                                                 #   `resolution` short name, follow pandas.datetime
           variables:                                                                #
