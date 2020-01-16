@@ -250,7 +250,8 @@ _Template_
 ```Yaml
 products:
   ALEXI:                                                                            # `product`
-    account: 'FTP_WA'                                                               # accounts.yml
+    account: 'IHEWA'                                                                # accounts.yml
+    template: 'IHE'
     meta:                                                                           # product metadata
       owner: 'IHE Delft'                                                            #   product owner/developer/maintainer...
       description:                                                                  #   description
