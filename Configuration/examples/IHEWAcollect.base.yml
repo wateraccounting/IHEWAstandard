@@ -42,14 +42,16 @@ products:
               name: 'Daily Evapotranspiration'                                      #   long name 
               description:                                                          #   description
                 ''                                                                  # 
-              dfmt: null                                                            #   remote dir format
-              rfmt: 'dtime'                                                         #   remote file format
-              tfmt: 'dtime'                                                         #   temporary file format
               dir: '/WaterAccounting/Data_Satellite/Evaporation/ALEXI/'             #   data location on the data potal/repository
               fname:                                                                #   file name
                 r: 'EDAY_CERES_{dtime:%Y%j}.dat.gz'                                 #     remote file,            string, template
                 t: 'EDAY_CERES_{dtime:%Y%j}.dat'                                    #     temporary file,         string, template
                 l: 'ALEXI_v1_mm.d_D-{dtime:%Y%m%d}.tif'                             #     local/downloaded file,  string, template
+              fmt:
+                d: null                                                             #   remote dir format
+                r: 'dtime'                                                          #   remote file format
+                t: 'dtime'                                                          #   temporary file format
+                l: 'dtime'                                                          #   local/download file format
               ftype:                                                                #   file type/extension
                 r: 'gz'                                                             #     remote file,            string
                 t: 'dat'                                                            #     temporary file,         string
