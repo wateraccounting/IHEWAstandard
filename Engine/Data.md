@@ -179,7 +179,7 @@ Parameter, **csv** data
 | ---------------------------------: | ---------------------------- | ------ | ----------------------------------- | ----- |
 | **0D, Parameter**                                                                                                        |
 | `name`                             | Basin name VGTB              |        | sh1I sh2I sh3I sh4I sh5I sh6I sh7I  | metadata |
-| `recycling_ratio`                  | Ratio                        |        | sh1I                          sh7I  | metadata|
+| `recycling_ratio`                  | Ratio                        |        | sh1I                          sh7I  | metadata |
 | `water_year_start_month`           | Start month of water year    |        | sh1I           sh4I sh5I sh6I sh7I  | metadata |
 | `surfwat`                          |                              |        |                     sh5I            | metadata |
 | `discharge_natural`                |                              |        |                     sh5I            | surfwat |
