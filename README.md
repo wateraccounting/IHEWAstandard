@@ -26,7 +26,7 @@ Format, etc.
   - [GRIB](./Data/GRIB.md)
   - [GTiff](./Data/GTiff.md)
   - [gz](./Data/gz.md)
-  - [HDF]](./Data/HDF.md)
+  - [HDF](./Data/HDF.md)
   - [NetCDF](./Data/NetCDF.md)
   - [SVG](./Data/SVG.md)
   - [Units](./Data/Units.md)
