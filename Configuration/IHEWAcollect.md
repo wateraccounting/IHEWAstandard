@@ -185,6 +185,7 @@ _resolution_ [**Spatial**, 'Name/Code']
 | 15s        | 15 arc-second  | 0.0041666666666667 | ~ 500   m | at the equator |
 | 30s        | 30 arc-second  | 0.0083333333333333 | ~ 1    km | at the equator |
 | 1m         | 1 arc-minute   | 0.0166666666666666 | ~ 2    km | at the equator |
+| 3m         | 3 arc-minute   | 0.05               | ~ 6    km | at the equator |
 | 5m         | 5 arc-minute   | 0.0833333333333333 | ~ 10   km | at the equator |
 | 6m         | 6 arc-minute   | 0.1                | ~ 12   km | at the equator |
 | 15m        | 15 arc-minute  | 0.2499999999999999 | ~ 30   km | at the equator |
