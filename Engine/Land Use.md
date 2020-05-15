@@ -1,5 +1,14 @@
 # Engine.Land Use
 
+**TOC**
+
+  - [Standard](#standard)
+  - [Resources](#resources)
+  - [Examples](#examples)
+
+
+## Standard
+
 | ID | Code  | Landuse   | Description                                                  | Beneficial T [%] | Beneficial E [%] | Beneficial I [%] | Agriculture [%] | Environment [%] | Economic [%] | Energy [%] | Leisure [%] |
 | -: | ----: | --------- | ------------------------------------------------------------ | ---------------- | ---------------- | ---------------- | --------------- | --------------- | ------------ | ---------- | ----------- |
 | 1  | PLU1  | Protected | Protected forests                                            | 100.0 | 100.0 | 0.0   | 0.0   | 85.0  | 0.0   | 0.0   | 15.0  |
@@ -84,7 +93,7 @@
 | 80 | MWU29 | Managed   | Thermal power plants                                         | 0.0   | 100.0 | 0.0   | 0.0   | 0.0   | 0.0   | 100.0 | 0.0   |
 
 
-Landuse & Landcover
+## Resources
 
   - [FAO](http://www.fao.org/3/x0596e/X0596e00.htm#P-1_0)
   - [FAO, AQUASTAT](http://www.fao.org/aquastat/en/geospatial-information/global-maps-irrigated-areas)
@@ -100,3 +109,5 @@ Landuse & Landcover
   - [Land Cover Classification with eo-learn: Part 2](https://medium.com/sentinel-hub/land-cover-classification-with-eo-learn-part-2-bd9aa86f8500)
   - [Land Cover Classification with eo-learn: Part 3](https://medium.com/sentinel-hub/land-cover-classification-with-eo-learn-part-3-c62ed9ecd405)
 
+
+## [Examples](./examples)

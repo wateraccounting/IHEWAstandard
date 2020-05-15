@@ -333,7 +333,7 @@ products:
 [NASA, OPeNDAP and GDS](https://disc.gsfc.nasa.gov/information/tools?title=OPeNDAP%20and%20GDS)
 
 
-## Examples
+## [Examples](./examples)
 
 ### Accounts
 

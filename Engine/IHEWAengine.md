@@ -3,7 +3,6 @@
 **TOC**
 
   - [Standard](#standard)
-    - [Landuse & Landcover](#landuse--landcover)
   - [Resources](#resources)
   - [Examples](#examples)
 

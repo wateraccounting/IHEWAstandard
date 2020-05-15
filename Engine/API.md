@@ -13,4 +13,4 @@
 ## Resources
 
 
-# [Examples](examples/README.md#api)
+## [Examples](./examples)
