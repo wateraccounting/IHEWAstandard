@@ -1,4 +1,4 @@
-# IHEWAcollect
+# Collect
 
 **TOC**
 

@@ -1,6 +1,4 @@
-# IHEWAstandard.Engine.Data
-
-Define the **Engine.Data standard** of WaterAccounting Tools.
+# Engine.Data
 
 **TOC**
 
@@ -386,8 +384,13 @@ _Variable Name, Calculation/HYD Processes, Script_
 |                                    | atm_recycl_incremental             |                                    |                                    |                                  |        |                               sh7   | results |
 |                                    | # fish                             |                                    |                                    |                                  |        |                               sh7   | results |
 
+_Template 1D variable, time series (t, value)_
 
-_Template 2D variable_
+```Python
+
+```
+
+_Template 2D variable, static map (y, x)_
 
 ```Python
 'DEM': {
@@ -413,7 +416,7 @@ _Template 2D variable_
         )
 ```
 
-_Template 3D variable_
+_Template 3D variable, dynamic map (time, y, x)_
 
 ```Python
 'PCP': {                                        # variable short name
