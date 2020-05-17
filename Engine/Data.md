@@ -384,10 +384,44 @@ _Variable Name, Calculation/HYD Processes, Script_
 |                                    | atm_recycl_incremental             |                                    |                                    |                                  |        |                               sh7   | results |
 |                                    | # fish                             |                                    |                                    |                                  |        |                               sh7   | results |
 
-_Template 1D variable, time series (t, value)_
+_Template 0D variable, time series ()_
 
 ```Python
+'RecyclingRatio': {                             # variable dimensions, 0D
+        'dims': (),
+        'attrs': {                              # variable attribute
+                'standard_name': 'recycling_ratio',
+                'long_name':     'Recycling Ratio',
+                'units':         '',
+                'from':          'Parameter'
+        },
+        'data': np.array(                       # variable data, np.array(, dtype=)
+                0.02,
+                dtype=np.float64
+        )
+},
+```
 
+_Template 1D variable, time series (t)_
+
+```Python
+'Q': {
+        'dims': (                               # variable dimensions, 1D
+                'time'
+        ),
+        'attrs': {                              # variable attributes
+                'standard_name': 'discharge',
+                'long_name':     'Discharge',
+                'units':         'm3.d',
+                'from':          'Measurement'
+        },
+        'data': np.array(                       # variable data, np.array(, dtype=)
+                [
+                    1, 2
+                ],
+                dtype=np.float64
+        )
+},
 ```
 
 _Template 2D variable, static map (y, x)_
@@ -403,7 +437,7 @@ _Template 2D variable, static map (y, x)_
                 'grid_mapping':  'crs',
                 'standard_name': 'digital_elevation_model',
                 'long_name':     'Digital Elevation Model',
-                'units':         '',
+                'units':         'm',
                 'from':          'HydroSHED'
         },
         'data': np.array(                       # variable data, np.array(, dtype=)
@@ -414,6 +448,7 @@ _Template 2D variable, static map (y, x)_
                 ],
                 dtype=np.float32
         )
+},
 ```
 
 _Template 3D variable, dynamic map (time, y, x)_
@@ -429,8 +464,7 @@ _Template 3D variable, dynamic map (time, y, x)_
                 'grid_mapping':  'crs',         # 'grid_mapping' linked with variable 'crs'
                 'standard_name': 'precipitation',
                 'long_name':     'Precipitation',
-                'temp_res':      'day',
-                'units':         'mm',
+                'units':         'mm.d',
                 'from':          'WaterPix'
         },
         'data': np.array(                       # variable data, np.array(, dtype=)
