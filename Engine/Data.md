@@ -475,9 +475,9 @@ _Template 3D variable, dynamic map (time, y, x)_
                         [5, 6]
                     ],
                     [
-                        [10, 20],
-                        [30, 40],
-                        [50, 60]
+                        [2, 3],
+                        [4, 5],
+                        [6, 1]
                     ]
                 ],
                 dtype=np.float32

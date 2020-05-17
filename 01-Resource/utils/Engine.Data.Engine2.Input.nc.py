@@ -28,18 +28,23 @@ ds_data_vars_f8 = np.float64
 ds = xr.Dataset.from_dict(
 {
     'attrs': {
-        # meta
+        # Meta
         'version':          'v0',                           # The version of this template NetCDF is 'v0', major release number of Github & Pypi
         'standard':         'WaterAccounting',              # This version applies standard of 'WaterAccounting'
-        # to
+
+        # For engine
         'engine_num':       '2',                            # The data is created for engine '2'
         'engine_use':       'Input',                        # The data is used as 'input' for engine2
         'model_name':       'Hyperloop',                    # The engine model,   linked with release name
         'model_version':    'v0.0.1',                       # The engine version, linked with release version
-        # from
+
+        # Created by
         'created_by':       'IHE',                          # This data is created by owner 'IHE'
-        'created_time':     '2019-12-03',                   # This data is created at time  'yyyy-mm-dd'
+        # 'created_time':     '2019-12-31 00:00:00',        # This data is cre0ated at time  'yyyy-mm-dd HH:MM:SS'
+        # 'created_time':     '{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime(2019, 12, 31, 0, 0, 0)),
+        'created_time':     '{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()),
         'created_model':    'WaterPix',                     # This data is created by model 'WaterPix'
+
         # GTiff format
                                                             # GTiff Origin, [West, North]
                                                             # GTiff Extent, [West, South] to [East, North]
@@ -48,6 +53,8 @@ ds = xr.Dataset.from_dict(
                                                             # Image         pixelWidth   = 10
                                                             # Image         pixelHeight  = 10
                                                             # CRS name,     linked with variable 'crs'
+
+        # GIS
         'CRS':              'EPSG:4326 - WGS 84 - Geographic',
         'originX':          0.0,                            # West
         'originY':          20.0,                           # North
@@ -315,9 +322,9 @@ ds = xr.Dataset.from_dict(
                                 [5, 6]
                             ],
                             [
-                                [10, 20],
-                                [30, 40],
-                                [50, 60]
+                                [2, 3],
+                                [4, 5],
+                                [6, 1]
                             ]
                         ],
                         dtype=ds_data_vars_f4
@@ -344,9 +351,9 @@ ds = xr.Dataset.from_dict(
                                 [5, 6]
                             ],
                             [
-                                [10, 20],
-                                [30, 40],
-                                [50, 60]
+                                [2, 3],
+                                [4, 5],
+                                [6, 1]
                             ]
                         ],
                         dtype=ds_data_vars_f4
