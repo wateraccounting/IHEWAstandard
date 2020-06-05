@@ -26,9 +26,11 @@ output_var = 'p'
 output_var_long_name = 'Precipitation'
 output_var_standard_name = 'precipitation'
 output_var_units = 'mm/month'
+output_var_complevel = 9  # valide level: 1 to ; no compress: 0
 
 output_var_dim_time = 12
-years = np.arange(start=2009, stop=(2018 + 1), step=1, dtype=np.int)
+# years = np.arange(start=2009, stop=(2018 + 1), step=1, dtype=np.int)
+years = np.arange(start=2009, stop=(2009 + 1), step=1, dtype=np.int)
 
 # file name
 output_path_data = r'./Basin_name/Input/netCDF/{var}'.format(var=output_var)
@@ -43,8 +45,11 @@ if not os.path.exists(file_i):
     print('"{}" not found!'.format(file_i))
 else:
     # define, xarray Dataset
-    ds_FillValue_f8 = -9999.0
+    ds_data_vars_f4 = np.float32
+    ds_FillValue_f4 = ds_data_vars_f4(-9999.0)
+
     ds_data_vars_f8 = np.float64
+    ds_FillValue_f8 = ds_data_vars_f8(-9999.0)
 
     # Load data
     with xr.open_dataset(file_i) as ds_i:
@@ -53,7 +58,7 @@ else:
         # Attributes: attrs, dims, coords, data_vars
         output_var_dim_lat = ds_i.dims[input_dim_lat]
         output_var_dim_lon = ds_i.dims[input_dim_lon]
-        
+
         t = ds_i.coords[input_dim_time].values
         y = ds_i.coords[input_dim_lat].values
         x = ds_i.coords[input_dim_lon].values
@@ -87,19 +92,54 @@ else:
         # xarray Dataset, create data
         ds_o_dict = {
             'attrs': {
-                # Meta
-                'version': 'v0',
-                'standard': 'WaterAccounting',
-                'engine_num': '2',
-                'engine_use': 'Input',
-                'model_name': 'Hyperloop',
-                'model_version': 'v0.0.1',
-                'created_by': 'IHE',
-                'created_time': '{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()),
-                'created_model': 'WaterPix',
-
-                # !!GIS, keep
+                # !!!!!!!!! #
+                # GIS, keep #
+                # !!!!!!!!! #
                 'CRS': 'EPSG:4326 - WGS 84 - Geographic',
+
+                # !!!! #
+                # Meta #
+                # !!!! #
+                # Fao
+                'title': '',
+                'id': '',
+                'processing_level': '',
+                'comment': '',
+                'date_created': '',
+                'creator_name': '',
+                'creator_email': '',
+                'institution': '',
+                'project': '',
+                'geospatial_bounds': '',
+                'geospatial_bounds_crs': '',
+                'geospatial_lat_min': '',
+                'geospatial_lat_max': '',
+                'geospatial_lon_min': '',
+                'geospatial_lon_max': '',
+                'time_coverage_start': '',
+                'time_coverage_end': '',
+                'time_coverage_resolution': '',
+                'geospatial_lat_units': '',
+                'geospatial_lat_resolution': '',
+                'geospatial_lon_units': '',
+                'geospatial_lon_resolution': '',
+                'date_modified': '',
+                'date_metadata_modified': '',
+                'data_type': '',
+                'metadata_link': '',
+                'references': '',
+                'description': '',
+
+                # # From QPan, can comment
+                # 'version': 'v0',
+                # 'standard': 'WaterAccounting',
+                # 'engine_num': '2',
+                # 'engine_use': 'Input',
+                # 'model_name': 'Hyperloop',
+                # 'model_version': 'v0.0.1',
+                # 'created_by': 'IHE',
+                # 'created_time': '{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()),
+                # 'created_model': 'WaterPix',
             },
             'dims': {
                 'time': output_var_dim_time,
@@ -107,24 +147,6 @@ else:
                 'x': output_var_dim_lon
             },
             'coords': {
-                'lon': {
-                    'dims': ('y', 'x'),
-                    'attrs': {
-                        'standard_name': 'longitude',
-                        'long_name': 'Longitude',
-                        'units': 'degrees_east',
-                        'axis': 'x'
-                    },
-                    'data': lon.astype(ds_data_vars_f8)
-                    # np.array(
-                    #     [
-                    #         [0, 10],
-                    #         [0, 10],
-                    #         [0, 10]
-                    #     ],
-                    #     dtype=ds_data_vars_f8
-                    # )
-                },
                 'lat': {
                     'dims': ('y', 'x'),
                     'attrs': {
@@ -133,14 +155,32 @@ else:
                         'units': 'degrees_north',
                         'axis': 'y'
                     },
-                    'data': lat.astype(ds_data_vars_f8)
+                    'data': lat.astype(ds_data_vars_f4)
                     # np.array(
                     #     [
                     #         [20, 20],
                     #         [10, 10],
                     #         [0, 0]
                     #     ],
-                    #     dtype=ds_data_vars_f8
+                    #     dtype=ds_data_vars_f4
+                    # )
+                },
+                'lon': {
+                    'dims': ('y', 'x'),
+                    'attrs': {
+                        'standard_name': 'longitude',
+                        'long_name': 'Longitude',
+                        'units': 'degrees_east',
+                        'axis': 'x'
+                    },
+                    'data': lon.astype(ds_data_vars_f4)
+                    # np.array(
+                    #     [
+                    #         [0, 10],
+                    #         [0, 10],
+                    #         [0, 10]
+                    #     ],
+                    #     dtype=ds_data_vars_f4
                     # )
                 },
                 'time': {
@@ -153,7 +193,9 @@ else:
                 }
             },
             'data_vars': {
-                # DO NOT CHANGE 'crs'!
+                # !!!!!!!!!!!!!!!!!!! #
+                # DO NOT CHANGE 'crs' #
+                # !!!!!!!!!!!!!!!!!!! #
                 'crs': {
                     'dims': (),
                     'attrs': {
@@ -184,7 +226,7 @@ else:
                         'semi_major_axis': 6378137.0,
                         'inverse_flattening': 298.257223563
                     },
-                    'data': ds_FillValue_f8
+                    'data': ds_FillValue_f4
                 },
 
                 # 3D
@@ -201,32 +243,59 @@ else:
                         'long_name': output_var_long_name,
                         'units': output_var_units
                     },
-                    'data': output_data.astype(ds_data_vars_f8)
-                    # np.array(
-                    #     # variable data, np.array(, dtype=)
-                    #     [
-                    #         [
-                    #             [1, 2],
-                    #             [3, 4],
-                    #             [5, 6]
-                    #         ] for month in range(1, 13)
-                    #     ],
-                    #     dtype=ds_data_vars_f8
-                    # )
+                    'data': output_data.astype(ds_data_vars_f4)
                 }
             }
         }
 
-
-        ds_o_encoding = {
-            # 3D
-            output_var: {
-                'dtype': ds_data_vars_f8,
-                '_FillValue': ds_FillValue_f8,
-                'scale_factor': ds_data_vars_f8(1.0),
-                'add_offset': ds_data_vars_f8(0.0)
+        # Compression,
+        # {'chunksizes', 'fletcher32', 'contiguous', 'complevel', 'shuffle', 'least_significant_digit', '_FillValue', 'zlib', 'dtype'}
+        # http://unidata.github.io/netcdf4-python/netCDF4/index.html#section9
+        if 0 < output_var_complevel < 10:
+            ds_o_encoding = {
+                # coords
+                'lat': {
+                    'zlib': True,
+                    'complevel': output_var_complevel,
+                    'least_significant_digit': 3
+                },
+                'lon': {
+                    'zlib': True,
+                    'complevel': output_var_complevel,
+                    'least_significant_digit': 3
+                },
+                # 3D
+                output_var: {
+                    'dtype': ds_data_vars_f4,
+                    '_FillValue': ds_FillValue_f4,
+                    'scale_factor': ds_data_vars_f4(1.0),
+                    'add_offset': ds_data_vars_f4(0.0),
+                    'zlib': True,
+                    'complevel': output_var_complevel,
+                    'least_significant_digit': 3
+                }
             }
-        }
+        else:
+            ds_o_encoding = {
+                # coords
+                'lat': {
+                    'zlib': False,
+                    'least_significant_digit': 3
+                },
+                'lon': {
+                    'zlib': False,
+                    'least_significant_digit': 3
+                },
+                # 3D
+                output_var: {
+                    'dtype': ds_data_vars_f4,
+                    '_FillValue': ds_FillValue_f4,
+                    'scale_factor': ds_data_vars_f4(1.0),
+                    'add_offset': ds_data_vars_f4(0.0),
+                    'zlib': False,
+                    'least_significant_digit': 3
+                }
+            }
 
         # xarray Dataset, write to file
         ds_o = xr.Dataset.from_dict(ds_o_dict)
