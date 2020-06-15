@@ -56,6 +56,7 @@ Define the **standard** of Water Accounting Tools.
   - Data, [folder](./01-Resource/resources/Data)
   - File, [folder](./01-Resource/resources/File)
   - GIS, [folder](./01-Resource/resources/GIS)
+  - ISO, [folder](./01-Resource/resources/ISO)
   - Others, [folder](./01-Resource/resources/Others)
 
 ### utils, [folder](./01-Resource/utils)
